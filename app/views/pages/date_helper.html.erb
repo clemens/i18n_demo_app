@@ -1,0 +1,81 @@
+<h2>DateHelper</h2>
+<div>
+  <h3>Date/Time distance</h3>
+    <div>
+      <table>
+      <tr>
+        <th scope="row">time_ago_in_words(20.seconds.ago, true)</th>
+        <td><%= time_ago_in_words(20.seconds.ago, true) %></td>
+      </tr>
+      <tr>
+        <th scope="row">time_ago_in_words(1.minute.ago)</th>
+        <td><%= time_ago_in_words(1.minute.ago) %></td>
+      </tr>
+      <tr>
+        <th scope="row">time_ago_in_words(1.5.minute.ago)</th>
+        <td><%= time_ago_in_words(1.5.minute.ago) %></td>
+      </tr>
+      <tr>
+        <th scope="row">time_ago_in_words(1.day.ago)</th>
+        <td><%= time_ago_in_words(1.day.ago) %></td>
+      </tr>
+      <tr>
+        <th scope="row">time_ago_in_words(1.2.day.ago)</th>
+        <td><%= time_ago_in_words(1.2.day.ago) %></td>
+      </tr>
+    </table>
+    <p>etc.</p>
+  </div>
+
+  <h3>Forms</h3>
+  <div>
+    <table>
+      <tr>
+        <th scope="row">select_date(Date.today)</th>
+        <td><%= select_date(Date.today) %></td>
+      </tr>
+      <tr>
+        <th scope="row">select_time(Time.now)</th>
+        <td><%= select_time(Time.now) %></td>
+      </tr>
+      <tr>
+        <th scope="row">select_datetime(Time.now)</th>
+        <td><%= select_datetime(Time.now) %></td>
+      </tr>
+      <tr>
+        <th scope="row">date_select(Object.new, :date_field)</th>
+        <td><%= date_select(Object.new, :date_field) %></td>
+      </tr>
+      <tr>
+        <th scope="row">time_select(Object.new, :time_field)</th>
+        <td><%= time_select(Object.new, :time_field) %></td>
+      </tr>
+      <tr>
+        <th scope="row">datetime_select(Object.new, :date_or_time_field)</th>
+        <td><%= datetime_select(Object.new, :date_or_time_field) %></td>
+      </tr>
+    </table>
+    <p>Note: You may have spotted that <code>select_date</code> and <code>select_datetime</code> don't use the field order that has been specified in the locale. This is because these methods use a different backend from their <code>date_select</code>/<code>datetime_select</code> counterparts. Right now, you can manually hack localization behavior in by using an initializer like the following:</p>
+    <blockquote>
+      <pre>
+ActionView::Helpers::DateHelper.class_eval do
+  def select_date_with_localization(date = Date.current, options = {}, html_options = {})
+    options[:order] ||= I18n.translate(:'date.order')
+    select_date_without_localization(date, options, html_options)
+  end
+  alias_method_chain :select_date, :localization
+
+  def select_datetime_with_localization(datetime = Time.current, options = {}, html_options = {})
+    options[:order] ||= I18n.translate(:'date.order')
+    select_datetime_without_localization(datetime, options, html_options)
+  end
+  alias_method_chain :select_datetime, :localization
+end
+      </pre>
+    </blockquote>
+    <p>You can find this initializer in <code>config/initializers/date_helper_i18n.rb</code> - just remove the comments and you're good to go.</p>
+    <p>The DateHelper API is <%= link_to "being refactored", "http://github.com/josh/rails/commits/date_presenter" %> as you read this to have a consistent backend. In a few days, the changes will be merged into core and future Rails versions won't need this hack.</p>
+  </div>
+</div>
+
+<p style="text-align:right;"><%= link_to '&raquo; ActiveRecordHelper', :action => 'active_record_helper' %></p>

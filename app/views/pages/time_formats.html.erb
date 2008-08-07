@@ -1,0 +1,46 @@
+<h2>Time formats</h2>
+<div>
+  <table>
+    <tr>
+      <th scope="row">Time.now.to_s</th>
+      <td><%= Time.now.to_s %></td>
+    </tr>
+    <tr>
+      <th scope="row">Time.now.to_s(:default)</th>
+      <td><%= Time.now.to_s(:default) %></td>
+    </tr>
+    <tr>
+      <th scope="row">Time.now.to_s(:short)</th>
+      <td><%= Time.now.to_s(:short) %></td>
+    </tr>
+    <tr>
+      <th scope="row">Time.now.to_s(:long)</th>
+      <td><%= Time.now.to_s(:long) %></td>
+    </tr>
+    <tr>
+      <th scope="row">Time.now.to_s(:long_ordinal)</th>
+      <td><%= Time.now.to_s(:long_ordinal) %></td>
+    </tr>
+    <tr>
+      <th scope="row">Time.now.to_s(:only_second)</th>
+      <td><%= Time.now.to_s(:only_second) %></td>
+    </tr>
+  </table>
+  <p>Rails standard formats (Time::DATE_FORMATS) still work:</p>
+  <table>
+    <tr>
+      <th scope="row">Time.now.to_s(:db)</th>
+      <td><%= Time.now.to_s(:db) %></td>
+    </tr>
+    <tr>
+      <th scope="row">Time.now.to_s(:number)</th>
+      <td><%= Time.now.to_s(:number) %></td>
+    </tr>
+    <tr>
+      <th scope="row">Time.now.to_s(:rfc822)</th>
+      <td><%= Time.now.to_s(:rfc822) %></td>
+    </tr>
+  </table>
+</div>
+
+<p style="text-align:right;"><%= link_to '&raquo; DateHelper', :action => 'date_helper' %></p>

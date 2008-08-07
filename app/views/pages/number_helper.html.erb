@@ -1,0 +1,118 @@
+<h2>NumberHelper</h2>
+<div>
+  <p>Note: <code>number_to_phone</code> hasn't been localized yet and probably never will be - at least not in core. Look out for new internationalization/localization plugins like a new version of <%= link_to "Globalize", "http://globalize.rubyforge.org/" %> as they will probably support stuff like that.</p>
+
+  <p>Another note: <code>number_to_currency</code>, <code>number_to_percentage</code> and <code>number_to_human_size</code> all use <code>number_with_precision</code> internally and <code>number_with_precision</code> uses <code>number_with_delimiter</code> internally.</p>
+
+  <h3>number_to_currency</h3>
+  <div>
+    <table>
+      <tr>
+        <th scope="row">number_to_currency(999)</th>
+        <td><%= number_to_currency(999) %></td>
+      </tr>
+      <tr>
+        <th scope="row">number_to_currency(1999)</th>
+        <td><%= number_to_currency(1999) %></td>
+      </tr>
+      <tr>
+        <th scope="row">number_to_currency(1999.99)</th>
+        <td><%= number_to_currency(1999.99) %></td>
+      </tr>
+      <tr>
+        <th scope="row">number_to_currency(1934524.34582)</th>
+        <td><%= number_to_currency(1934524.34582) %></td>
+      </tr>
+    </table>
+  </div>
+
+  <h3>number_to_percentage</h3>
+  <div>
+    <table>
+      <tr>
+        <th scope="row">number_to_percentage(999)</th>
+        <td><%= number_to_percentage(999) %></td>
+      </tr>
+      <tr>
+        <th scope="row">number_to_percentage(1999)</th>
+        <td><%= number_to_percentage(1999) %></td>
+      </tr>
+      <tr>
+        <th scope="row">number_to_percentage(1999.99)</th>
+        <td><%= number_to_percentage(1999.99) %></td>
+      </tr>
+      <tr>
+        <th scope="row">number_to_percentage(1934524.34582)</th>
+        <td><%= number_to_percentage(1934524.34582) %></td>
+      </tr>
+    </table>
+  </div>
+
+  <h3>number_to_human_size</h3>
+  <div>
+    <table>
+      <tr>
+        <th scope="row">number_to_human_size(1.byte)</th>
+        <td><%= number_to_human_size(1.byte) %></td>
+      </tr>
+      <tr>
+        <th scope="row">number_to_human_size(2.kilobytes)</th>
+        <td><%= number_to_human_size(2.kilobytes) %></td>
+      </tr>
+      <tr>
+        <th scope="row">number_to_human_size(2.5.kilobytes)</th>
+        <td><%= number_to_human_size(2.5.kilobytes) %></td>
+      </tr>
+      <tr>
+        <th scope="row">number_to_human_size(2.34582.kilobytes)</th>
+        <td><%= number_to_human_size(2.34582.kilobytes) %></td>
+      </tr>
+    </table>
+  </div>
+
+  <h3>number_with_precision</h3>
+  <div>
+    <table>
+      <tr>
+        <th scope="row">number_with_precision(999)</th>
+        <td><%= number_with_precision(999) %></td>
+      </tr>
+      <tr>
+        <th scope="row">number_with_precision(1999)</th>
+        <td><%= number_with_precision(1999) %></td>
+      </tr>
+      <tr>
+        <th scope="row">number_with_precision(1999.99)</th>
+        <td><%= number_with_precision(1999.99) %></td>
+      </tr>
+      <tr>
+        <th scope="row">number_with_precision(1934524.34582)</th>
+        <td><%= number_with_precision(1934524.34582) %></td>
+      </tr>
+    </table>
+  </div>
+
+  <h3>number_with_delimiter</h3>
+  <div>
+    <table>
+      <tr>
+        <th scope="row">number_with_delimiter(999)</th>
+        <td><%= number_with_delimiter(999) %></td>
+      </tr>
+      <tr>
+        <th scope="row">number_with_delimiter(1999)</th>
+        <td><%= number_with_delimiter(1999) %></td>
+      </tr>
+      <tr>
+        <th scope="row">number_with_delimiter(1999.99)</th>
+        <td><%= number_with_delimiter(1999.99) %></td>
+      </tr>
+      <tr>
+        <th scope="row">number_with_delimiter(1934524.34582)</th>
+        <td><%= number_with_delimiter(1934524.34582) %></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<p style="text-align:right;"><%= link_to '&raquo; About this demo app', :action => 'about' %></p>

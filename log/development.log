@@ -1,0 +1,2757 @@
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 13:54:29) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNzc3MDI3MDQ0ZTRhNDA0ZjRjMTI4NDJhYWM2N2MyNGYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--303a240d2ac7d9c0fbe3d1df171830d272042407
+  Parameters: {"action"=>"index", "controller"=>"test"}
+
+
+CGI::Session::CookieStore::TamperedWithCookie (CGI::Session::CookieStore::TamperedWithCookie):
+    /vendor/rails/actionpack/lib/action_controller/session/cookie_store.rb:144:in `unmarshal'
+    /vendor/rails/actionpack/lib/action_controller/session/cookie_store.rb:101:in `restore'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/cgi/session.rb:304:in `[]'
+    /vendor/rails/actionpack/lib/action_controller/cgi_process.rb:136:in `session'
+    /vendor/rails/actionpack/lib/action_controller/cgi_process.rb:168:in `stale_session_check!'
+    /vendor/rails/actionpack/lib/action_controller/cgi_process.rb:116:in `session'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1172:in `assign_shortcuts_without_flash'
+    /vendor/rails/actionpack/lib/action_controller/flash.rb:166:in `assign_shortcuts'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:538:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:593:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:409:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:151:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:116:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:33:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47diagnostics46erb
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_trace46erb
+Rendered /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (0.09307)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_request_and_response46erb
+Rendered /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.00112)
+Rendering /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47layout46erb
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 13:54:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Completed in 0.00739 (135 reqs/sec) | Rendering: 0.00535 (72%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 13:54:47) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Completed in 0.00733 (136 reqs/sec) | Rendering: 0.00508 (69%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 13:54:48) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Completed in 0.00747 (133 reqs/sec) | Rendering: 0.00534 (71%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 13:54:49) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Completed in 0.00735 (135 reqs/sec) | Rendering: 0.00513 (69%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 13:54:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Completed in 0.00709 (140 reqs/sec) | Rendering: 0.00511 (72%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 13:55:19) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Completed in 0.00702 (142 reqs/sec) | Rendering: 0.00496 (70%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 13:55:55) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Completed in 0.00712 (140 reqs/sec) | Rendering: 0.00500 (70%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 13:57:30) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Completed in 0.00727 (137 reqs/sec) | Rendering: 0.00518 (71%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 13:59:40) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Completed in 0.00842 (118 reqs/sec) | Rendering: 0.00636 (75%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:01:10) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00966 (103 reqs/sec) | Rendering: 0.00767 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:02:31) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01028 (97 reqs/sec) | Rendering: 0.00827 (80%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:02:42) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00990 (100 reqs/sec) | Rendering: 0.00790 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:02:57) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01034 (96 reqs/sec) | Rendering: 0.00818 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:03:25) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01014 (98 reqs/sec) | Rendering: 0.00808 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:03:31) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01049 (95 reqs/sec) | Rendering: 0.00837 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:03:55) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01028 (97 reqs/sec) | Rendering: 0.00811 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:03:59) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01054 (94 reqs/sec) | Rendering: 0.00839 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:04:11) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01030 (97 reqs/sec) | Rendering: 0.00826 (80%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:04:36) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00999 (100 reqs/sec) | Rendering: 0.00798 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:04:54) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01005 (99 reqs/sec) | Rendering: 0.00805 (80%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:05:20) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01006 (99 reqs/sec) | Rendering: 0.00801 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:05:44) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00999 (100 reqs/sec) | Rendering: 0.00800 (80%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:05:49) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01009 (99 reqs/sec) | Rendering: 0.00809 (80%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:07:25) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01213 (82 reqs/sec) | Rendering: 0.00995 (82%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:07:31) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01154 (86 reqs/sec) | Rendering: 0.00942 (81%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:07:54) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01093 (91 reqs/sec) | Rendering: 0.00894 (81%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:08:25) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01121 (89 reqs/sec) | Rendering: 0.00907 (80%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#date_formats (for 127.0.0.1 at 2008-08-07 14:09:35) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_formats", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_formats
+Compiling template _run_erb_47app47views47test47date_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01111 (90 reqs/sec) | Rendering: 0.00910 (81%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_formats]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:10:58) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00625 (159 reqs/sec) | Rendering: 0.00440 (70%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:11:09) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00647 (154 reqs/sec) | Rendering: 0.00460 (71%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:12:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00661 (151 reqs/sec) | Rendering: 0.00471 (71%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:15:16) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00765 (130 reqs/sec) | Rendering: 0.00580 (75%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:15:37) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00818 (122 reqs/sec) | Rendering: 0.00604 (73%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:15:42) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00766 (130 reqs/sec) | Rendering: 0.00572 (74%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:16:37) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00721 (138 reqs/sec) | Rendering: 0.00533 (73%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:16:48) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00862 (116 reqs/sec) | Rendering: 0.00676 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:16:59) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00861 (116 reqs/sec) | Rendering: 0.00674 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:17:26) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00889 (112 reqs/sec) | Rendering: 0.00694 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:17:42) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00873 (114 reqs/sec) | Rendering: 0.00686 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:17:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00868 (115 reqs/sec) | Rendering: 0.00677 (77%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:18:03) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00930 (107 reqs/sec) | Rendering: 0.00737 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:18:09) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00954 (104 reqs/sec) | Rendering: 0.00714 (74%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:18:30) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00890 (112 reqs/sec) | Rendering: 0.00693 (77%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:18:45) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00882 (113 reqs/sec) | Rendering: 0.00690 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:19:00) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00865 (115 reqs/sec) | Rendering: 0.00677 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:19:37) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00855 (116 reqs/sec) | Rendering: 0.00669 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:20:00) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00865 (115 reqs/sec) | Rendering: 0.00676 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:21:13) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00886 (112 reqs/sec) | Rendering: 0.00692 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:23:28) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00943 (106 reqs/sec) | Rendering: 0.00739 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:24:21) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00978 (102 reqs/sec) | Rendering: 0.00779 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:24:26) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00949 (105 reqs/sec) | Rendering: 0.00756 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:24:54) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00917 (109 reqs/sec) | Rendering: 0.00731 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:33:50) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00957 (104 reqs/sec) | Rendering: 0.00764 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 14:33:52) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00942 (106 reqs/sec) | Rendering: 0.00751 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#time_formats (for 127.0.0.1 at 2008-08-07 14:33:56) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"time_formats", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/time_formats
+Compiling template _run_erb_47app47views47test47time_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01096 (91 reqs/sec) | Rendering: 0.00884 (80%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/time_formats]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:36:00) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00757 (132 reqs/sec) | Rendering: 0.00558 (73%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:36:15) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+
+
+ActionView::TemplateError (Time can't be coerced into Fixnum) on line #3 of app/views//date_helper.html.erb:
+1: <h2>DateHelper</h2>
+2: <h3>Date/Time distance</h3>
+3: <p><%= distance_of_time_in_words(@date - 2.years) %></p>
+    vendor/rails/actionpack/lib/action_view/helpers/date_helper.rb:65:in `-'
+    vendor/rails/actionpack/lib/action_view/helpers/date_helper.rb:65:in `distance_of_time_in_words'
+    app/views/test/date_helper.html.erb:3
+    vendor/rails/actionpack/lib/action_view/base.rb:397:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:397:in `execute'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:34:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:34:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:66:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:363:in `render_file'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1145:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:866:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1194:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1200:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:604:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:597:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:205:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:593:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:409:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:151:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:116:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:33:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47template_error46erb
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_trace46erb
+Rendered /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (0.03940)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_request_and_response46erb
+Rendered /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.00089)
+Rendering /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47layout46erb
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:36:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.08821 (11 reqs/sec) | Rendering: 0.00564 (6%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:37:12) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00746 (133 reqs/sec) | Rendering: 0.00542 (72%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:37:16) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00786 (127 reqs/sec) | Rendering: 0.00571 (72%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:37:26) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00761 (131 reqs/sec) | Rendering: 0.00549 (72%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:37:41) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01038 (96 reqs/sec) | Rendering: 0.00829 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:38:31) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01021 (97 reqs/sec) | Rendering: 0.00813 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:38:40) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01015 (98 reqs/sec) | Rendering: 0.00805 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:38:45) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01023 (97 reqs/sec) | Rendering: 0.00817 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:39:17) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00796 (125 reqs/sec) | Rendering: 0.00577 (72%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:39:23) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00775 (129 reqs/sec) | Rendering: 0.00565 (72%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:39:29) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00829 (120 reqs/sec) | Rendering: 0.00600 (72%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:39:52) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.03198 (31 reqs/sec) | Rendering: 0.02997 (93%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:40:02) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00917 (109 reqs/sec) | Rendering: 0.00707 (77%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:41:17) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00970 (103 reqs/sec) | Rendering: 0.00770 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:41:49) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00996 (100 reqs/sec) | Rendering: 0.00794 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:42:00) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00953 (104 reqs/sec) | Rendering: 0.00743 (77%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:42:04) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00980 (101 reqs/sec) | Rendering: 0.00777 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:42:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00972 (102 reqs/sec) | Rendering: 0.00771 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:42:10) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00966 (103 reqs/sec) | Rendering: 0.00759 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:42:13) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01037 (96 reqs/sec) | Rendering: 0.00788 (76%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:42:18) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01020 (98 reqs/sec) | Rendering: 0.00798 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:42:50) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00971 (102 reqs/sec) | Rendering: 0.00767 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:42:59) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00973 (102 reqs/sec) | Rendering: 0.00766 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:43:05) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00948 (105 reqs/sec) | Rendering: 0.00744 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:43:09) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00955 (104 reqs/sec) | Rendering: 0.00754 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:43:12) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00980 (102 reqs/sec) | Rendering: 0.00779 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:43:14) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00947 (105 reqs/sec) | Rendering: 0.00744 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:44:09) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.08729 (11 reqs/sec) | Rendering: 0.01003 (11%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:45:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01882 (53 reqs/sec) | Rendering: 0.01673 (88%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:48:48) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01820 (54 reqs/sec) | Rendering: 0.01391 (76%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:49:10) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01825 (54 reqs/sec) | Rendering: 0.01393 (76%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:49:45) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+
+
+ActionView::TemplateError (wrong number of arguments (1 for 2)) on line #42 of app/views//date_helper.html.erb:
+39:   </tr>
+40:   <tr>
+41:     <th scope="row">datetime_select(Object.new)</th>
+42:     <td><%= datetime_select(Object.new) %></td>
+43:   </tr>
+44: </table>
+    app/views/test/date_helper.html.erb:42:in `datetime_select'
+    app/views/test/date_helper.html.erb:42
+    vendor/rails/actionpack/lib/action_view/base.rb:397:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:397:in `execute'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:34:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:34:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:66:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:363:in `render_file'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1145:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:866:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1194:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1205:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:604:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:597:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:205:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:593:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:409:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:151:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:116:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:33:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47template_error46erb
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_trace46erb
+Rendered /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (0.11410)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_request_and_response46erb
+Rendered /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.00085)
+Rendering /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47layout46erb
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:49:53) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.03662 (27 reqs/sec) | Rendering: 0.03192 (87%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:50:04) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.03710 (26 reqs/sec) | Rendering: 0.03268 (88%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:50:22) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.10898 (9 reqs/sec) | Rendering: 0.10431 (95%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:50:52) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.05596 (17 reqs/sec) | Rendering: 0.05117 (91%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:51:18) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.12201 (8 reqs/sec) | Rendering: 0.11708 (95%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:51:21) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.11608 (8 reqs/sec) | Rendering: 0.11113 (95%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:51:30) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.05735 (17 reqs/sec) | Rendering: 0.05225 (91%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:51:58) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.12019 (8 reqs/sec) | Rendering: 0.11535 (95%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#time_formats (for 127.0.0.1 at 2008-08-07 14:52:00) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"time_formats", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/time_formats
+Compiling template _run_erb_47app47views47test47time_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01133 (88 reqs/sec) | Rendering: 0.00693 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/time_formats]
+
+
+Processing TestController#date_formats (for 127.0.0.1 at 2008-08-07 14:52:01) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_formats", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_formats
+Compiling template _run_erb_47app47views47test47date_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01421 (70 reqs/sec) | Rendering: 0.00982 (69%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_formats]
+
+
+Processing TestController#time_formats (for 127.0.0.1 at 2008-08-07 14:52:02) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"time_formats", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/time_formats
+Compiling template _run_erb_47app47views47test47time_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01129 (88 reqs/sec) | Rendering: 0.00685 (60%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/time_formats]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:52:05) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.12464 (8 reqs/sec) | Rendering: 0.11976 (96%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:52:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.05680 (17 reqs/sec) | Rendering: 0.05163 (90%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:52:16) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.11950 (8 reqs/sec) | Rendering: 0.11453 (95%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#number_helper (for 127.0.0.1 at 2008-08-07 14:52:17) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"test"}
+
+
+ActionController::UnknownAction (No action responded to number_helper. Actions: ):
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:604:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:597:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:205:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:548:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:593:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:409:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:151:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:116:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:33:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47unknown_action46erb
+Rendering /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47layout46erb
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:52:31) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.05700 (17 reqs/sec) | Rendering: 0.05164 (90%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:52:33) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.12159 (8 reqs/sec) | Rendering: 0.11668 (95%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:52:40) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.11643 (8 reqs/sec) | Rendering: 0.11163 (95%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:53:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.05737 (17 reqs/sec) | Rendering: 0.05235 (91%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 14:53:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.12030 (8 reqs/sec) | Rendering: 0.11520 (95%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#active_record_helper (for 127.0.0.1 at 2008-08-07 14:53:54) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"active_record_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/active_record_helper
+Compiling template _run_erb_47app47views47test47active_record_helper46erb
+
+
+ActionView::TemplateError (undefined method `new' for Test:Module) on line #2 of app/views//active_record_helper.erb:
+1: <h2>ActiveRecordHelper</h2>
+2: <%= Test.new.errors %>
+    app/views/test/active_record_helper.erb:2
+    vendor/rails/actionpack/lib/action_view/base.rb:397:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:397:in `execute'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:34:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:34:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:66:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:363:in `render_file'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1145:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:866:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1194:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1205:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:604:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:597:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:205:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:593:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:409:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:151:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:116:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:33:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47template_error46erb
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_trace46erb
+Rendered /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (0.03389)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_request_and_response46erb
+Rendered /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.00072)
+Rendering /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47layout46erb
+
+
+Processing TestController#active_record_helper (for 127.0.0.1 at 2008-08-07 14:54:05) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"active_record_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/active_record_helper
+Compiling template _run_erb_47app47views47test47active_record_helper46erb
+
+
+ActionView::TemplateError (undefined method `new' for Test:Module) on line #2 of app/views//active_record_helper.erb:
+1: <h2>ActiveRecordHelper</h2>
+2: <%= Test.new.errors %>
+    app/views/test/active_record_helper.erb:2
+    vendor/rails/actionpack/lib/action_view/base.rb:397:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:397:in `execute'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:34:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:34:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:66:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:363:in `render_file'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1145:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:866:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1194:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1205:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:604:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:597:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:205:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:593:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:409:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:151:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:116:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:33:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47template_error46erb
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_trace46erb
+Rendered /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (0.03644)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_request_and_response46erb
+Rendered /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.00074)
+Rendering /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47layout46erb
+
+
+Processing TestController#active_record_helper (for 127.0.0.1 at 2008-08-07 14:54:23) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"active_record_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/active_record_helper
+Compiling template _run_erb_47app47views47test47active_record_helper46erb
+
+
+ActionView::TemplateError (Could not find table 'products') on line #2 of app/views//active_record_helper.erb:
+1: <h2>ActiveRecordHelper</h2>
+2: <%= Product.new.errors %>
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite3_adapter.rb:29:in `table_structure'
+    vendor/rails/activesupport/lib/active_support/core_ext/object/misc.rb:28:in `returning'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite3_adapter.rb:28:in `table_structure'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:189:in `columns'
+    vendor/rails/activerecord/lib/active_record/base.rb:1177:in `columns'
+    vendor/rails/activerecord/lib/active_record/base.rb:2648:in `attributes_from_column_definition_without_lock'
+    vendor/rails/activerecord/lib/active_record/locking/optimistic.rb:55:in `attributes_from_column_definition'
+    vendor/rails/activerecord/lib/active_record/base.rb:2172:in `initialize'
+    app/views/test/active_record_helper.erb:2:in `new'
+    app/views/test/active_record_helper.erb:2
+    vendor/rails/actionpack/lib/action_view/base.rb:397:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:397:in `execute'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:34:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:34:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:66:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:363:in `render_file'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1145:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:866:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1194:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1205:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:604:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:597:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:205:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:593:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:409:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:151:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:116:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:33:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47template_error46erb
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_trace46erb
+Rendered /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (0.03770)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_request_and_response46erb
+Rendered /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.00071)
+Rendering /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47layout46erb
+  [4;36;1mSQL (0.000248)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000154)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.002958)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.002413)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000348)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000173)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20080807125522)
+  [4;36;1mSQL (0.000139)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002567)[0m   [0mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "released_at" datetime) [0m
+  [4;36;1mSQL (0.003215)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080807125522')[0m
+  [4;35;1mSQL (0.000310)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000371)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000095)[0m   [0mPRAGMA index_list("products")[0m
+
+
+Processing TestController#active_record_helper (for 127.0.0.1 at 2008-08-07 14:56:01) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"active_record_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/active_record_helper
+Compiling template _run_erb_47app47views47test47active_record_helper46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01212 (82 reqs/sec) | Rendering: 0.00943 (77%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/active_record_helper]
+
+
+Processing TestController#active_record_helper (for 127.0.0.1 at 2008-08-07 14:58:16) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"active_record_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/active_record_helper
+Compiling template _run_erb_47app47views47test47active_record_helper46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00762 (131 reqs/sec) | Rendering: 0.00469 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/active_record_helper]
+
+
+Processing TestController#active_record_helper (for 127.0.0.1 at 2008-08-07 14:58:25) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"active_record_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/active_record_helper
+Compiling template _run_erb_47app47views47test47active_record_helper46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00722 (138 reqs/sec) | Rendering: 0.00419 (58%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/active_record_helper]
+
+
+Processing TestController#number_helper (for 127.0.0.1 at 2008-08-07 15:00:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/number_helper
+Compiling template _run_erb_47app47views47test47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00812 (123 reqs/sec) | Rendering: 0.00473 (58%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/number_helper]
+
+
+Processing TestController#number_helper (for 127.0.0.1 at 2008-08-07 15:01:13) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/number_helper
+Compiling template _run_erb_47app47views47test47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00856 (116 reqs/sec) | Rendering: 0.00535 (62%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/number_helper]
+
+
+Processing TestController#number_helper (for 127.0.0.1 at 2008-08-07 15:02:29) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/number_helper
+Compiling template _run_erb_47app47views47test47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01007 (99 reqs/sec) | Rendering: 0.00637 (63%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/number_helper]
+
+
+Processing TestController#number_helper (for 127.0.0.1 at 2008-08-07 15:03:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/number_helper
+Compiling template _run_erb_47app47views47test47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01308 (76 reqs/sec) | Rendering: 0.00868 (66%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/number_helper]
+
+
+Processing TestController#number_helper (for 127.0.0.1 at 2008-08-07 15:05:39) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/number_helper
+Compiling template _run_erb_47app47views47test47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01557 (64 reqs/sec) | Rendering: 0.01016 (65%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/number_helper]
+
+
+Processing TestController#number_helper (for 127.0.0.1 at 2008-08-07 15:05:56) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/number_helper
+Compiling template _run_erb_47app47views47test47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01567 (63 reqs/sec) | Rendering: 0.01035 (66%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/number_helper]
+
+
+Processing TestController#number_helper (for 127.0.0.1 at 2008-08-07 15:06:53) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/number_helper
+Compiling template _run_erb_47app47views47test47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01845 (54 reqs/sec) | Rendering: 0.01174 (63%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/number_helper]
+
+
+Processing TestController#number_helper (for 127.0.0.1 at 2008-08-07 15:07:37) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/number_helper
+Compiling template _run_erb_47app47views47test47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01844 (54 reqs/sec) | Rendering: 0.01196 (64%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/number_helper]
+
+
+Processing TestController#number_helper (for 127.0.0.1 at 2008-08-07 15:08:04) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/number_helper
+Compiling template _run_erb_47app47views47test47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01980 (50 reqs/sec) | Rendering: 0.01259 (63%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/number_helper]
+
+
+Processing TestController#number_helper (for 127.0.0.1 at 2008-08-07 15:11:58) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/number_helper
+Compiling template _run_erb_47app47views47test47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01979 (50 reqs/sec) | Rendering: 0.01240 (62%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/number_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 15:29:26) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.08103 (12 reqs/sec) | Rendering: 0.07613 (93%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 15:34:43) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+
+
+ActionView::TemplateError (undefined local variable or method `date' for #<ActionView::Base:0x17c3228>) on line #38 of app/views//date_helper.html.erb:
+35:   </tr>
+36:   <tr>
+37:     <th scope="row">select_datetime(Time.now)</th>
+38:     <td><%= select_datetime(Time.now) %></td>
+39:   </tr>
+40:   <tr>
+41:     <th scope="row">date_select(Object.new, :date_field)</th>
+
+    config/initializers/date_helper_i18n.rb:10:in `select_datetime'
+    app/views/test/date_helper.html.erb:38
+    vendor/rails/actionpack/lib/action_view/base.rb:397:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:397:in `execute'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:34:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:34:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:66:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:363:in `render_file'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1145:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:866:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1194:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1205:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:604:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:597:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:205:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:593:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:409:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:151:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:116:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:33:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47template_error46erb
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_trace46erb
+Rendered /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (0.03790)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_request_and_response46erb
+Rendered /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.00089)
+Rendering /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47layout46erb
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 15:34:56) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.08173 (12 reqs/sec) | Rendering: 0.07633 (93%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 15:35:41) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.08329 (12 reqs/sec) | Rendering: 0.07708 (92%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 15:38:16) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.12513 (7 reqs/sec) | Rendering: 0.11885 (94%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 15:38:39) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.05756 (17 reqs/sec) | Rendering: 0.05150 (89%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 15:38:44) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.12108 (8 reqs/sec) | Rendering: 0.11508 (95%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 15:38:58) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.05759 (17 reqs/sec) | Rendering: 0.05154 (89%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 15:39:09) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.05883 (16 reqs/sec) | Rendering: 0.05272 (89%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 15:39:18) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.12062 (8 reqs/sec) | Rendering: 0.11458 (94%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 15:39:25) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.05727 (17 reqs/sec) | Rendering: 0.05111 (89%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#date_helper (for 127.0.0.1 at 2008-08-07 15:39:30) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/date_helper
+Compiling template _run_erb_47app47views47test47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.12171 (8 reqs/sec) | Rendering: 0.11558 (94%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/date_helper]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 15:39:49) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00944 (105 reqs/sec) | Rendering: 0.00431 (45%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 15:40:49) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00685 (145 reqs/sec) | Rendering: 0.00431 (62%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 15:44:00) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00740 (135 reqs/sec) | Rendering: 0.00442 (59%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 15:44:30) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00826 (121 reqs/sec) | Rendering: 0.00513 (62%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#setup (for 127.0.0.1 at 2008-08-07 15:44:31) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"setup", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/setup
+Compiling template _run_erb_47app47views47test47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00984 (101 reqs/sec) | Rendering: 0.00461 (46%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/setup]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 15:44:37) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00789 (126 reqs/sec) | Rendering: 0.00473 (60%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 15:44:53) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00773 (129 reqs/sec) | Rendering: 0.00472 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 15:45:02) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00769 (129 reqs/sec) | Rendering: 0.00463 (60%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 15:45:16) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00782 (127 reqs/sec) | Rendering: 0.00478 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 15:45:21) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00769 (130 reqs/sec) | Rendering: 0.00475 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#index (for 127.0.0.1 at 2008-08-07 15:46:43) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/index
+Compiling template _run_erb_47app47views47test47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00753 (132 reqs/sec) | Rendering: 0.00462 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test]
+
+
+Processing TestController#setup (for 127.0.0.1 at 2008-08-07 15:46:46) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"setup", "controller"=>"test"}
+Rendering template within layouts/application
+Rendering test/setup
+Compiling template _run_erb_47app47views47test47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00992 (100 reqs/sec) | Rendering: 0.00471 (47%) | DB: 0.00000 (0%) | 200 OK [http://localhost/test/setup]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-08-07 15:47:31) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/pages/setup" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:385:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:150:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:116:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:33:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47routing_error46erb
+Rendering /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47layout46erb
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-08-07 15:47:35) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/pages" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:385:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:150:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:116:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:33:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47routing_error46erb
+Rendering /Users/clemens/Rails/Articles/i18n/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47layout46erb
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-07 15:47:44) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00857 (116 reqs/sec) | Rendering: 0.00516 (60%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-07 15:47:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01055 (94 reqs/sec) | Rendering: 0.00505 (47%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#date_formats (for 127.0.0.1 at 2008-08-07 15:47:54) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_formats", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_formats
+Compiling template _run_erb_47app47views47pages47date_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01518 (65 reqs/sec) | Rendering: 0.01062 (69%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_formats]
+
+
+Processing PagesController#time_formats (for 127.0.0.1 at 2008-08-07 15:47:57) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"time_formats", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/time_formats
+Compiling template _run_erb_47app47views47pages47time_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01270 (78 reqs/sec) | Rendering: 0.00817 (64%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/time_formats]
+
+
+Processing PagesController#date_helper (for 127.0.0.1 at 2008-08-07 15:47:58) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_helper
+Compiling template _run_erb_47app47views47pages47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.08639 (11 reqs/sec) | Rendering: 0.08026 (92%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_helper]
+
+
+Processing PagesController#active_record_helper (for 127.0.0.1 at 2008-08-07 15:48:01) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"active_record_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/active_record_helper
+Compiling template _run_erb_47app47views47pages47active_record_helper46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00749 (133 reqs/sec) | Rendering: 0.00461 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/active_record_helper]
+
+
+Processing PagesController#number_helper (for 127.0.0.1 at 2008-08-07 15:48:03) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/number_helper
+Compiling template _run_erb_47app47views47pages47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.02013 (49 reqs/sec) | Rendering: 0.01270 (63%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/number_helper]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-07 15:48:31) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00988 (101 reqs/sec) | Rendering: 0.00465 (47%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-07 15:49:02) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01305 (76 reqs/sec) | Rendering: 0.00502 (38%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-07 15:51:05) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01383 (72 reqs/sec) | Rendering: 0.00566 (40%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#number_helper (for 127.0.0.1 at 2008-08-07 15:51:10) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/number_helper
+Compiling template _run_erb_47app47views47pages47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.02037 (49 reqs/sec) | Rendering: 0.01298 (63%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/number_helper]
+
+
+Processing PagesController#number_helper (for 127.0.0.1 at 2008-08-07 15:51:58) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/number_helper
+Compiling template _run_erb_47app47views47pages47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.02092 (47 reqs/sec) | Rendering: 0.01345 (64%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/number_helper]
+
+
+Processing PagesController#number_helper (for 127.0.0.1 at 2008-08-07 16:01:06) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/number_helper
+Compiling template _run_erb_47app47views47pages47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.02082 (48 reqs/sec) | Rendering: 0.01282 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/number_helper]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-07 16:04:08) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00764 (130 reqs/sec) | Rendering: 0.00448 (58%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-07 16:04:09) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00791 (126 reqs/sec) | Rendering: 0.00464 (58%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-07 16:04:10) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01460 (68 reqs/sec) | Rendering: 0.00603 (41%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-07 16:04:41) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01448 (69 reqs/sec) | Rendering: 0.00536 (37%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-07 16:04:50) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01446 (69 reqs/sec) | Rendering: 0.00549 (38%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#date_formats (for 127.0.0.1 at 2008-08-07 16:04:54) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_formats", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_formats
+Compiling template _run_erb_47app47views47pages47date_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.08745 (11 reqs/sec) | Rendering: 0.01092 (12%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_formats]
+
+
+Processing PagesController#time_formats (for 127.0.0.1 at 2008-08-07 16:04:57) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"time_formats", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/time_formats
+Compiling template _run_erb_47app47views47pages47time_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01268 (78 reqs/sec) | Rendering: 0.00777 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/time_formats]
+
+
+Processing PagesController#date_helper (for 127.0.0.1 at 2008-08-07 16:04:57) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_helper
+Compiling template _run_erb_47app47views47pages47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.08148 (12 reqs/sec) | Rendering: 0.07509 (92%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_helper]
+
+
+Processing PagesController#date_helper (for 127.0.0.1 at 2008-08-07 16:05:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_helper
+Compiling template _run_erb_47app47views47pages47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.13195 (7 reqs/sec) | Rendering: 0.12519 (94%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_helper]
+
+
+Processing PagesController#active_record_helper (for 127.0.0.1 at 2008-08-07 16:05:12) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"active_record_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/active_record_helper
+Compiling template _run_erb_47app47views47pages47active_record_helper46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00753 (132 reqs/sec) | Rendering: 0.00464 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/active_record_helper]
+
+
+Processing PagesController#number_helper (for 127.0.0.1 at 2008-08-07 16:05:15) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/number_helper
+Compiling template _run_erb_47app47views47pages47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.02050 (48 reqs/sec) | Rendering: 0.01270 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/number_helper]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-07 16:05:17) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00688 (145 reqs/sec) | Rendering: 0.00439 (63%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-07 16:06:37) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00733 (136 reqs/sec) | Rendering: 0.00461 (62%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-07 16:09:16) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00959 (104 reqs/sec) | Rendering: 0.00548 (57%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-07 16:09:54) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00787 (127 reqs/sec) | Rendering: 0.00482 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-07 16:10:13) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00905 (110 reqs/sec) | Rendering: 0.00583 (64%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-07 16:10:22) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00826 (121 reqs/sec) | Rendering: 0.00514 (62%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-07 16:10:48) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00801 (124 reqs/sec) | Rendering: 0.00487 (60%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-07 16:10:57) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00785 (127 reqs/sec) | Rendering: 0.00475 (60%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-07 16:11:04) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00790 (126 reqs/sec) | Rendering: 0.00482 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-07 16:12:19) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00799 (125 reqs/sec) | Rendering: 0.00484 (60%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-07 16:12:28) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00797 (125 reqs/sec) | Rendering: 0.00487 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-07 16:13:14) [GET]
+  Session ID: e5ba5e64c052bff1988aef89c89c3a82
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00801 (124 reqs/sec) | Rendering: 0.00488 (60%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-07 16:13:33) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00816 (122 reqs/sec) | Rendering: 0.00498 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-07 16:13:39) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00789 (126 reqs/sec) | Rendering: 0.00482 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-07 16:13:40) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01467 (68 reqs/sec) | Rendering: 0.00560 (38%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#date_formats (for 127.0.0.1 at 2008-08-07 16:13:43) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_formats", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_formats
+Compiling template _run_erb_47app47views47pages47date_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01609 (62 reqs/sec) | Rendering: 0.01141 (70%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_formats]
+
+
+Processing PagesController#time_formats (for 127.0.0.1 at 2008-08-07 16:13:45) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"time_formats", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/time_formats
+Compiling template _run_erb_47app47views47pages47time_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01252 (79 reqs/sec) | Rendering: 0.00793 (63%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/time_formats]
+
+
+Processing PagesController#date_helper (for 127.0.0.1 at 2008-08-07 16:13:46) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_helper
+Compiling template _run_erb_47app47views47pages47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.05883 (16 reqs/sec) | Rendering: 0.05241 (89%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_helper]
+
+
+Processing PagesController#active_record_helper (for 127.0.0.1 at 2008-08-07 16:13:49) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"active_record_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/active_record_helper
+Compiling template _run_erb_47app47views47pages47active_record_helper46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00765 (130 reqs/sec) | Rendering: 0.00474 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/active_record_helper]
+
+
+Processing PagesController#number_helper (for 127.0.0.1 at 2008-08-07 16:13:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/number_helper
+Compiling template _run_erb_47app47views47pages47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.02262 (44 reqs/sec) | Rendering: 0.01426 (63%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/number_helper]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-07 16:13:54) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00825 (121 reqs/sec) | Rendering: 0.00501 (60%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-07 16:15:08) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00860 (116 reqs/sec) | Rendering: 0.00490 (57%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-07 16:15:28) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00805 (124 reqs/sec) | Rendering: 0.00491 (60%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-07 16:15:40) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00821 (121 reqs/sec) | Rendering: 0.00499 (60%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-07 16:15:53) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00832 (120 reqs/sec) | Rendering: 0.00514 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-07 16:16:00) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00901 (111 reqs/sec) | Rendering: 0.00505 (56%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-07 16:16:09) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00822 (121 reqs/sec) | Rendering: 0.00488 (59%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-07 16:16:18) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00892 (112 reqs/sec) | Rendering: 0.00488 (54%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-07 16:16:35) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00859 (116 reqs/sec) | Rendering: 0.00528 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]

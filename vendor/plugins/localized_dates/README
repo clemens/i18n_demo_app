@@ -1,0 +1,121 @@
+localized_dates
+=================
+
+The localized_dates plugin takes away some of the pain of localizing dates and times. It leverages the power of the
+Rails i18n plugin (http://rails-i18n.org/) to facilitate localization of dates and times.
+
+Installation
+=================
+
+To install the plugin, change into an existing Rails application and run
+
+  ruby script/plugin install git://github.com/clemens/localized_dates.git
+
+This will download the plugin and store it in vendor/plugins/localized_dates. It will also create a directory named
+config/locales and copy two locales, en-US and de-AT into this directory. While the en-US locale mimics current Rails
+formats, de-AT serves as a demo on how date and time formats can be customized.
+
+Adding a new locale
+=================
+
+To add a new locale, simply create a new file in config/locales. You can make your life easier by copying an existing
+locale and basing your new locale on it.
+
+Adding new date and time formats
+=================
+
+Adding new date and time formats is easy. Take a look at the basic structure of the locale file:
+
+  I18n.backend.store_translations :'en-US', {
+    :date => {
+      :formats => {
+        # your formats here
+      }
+    },
+    :time => {
+      :formats => {
+        # your formats here
+      },
+      :datetime => {
+        :formats => {
+          # your formats here
+        }
+      },
+      :time_with_zone => {
+        :formats => {
+          # your formats here
+        }
+      }
+    }
+  }
+
+As you can see, there are two basic entites: :date and :time. :time also has two children, :datetime and
+:time_with_zone that both inherit from :time so you usually don't even need to define them (the de-AT locale doesn't).
+
+For example, if you define a :time format named :release_date, you can use Time.now.to_s(:release_date) in your views.
+You should always define a format named :default for both, :date and :time, that serves as the default format. You can
+use the default format by simply writing Time.now.to_s without passing an additional parameter.
+
+You can either use a strftime compatible formatting string or a Proc that returns a strftime formatting string as a
+date/time format. Take a look at the following examples:
+
+  :short => "%d %B, %H:%M" # => "03 August, 22:49"
+  :long => lambda { |time| "%A, #{time.day}. %B %Y, %H:%M" } # => "Samstag, 3. August 2008, 22:49"
+  
+Please note that the use of Procs is slightly different from Rails' original behavior:
+
+  old: :long => lambda { |time| time.strftime("%A, #{time.day}. %B %Y, %H:%M") }
+  new: :long => lambda { |time| "%A, #{time.day}. %B %Y, %H:%M" }
+  
+The old way should still work without throwing error messages, however, the dates and times will not be localized.
+
+For further information on strftime formatting, see http://ruby-doc.org/core/classes/Time.html#M000139.
+
+Check installed locales
+=================
+
+To display a list of all locales installed in config/locales, you can use the following rake command:
+
+  rake locales
+
+Customizing day and month names
+=================
+
+If you localize your application for a language other than English, you most likely want to change the default month
+and day names to your own countries' names. Here's how it's done:
+
+  I18n.backend.store_translations :'de-AT', {
+    :date => {
+      :day_names => %w(Sonntag Montag Dienstag Mittwoch Donnerstag Freitag Samstag),
+      :abbr_day_names => %w(So Mo Di Mi Do Fr Sa),
+      :month_names => [nil] + %w(Januar Februar März April Mai Juni Juli August September Oktober November Dezember),
+      :abbr_month_names => [nil] + %w(Jan Feb Mär Apr Mai Jun Jul Aug Sep Okt Nov Dez),
+      :order => [:day, :month, :year]
+    }
+  }
+
+The only caveat here is that :month_names and :abbr_month_names *need* nil as their respective first elements. If you
+don't use nil as the first element you'll end up with wrong dates (August will become September, etc.). Also note that
+the definition of day names starts with Sunday (not Monday).
+
+Changing the default locale
+=================
+
+If you want to use a default locale other than en-US, you have to tell the i18n plugin the locale you want to use by
+default. Simply put the following line in an initializer in config/initializers or include it in your environment.rb:
+
+    I18n.default_locale = 'de-AT'
+
+Bugs and Feedback
+=================
+
+If you discover any bugs I'd appreciate if you sent me an e-mail to clemens@railway.at. Please include a detailed
+description of your problem if you want me to help you.
+
+If you have positive feedback and want to drop me a line that's fine, too! :-)
+
+
+Copyright (c) 2008 Clemens Kofler <clemens@railway.at>, released under the MIT license
+
+http://www.railway.at
+http://github.com/clemens/localized_dates
