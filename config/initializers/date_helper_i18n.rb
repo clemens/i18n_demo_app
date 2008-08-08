@@ -1,3 +1,6 @@
+# You only need this if you run Edge Rails older than this revision: 
+#   http://github.com/rails/rails/commit/105093f90728f81268367bd52581fccfa165f170
+#
 # ActionView::Helpers::DateHelper.class_eval do
 #   def select_date_with_localization(date = Date.current, options = {}, html_options = {})
 #     options[:order] ||= I18n.translate(:'date.order')
