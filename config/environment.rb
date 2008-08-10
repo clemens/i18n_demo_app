@@ -67,4 +67,4 @@ Rails::Initializer.run do |config|
 end
 
 I18n.default_locale = 'gibberish'
-I18n.locale         = 'gibberish'
+I18n.locale = 'gibberish'

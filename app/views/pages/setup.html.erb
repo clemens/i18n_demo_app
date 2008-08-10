@@ -33,8 +33,8 @@ I18n.backend.store_translations :'gibberish', {
       :long_ordinal => lambda { |date| "%B #{date.day}ish, %Y" },
       :only_day     => lambda { |date| "#{date.day}ish"}
     },
-    :day_names => [nil] + %w(Sunday-ish Monday-ish Tuesday-ish Wednesday-ish Thursday-ish Friday-ish Saturday-ish),
-    :abbr_day_names => [nil] + %w(Sun-i Mon-i Tue-i Wed-i Thu-i Fri-i Sat-i),
+    :day_names => %w(Sunday-ish Monday-ish Tuesday-ish Wednesday-ish Thursday-ish Friday-ish Saturday-ish),
+    :abbr_day_names => %w(Sun-i Mon-i Tue-i Wed-i Thu-i Fri-i Sat-i),
     :month_names => [nil] + %w(January-ish February-ish March-ish April-ish May-ish June-ish
                                July-ish August-ish September-ish October-ish November-rish December-ish),
     :abbr_month_names => [nil] + %w(Jan-i Feb-i Mar-i Apr-i May-i Jun-i Jul-i Aug-i Sep-i Oct-i Nov-i Dec-i),
