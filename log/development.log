@@ -88,3 +88,329 @@ Rendering pages/active_record_helper
 Compiling template _run_erb_47app47views47pages47active_record_helper46erb
 Compiling template _run_erb_47app47views47layouts47application46html46erb
 Completed in 0.00645 (154 reqs/sec) | Rendering: 0.00398 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/active_record_helper]
+  [4;36;1mSQL (0.000406)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000120)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.002221)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001904)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000149)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-14 12:48:48) [GET]
+  Session ID: c6fd6de299209abb0970c81dbbafc4e4
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00681 (146 reqs/sec) | Rendering: 0.00435 (63%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-14 12:48:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00584 (171 reqs/sec) | Rendering: 0.00358 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-14 12:48:52) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01041 (96 reqs/sec) | Rendering: 0.00437 (41%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#date_formats (for 127.0.0.1 at 2008-08-14 12:48:58) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_formats", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_formats
+Compiling template _run_erb_47app47views47pages47date_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01044 (95 reqs/sec) | Rendering: 0.00682 (65%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_formats]
+
+
+Processing PagesController#time_formats (for 127.0.0.1 at 2008-08-14 12:48:59) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"time_formats", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/time_formats
+Compiling template _run_erb_47app47views47pages47time_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00858 (116 reqs/sec) | Rendering: 0.00547 (63%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/time_formats]
+
+
+Processing PagesController#date_helper (for 127.0.0.1 at 2008-08-14 12:49:00) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_helper
+Compiling template _run_erb_47app47views47pages47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.12813 (7 reqs/sec) | Rendering: 0.12365 (96%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_helper]
+
+
+Processing PagesController#active_record_helper (for 127.0.0.1 at 2008-08-14 12:49:01) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"active_record_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/active_record_helper
+Compiling template _run_erb_47app47views47pages47active_record_helper46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00573 (174 reqs/sec) | Rendering: 0.00332 (57%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/active_record_helper]
+
+
+Processing PagesController#number_helper (for 127.0.0.1 at 2008-08-14 12:49:02) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/number_helper
+Compiling template _run_erb_47app47views47pages47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01500 (66 reqs/sec) | Rendering: 0.00961 (64%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/number_helper]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-14 20:57:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.07086 (14 reqs/sec) | Rendering: 0.01757 (24%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-14 20:57:26) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00856 (116 reqs/sec) | Rendering: 0.00427 (49%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-14 20:57:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.03326 (30 reqs/sec) | Rendering: 0.00416 (12%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#date_formats (for 127.0.0.1 at 2008-08-14 20:57:43) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_formats", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_formats
+Compiling template _run_erb_47app47views47pages47date_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.04247 (23 reqs/sec) | Rendering: 0.00730 (17%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_formats]
+
+
+Processing PagesController#date_formats (for 127.0.0.1 at 2008-08-14 20:58:11) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_formats", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_formats
+Compiling template _run_erb_47app47views47pages47date_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01162 (86 reqs/sec) | Rendering: 0.00789 (67%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_formats]
+
+
+Processing PagesController#date_formats (for 127.0.0.1 at 2008-08-14 20:58:45) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_formats", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_formats
+Compiling template _run_erb_47app47views47pages47date_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01118 (89 reqs/sec) | Rendering: 0.00805 (71%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_formats]
+
+
+Processing PagesController#time_formats (for 127.0.0.1 at 2008-08-14 20:58:47) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"time_formats", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/time_formats
+Compiling template _run_erb_47app47views47pages47time_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.03667 (27 reqs/sec) | Rendering: 0.00597 (16%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/time_formats]
+
+
+Processing PagesController#date_helper (for 127.0.0.1 at 2008-08-14 20:58:55) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_helper
+Compiling template _run_erb_47app47views47pages47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.04159 (24 reqs/sec) | Rendering: 0.03769 (90%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_helper]
+
+
+Processing PagesController#active_record_helper (for 127.0.0.1 at 2008-08-14 20:59:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"active_record_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/active_record_helper
+Compiling template _run_erb_47app47views47pages47active_record_helper46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.03887 (25 reqs/sec) | Rendering: 0.00357 (9%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/active_record_helper]
+
+
+Processing PagesController#number_helper (for 127.0.0.1 at 2008-08-14 20:59:10) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/number_helper
+Compiling template _run_erb_47app47views47pages47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.04549 (21 reqs/sec) | Rendering: 0.01128 (24%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/number_helper]
+
+
+Processing PagesController#number_helper (for 127.0.0.1 at 2008-08-14 20:59:48) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/number_helper
+Compiling template _run_erb_47app47views47pages47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01650 (60 reqs/sec) | Rendering: 0.01100 (66%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/number_helper]
+
+
+Processing PagesController#number_helper (for 127.0.0.1 at 2008-08-14 20:59:57) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/number_helper
+Compiling template _run_erb_47app47views47pages47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01686 (59 reqs/sec) | Rendering: 0.01108 (65%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/number_helper]
+
+
+Processing PagesController#number_helper (for 127.0.0.1 at 2008-08-14 21:00:01) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/number_helper
+Compiling template _run_erb_47app47views47pages47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01688 (59 reqs/sec) | Rendering: 0.01116 (66%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/number_helper]
+
+
+Processing PagesController#number_helper (for 127.0.0.1 at 2008-08-14 21:00:47) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/number_helper
+Compiling template _run_erb_47app47views47pages47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01681 (59 reqs/sec) | Rendering: 0.01144 (68%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/number_helper]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-14 21:00:50) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.03914 (25 reqs/sec) | Rendering: 0.00381 (9%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-14 21:00:56) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00622 (160 reqs/sec) | Rendering: 0.00374 (60%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-14 21:01:10) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01089 (91 reqs/sec) | Rendering: 0.00414 (37%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#date_formats (for 127.0.0.1 at 2008-08-14 21:01:13) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_formats", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_formats
+Compiling template _run_erb_47app47views47pages47date_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01042 (95 reqs/sec) | Rendering: 0.00703 (67%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_formats]
+
+
+Processing PagesController#time_formats (for 127.0.0.1 at 2008-08-14 21:01:17) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"time_formats", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/time_formats
+Compiling template _run_erb_47app47views47pages47time_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00928 (107 reqs/sec) | Rendering: 0.00601 (64%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/time_formats]
+
+
+Processing PagesController#date_helper (for 127.0.0.1 at 2008-08-14 21:01:21) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"date_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_helper
+Compiling template _run_erb_47app47views47pages47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.04478 (22 reqs/sec) | Rendering: 0.04125 (92%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_helper]
+
+
+Processing PagesController#active_record_helper (for 127.0.0.1 at 2008-08-14 21:01:39) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"active_record_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/active_record_helper
+Compiling template _run_erb_47app47views47pages47active_record_helper46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00596 (167 reqs/sec) | Rendering: 0.00380 (63%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/active_record_helper]
+
+
+Processing PagesController#number_helper (for 127.0.0.1 at 2008-08-14 21:01:40) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"number_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/number_helper
+Compiling template _run_erb_47app47views47pages47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01612 (62 reqs/sec) | Rendering: 0.01045 (64%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/number_helper]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-14 21:01:58) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--f4800bf2b81f3adc8f04783a4decfbb69e8228e1
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00630 (158 reqs/sec) | Rendering: 0.00376 (59%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]

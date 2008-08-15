@@ -1,28 +1,3 @@
-<h2>Configuração</h2>
-<div>
-  <h3>Congelando Edge e instalando o plugin localized_dates</h3>
-  <div>
-	Você precisa estar no Edge Rails para usar as funcionalidades de i18n (internacionalização):
-    <blockquote>
-      <pre>
-rails i18n_test
-rake rails:freeze:edge
-      </pre>
-    </blockquote>
-	Para formatos de data e hora, você também precisa instalar o <%= link_to "plugin localized_dates", "http://github.com/clemens/localized_dates" %>:
-    <blockquote>
-      <pre>
-./script/plugin install git://github.com/clemens/localized_dates.git
-      </pre>
-    </blockquote>
-  </div>
-
-  <h3>Configurando o local</h3>
-  <div>
-    <p>O melhor lugar para colocar sua configuração local, na minha opinião, é em <code>config/locales</code>. O plugin localized_dates copiará dois locais, en-US e de-AT, em seu diretório. Você pode extender ou modificá-los e também criar novos locais.</p>
-    <p>Aqui está o local de demonstração que foi usado para esta aplicação de demonstração:</p>
-    <blockquote>
-      <pre>
 I18n.backend.store_translations :'pt-BR', {
   # formatos de data e hora
   :date => {
@@ -69,14 +44,14 @@ I18n.backend.store_translations :'pt-BR', {
   :number => {
     :format => {
       :precision => 3,
-      :separator => '.',
-      :delimiter => ','
+      :separator => ',',
+      :delimiter => '.'
     },
     :currency => {
       :format => {
         :unit => 'R$',
         :precision => 2,
-        :format => '%n %u'
+        :format => '%u %n'
       }
     }
   },
@@ -112,22 +87,3 @@ I18n.backend.store_translations :'pt-BR', {
     }
   }
 }
-      </pre>
-    </blockquote>
-    <p>Você também precisa configurar o local padrão e/ou local em seu seu <code>environment.rb</code> ou um inicializador.</p>
-    <blockquote>
-      <pre>
-I18n.default_locale = 'pt-BR'
-I18n.locale         = 'pt-BR'
-      </pre>
-    </blockquote>
-  </div>
-
-  <h3>Uma palavra sobre a estrutura de locais</h3>
-  <div>
-    <p>Você deve ter notado que dentro da parte <code>:number</code> do local, nós definimos <code>:format</code> e <code>:currency</code>. Em geral, locais são estruturas hierárquicas - isto é, moedas são números, porcentagens são números, etc. <code>:currency</code> pode tanto se sobrepor à configuração <code>:format</code> básica (em nosso caso, nós configuramos <code>:precision</code> para 2 em vez de 3) ou extendê-la (adicionamos duas novas opções, <code>:unit</code> e <code>:format</code>).</p>
-	<p>O mesmo é válido para datas e horas: se for necessário, <code>:datetime</code> e <code>:time_with_zone</code> podem ser usados para resolver especificamente formatação de seus respectivos tipos em vez de depender das configurações para <code>:time</code>. Note, entretanto, que normalmente você quer usar as mesmas formatações que <code>:time</code>.</p>
-  </div>
-</div>
-
-<p style="text-align:right;"><%= link_to '&raquo; Formatos de Data', :action => 'date_formats' %></p>

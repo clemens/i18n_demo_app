@@ -1,18 +1,18 @@
 <html>
   <head>
-    <title>Localizing Rails - Demo Application</title>
+    <title>Localizando Rails - Aplicação de Demonstração</title>
     <%= stylesheet_link_tag 'application' %>
   </head>
   <body>
     <div id="page">
-      <h1>Localizing Rails<span id="claim">how to localize your app with Rails' new i18n features</span></h1>
+      <h1>Localizando Rails<span id="claim">como localizar sua aplicação com as novas funcionalidades de internacionalização do Rails</span></h1>
       <div id="navigation">
-        <h4 style="margin:0; margin-bottom:5px;">Contents</h4>
+        <h4 style="margin:0; margin-bottom:5px;">Conteúdo</h4>
         <ul>
-          <li><%= link_to "Introduction", :action => 'index' %></li>
-          <li><%= link_to "Setup", :action => 'setup' %></li>
-          <li><%= link_to "Date formats", :action => 'date_formats' %></li>
-          <li><%= link_to "Time formats", :action => 'time_formats' %></li>
+          <li><%= link_to "Introdução", :action => 'index' %></li>
+          <li><%= link_to "Configuração", :action => 'setup' %></li>
+          <li><%= link_to "Formatos de Data", :action => 'date_formats' %></li>
+          <li><%= link_to "Formatos de Hora", :action => 'time_formats' %></li>
           <li><%= link_to "DateHelper", :action => 'date_helper' %></li>
           <li><%= link_to "ActiveRecordHelper", :action => 'active_record_helper' %></li>
           <li><%= link_to "NumberHelper", :action => 'number_helper' %></li>
@@ -22,8 +22,9 @@
         <%= yield %>
       </div>
       <div id="footer">
-        <p>Localizing Rails - Demo Application</p>
+        <p>Localizando Rails - Aplicação de Demonstração</p>
         <p>&copy; 2008 Clemens Kofler &lt;<%= mail_to 'clemens@railway.at' %>&gt;</p>
+		<p>Traduzido para português brasileiro por <%= link_to 'Fabio Akita', 'http://www.akitaonrails.com/' %></p>
         <p><%= link_to 'www.railway.at - welcome aboard!', 'http://www.railway.at' %></p>
         <p style="position:absolute; bottom:25px; right:25px;"><%= link_to image_tag("http://i.creativecommons.org/l/by-nc-sa/2.0/at/88x31.png"), "http://creativecommons.org/licenses/by-nc-sa/2.0/at/" %></p>
       </div>
