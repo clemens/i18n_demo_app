@@ -23,7 +23,7 @@ I18n.backend.store_translations :'pt-BR', {
     :pm => ''
   },
 
-  # date helper distance in words
+  # date helper distanci em palavras
   :datetime => {
     :distance_in_words => {
       :half_a_minute       => 'meio minuto',
@@ -40,7 +40,7 @@ I18n.backend.store_translations :'pt-BR', {
     }
   },
 
-  # numbers
+  # numeros
   :number => {
     :format => {
       :precision => 3,
@@ -84,6 +84,16 @@ I18n.backend.store_translations :'pt-BR', {
       :less_than_or_equal_to => "precisa ser menor ou igual a {{count}}",
       :odd => "precisa ser ímpar",
       :even => "precisa ser par"
+    }
+  },
+  
+  # Plugin in_place_editing
+  :in_place_editing => {
+    :text => {
+      :cancel => "cancelar",
+      :loading => "carregando...",
+      :save => "salvar",
+      :saving => "salvando..."
     }
   }
 }

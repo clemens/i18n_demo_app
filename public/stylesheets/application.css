@@ -67,6 +67,7 @@ div#navigation ul {
 
 div#content {
   margin-left: 175px;
+  min-height: 250px;
 }
 
 div#footer {
