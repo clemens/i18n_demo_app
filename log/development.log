@@ -3198,3 +3198,383 @@ Rendering pages/date_helper
 Compiling template _run_erb_47app47views47pages47date_helper46html46erb
 Compiling template _run_erb_47app47views47layouts47application46html46erb
 Completed in 0.03256 (30 reqs/sec) | Rendering: 0.02594 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_helper]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:21:47) [GET]
+  Session ID: 5ec1abf66bd176fc0cd28b96777fc15d
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.03938 (25 reqs/sec) | Rendering: 0.03457 (87%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:21:52) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"index", "controller"=>"pages", "locale"=>"ja-JP"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.02074 (48 reqs/sec) | Rendering: 0.01682 (81%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:21:58) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"index", "controller"=>"pages", "locale"=>"en-US"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01268 (78 reqs/sec) | Rendering: 0.00880 (69%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:22:14) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"index", "controller"=>"pages", "locale"=>"ja-JP"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00993 (100 reqs/sec) | Rendering: 0.00606 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:26:06) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"index", "controller"=>"pages", "locale"=>"en-US"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00976 (102 reqs/sec) | Rendering: 0.00600 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:29:08) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"index", "controller"=>"pages", "locale"=>"ja-JP"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.07080 (14 reqs/sec) | Rendering: 0.06693 (94%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:29:15) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"index", "controller"=>"pages", "locale"=>"ja-JP"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01077 (92 reqs/sec) | Rendering: 0.00680 (63%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:29:22) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"index", "controller"=>"pages", "locale"=>"en-US"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01150 (86 reqs/sec) | Rendering: 0.00697 (60%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:29:33) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"index", "controller"=>"pages", "locale"=>"en-US"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01133 (88 reqs/sec) | Rendering: 0.00737 (65%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:29:36) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"index", "controller"=>"pages", "locale"=>"ja-JP"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01269 (78 reqs/sec) | Rendering: 0.00883 (69%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:32:19) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"index", "controller"=>"pages", "locale"=>"en-US"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01023 (97 reqs/sec) | Rendering: 0.00645 (63%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:32:26) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"index", "controller"=>"pages", "locale"=>"gibberish"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01097 (91 reqs/sec) | Rendering: 0.00706 (64%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:46:07) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"index", "controller"=>"pages", "locale"=>"gibberish"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01088 (91 reqs/sec) | Rendering: 0.00686 (63%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:46:10) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"index", "controller"=>"pages", "locale"=>"en-US"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01353 (73 reqs/sec) | Rendering: 0.00886 (65%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:46:13) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"index", "controller"=>"pages", "locale"=>"ja-JP"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01456 (68 reqs/sec) | Rendering: 0.00922 (63%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:46:55) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"index", "controller"=>"pages", "locale"=>"ja-JP"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01083 (92 reqs/sec) | Rendering: 0.00695 (64%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:47:00) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00950 (105 reqs/sec) | Rendering: 0.00589 (62%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:47:03) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00971 (102 reqs/sec) | Rendering: 0.00606 (62%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:47:07) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"index", "controller"=>"pages", "locale"=>"ja-JP"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00993 (100 reqs/sec) | Rendering: 0.00605 (60%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:47:08) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00968 (103 reqs/sec) | Rendering: 0.00602 (62%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:47:13) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"index", "controller"=>"pages", "locale"=>"ja-JP"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01102 (90 reqs/sec) | Rendering: 0.00715 (64%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-26 17:47:26) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.07339 (13 reqs/sec) | Rendering: 0.00755 (10%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-26 17:47:32) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"setup", "controller"=>"pages", "locale"=>"ja-JP"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01997 (50 reqs/sec) | Rendering: 0.00984 (49%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-26 17:47:37) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01484 (67 reqs/sec) | Rendering: 0.00671 (45%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-26 17:56:15) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"setup", "controller"=>"pages", "locale"=>"ja-JP"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01543 (64 reqs/sec) | Rendering: 0.00711 (46%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-26 17:56:18) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01468 (68 reqs/sec) | Rendering: 0.00660 (44%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-26 17:56:29) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"setup", "controller"=>"pages", "locale"=>"ja-JP"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01542 (64 reqs/sec) | Rendering: 0.00684 (44%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-26 17:56:58) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"setup", "controller"=>"pages", "locale"=>"ja-JP"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01637 (61 reqs/sec) | Rendering: 0.00778 (47%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-26 17:57:03) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"setup", "controller"=>"pages", "locale"=>"en-US"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.02010 (49 reqs/sec) | Rendering: 0.01159 (57%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-26 17:57:05) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"setup", "controller"=>"pages", "locale"=>"ja-JP"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01718 (58 reqs/sec) | Rendering: 0.00788 (45%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-26 17:57:15) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"authenticity_token"=>"b4b9cfffc2f41cf4a5a08d98716ae6637459264b", "action"=>"setup", "controller"=>"pages", "locale"=>"ja-JP"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01582 (63 reqs/sec) | Rendering: 0.00750 (47%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-26 17:57:30) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01552 (64 reqs/sec) | Rendering: 0.00728 (46%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-26 17:57:47) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"local"=>"ja-JP", "action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01671 (59 reqs/sec) | Rendering: 0.00759 (45%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup?local=ja-JP]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-26 17:57:58) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"action"=>"setup", "controller"=>"pages", "locale"=>"ja-JP"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01704 (58 reqs/sec) | Rendering: 0.00698 (40%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup?locale=ja-JP]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-26 17:58:04) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01494 (66 reqs/sec) | Rendering: 0.00677 (45%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-26 17:58:05) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01523 (65 reqs/sec) | Rendering: 0.00686 (45%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-26 17:58:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01538 (65 reqs/sec) | Rendering: 0.00688 (44%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-26 17:58:08) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFjNjNkYjhiOTY0YjUyNjk4OTRhOTI4ODE3MzQ1OWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1580f61af1873c7d3480ca764c76fd2d6d254919
+  Parameters: {"action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01508 (66 reqs/sec) | Rendering: 0.00694 (46%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
