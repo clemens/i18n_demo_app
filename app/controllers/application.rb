@@ -12,4 +12,13 @@ class ApplicationController < ActionController::Base
   # Uncomment this to filter the contents of submitted sensitive data parameters
   # from your application log (in this case, all fields with names like "password"). 
   # filter_parameter_logging :password
+  
+  before_filter :set_locale
+  def set_locale
+    locale = params[:locale] || 'gibberish'
+    I18n.locale = locale
+    I18n.populate do 
+      require "#{RAILS_ROOT}/config/locales/#{locale}.rb"
+    end
+  end
 end

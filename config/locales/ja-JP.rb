@@ -1,4 +1,4 @@
-I18n.backend.store_translations :'gibberish', {
+I18n.backend.store_translations :'ja-JP', {
   # date and time formats
   :date => {
     :formats => {

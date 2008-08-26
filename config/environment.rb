@@ -66,5 +66,9 @@ Rails::Initializer.run do |config|
   # config.active_record.observers = :cacher, :garbage_collector
 end
 
-I18n.default_locale = 'pt-BR'
-I18n.locale = 'pt-BR'
+
+
+#I18n.default_locale = 'pt-BR'
+#I18n.locale = 'pt-BR'
+I18n.default_locale = 'gibberish'
+#I18n.locale = 'gibberish'

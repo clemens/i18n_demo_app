@@ -44,15 +44,19 @@ code, blockquote pre {
   font-size: 0.7em;
 }
 
-div#page {
+div#blank_wrap {
   position: absolute;
   left: 50%;
   width: 990px;
   margin-left: -495px;
+}
+
+div#page{
   border: 2px solid black;
   background-color: #ffffff;
-  padding: 25px;
+  padding: 25px;	
 }
+
 
 div#navigation {
   float: left;

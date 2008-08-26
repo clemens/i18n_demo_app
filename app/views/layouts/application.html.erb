@@ -1,34 +1,43 @@
 <html>
   <head>
-    <title>Localizando Rails - Aplicação de Demonstração</title>
+    <title><%= I18n.t 'txt.main_title' %> - <%= I18n.t 'txt.app_name' %></title>
     <%= stylesheet_link_tag 'application' %>
+		<%= javascript_include_tag :defaults%>
   </head>
   <body>
-    <div id="page">
-      <h1>Localizando Rails<span id="claim">como localizar sua aplicação com as novas funcionalidades de internacionalização do Rails</span></h1>
-      <div id="navigation">
-        <h4 style="margin:0; margin-bottom:5px;">Conteúdo</h4>
-        <ul>
-          <li><%= link_to "Introdução", :action => 'index' %></li>
-          <li><%= link_to "Configuração", :action => 'setup' %></li>
-          <li><%= link_to "Formatos de Data", :action => 'date_formats' %></li>
-          <li><%= link_to "Formatos de Hora", :action => 'time_formats' %></li>
-          <li><%= link_to "DateHelper", :action => 'date_helper' %></li>
-          <li><%= link_to "ActiveRecordHelper", :action => 'active_record_helper' %></li>
-          <li><%= link_to "NumberHelper", :action => 'number_helper' %></li>
-          <li><%= link_to "InPlaceEditing", :action => 'in_place_editing' %></li>
-        </ul>
-      </div>
-      <div id="content">
-        <%= yield %>
-      </div>
-      <div id="footer">
-        <p>Localizando Rails - Aplicação de Demonstração</p>
-        <p>&copy; 2008 Clemens Kofler &lt;<%= mail_to 'clemens@railway.at' %>&gt;</p>
-		<p>Traduzido para português brasileiro por <%= link_to 'Fabio Akita', 'http://www.akitaonrails.com/' %></p>
-        <p><%= link_to 'www.railway.at - welcome aboard!', 'http://www.railway.at' %></p>
-        <p style="position:absolute; bottom:25px; right:25px;"><%= link_to image_tag("http://i.creativecommons.org/l/by-nc-sa/2.0/at/88x31.png"), "http://creativecommons.org/licenses/by-nc-sa/2.0/at/" %></p>
-      </div>
+		<div id="blank_wrap">
+
+		<% form_tag '' do %>
+			<%= select_tag("locale", options_for_select(%w[gibberish en-US pt-BR ja-JP de-AT], I18n.locale), { :index => nil, :onchange => 'this.form.submit()'}) %>
+		<% end %>
+		
+	    <div id="page">
+	      <h1><%= I18n.t 'txt.main_title' %><span id="claim"><%= I18n.t 'txt.sub_title' %></span></h1>
+	      <div id="navigation">
+	        <h4 style="margin:0; margin-bottom:5px;"><%= I18n.t 'txt.contents' %></h4>
+	        <ul>
+	          <li><%= link_to I18n.t 'txt.menu.introduction', :action => 'index' %></li>
+	          <li><%= link_to I18n.t 'txt.menu.setup', :action => 'setup' %></li>
+	          <li><%= link_to I18n.t 'txt.menu.date_formats', :action => 'date_formats' %></li>
+	          <li><%= link_to I18n.t 'txt.menu.time_formats', :action => 'time_formats' %></li>
+	          <li><%= link_to "DateHelper", :action => 'date_helper' %></li>
+	          <li><%= link_to "ActiveRecordHelper", :action => 'active_record_helper' %></li>
+	          <li><%= link_to "NumberHelper", :action => 'number_helper' %></li>
+	          <li><%= link_to "InPlaceEditing", :action => 'in_place_editing' %></li>
+	        </ul>
+	      </div>
+	      <div id="content">
+	        <%= yield %>
+	      </div>
+	      <div id="footer">
+	        <p><%= I18n.t 'txt.main_title' %> - <%= I18n.t 'txt.app_name' %></p>
+	        <p>&copy; 2008 Clemens Kofler &lt;<%= mail_to 'clemens@railway.at' %>&gt;</p>
+			<p>Traduzido para português brasileiro por <%= link_to 'Fabio Akita', 'http://www.akitaonrails.com/' %></p>
+			<p>Content Translation work & Japanese - Simon Tokumine & Masayuki Nakamura</p>
+	        <p><%= link_to 'www.railway.at - welcome aboard!', 'http://www.railway.at' %></p>
+	        <p style="position:absolute; bottom:25px; right:25px;"><%= link_to image_tag("http://i.creativecommons.org/l/by-nc-sa/2.0/at/88x31.png"), "http://creativecommons.org/licenses/by-nc-sa/2.0/at/" %></p>
+	      </div>
+			</div>
     </div>
   </body>
 </html>
