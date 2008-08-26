@@ -1,4 +1,4 @@
-<h2>Formatos de Data</h2>
+<h2><%= I18n.t('txt.menu.date_formats') %></h2>
 <div>
   <table>
     <tr>
@@ -26,7 +26,7 @@
       <td><%= Date.today.to_s(:only_day) %></td>
     </tr>
   </table>
-  <p>Formatos padrão do Rails (Date::DATE_FORMATS) ainda funcionam:</p>
+  <p><%= I18n.t('txt.date_formats.rails_standards_work') %></p>
   <table>
     <tr>
       <th scope="row">Date.today.to_s(:db)</th>
@@ -43,4 +43,4 @@
   </table>
 </div>
 
-<p style="text-align:right;"><%= link_to '&raquo; Formatos de Hora', :action => 'time_formats' %></p>
+<p style="text-align:right;"><%= link_to "&raquo; #{I18n.t('txt.menu.date_formats')}" , :action => 'time_formats' %></p>

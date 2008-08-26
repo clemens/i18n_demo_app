@@ -1,7 +1,7 @@
-<h2>Sobre esta aplicação de demonstração</h2>
+<h2><%= I18n.t 'txt.about.title' %></h2>
 <div>
-  <p>Esta aplicação de demonstração foi escrita por <%= mail_to "clemens@railway.at", "Clemens Kofler" %> e traduzida para português brasileiro por <%= mail_to "fabioakita@gmail.com", "Fabio Akita" %>.</p>
-  <p>Se tiver qualquer feedback, por favor sinta-se à vontade para me escrever. Também visite  <%= link_to "www.railway.at", "http://www.railway.at" %> onde eu blogo regularmente sobre Rails e outras coisas.</p>
-  <p>Esta aplicação de demonstração e seu conteúdo estão licenciados sobre a <%= link_to "Creative Commons Attribution Noncommercial Share Alike License", "http://creativecommons.org/licenses/by-nc-sa/2.0/at/" %>. Se quiser utilizar isso de maneiras proibidas pela licença, por favor entre em contato comigo e peça minha permissão.</p>
+  <p><%= I18n.t 'txt.about.author', :mail_1 => mail_to("clemens@railway.at", "Clemens Kofler"), :mail_2 => mail_to("fabioakita@gmail.com", "Fabio Akita") %></p>
+  <p><%= I18n.t 'txt.about.feedback', :blog_href => link_to("www.railway.at", "http://www.railway.at") %></p>
+  <p><%= I18n.t 'txt.about.licence', :licence_href => link_to("Creative Commons Attribution Noncommercial Share Alike License", "http://creativecommons.org/licenses/by-nc-sa/2.0/at/") %></p>
   <p><%= link_to image_tag("http://i.creativecommons.org/l/by-nc-sa/2.0/at/88x31.png"), "http://creativecommons.org/licenses/by-nc-sa/2.0/at/" %></p>
 </div>

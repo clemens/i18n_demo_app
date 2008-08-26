@@ -3198,3 +3198,1581 @@ Rendering pages/date_helper
 Compiling template _run_erb_47app47views47pages47date_helper46html46erb
 Compiling template _run_erb_47app47views47layouts47application46html46erb
 Completed in 0.03256 (30 reqs/sec) | Rendering: 0.02594 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_helper]
+
+
+Processing PagesController#date_helper (for 127.0.0.1 at 2008-08-26 17:40:06) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"date_helper", "controller"=>"pages", "locale"=>"gibberish"}
+Rendering template within layouts/application
+Rendering pages/date_helper
+Compiling template _run_erb_47app47views47pages47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.07193 (13 reqs/sec) | Rendering: 0.06550 (91%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_helper]
+
+
+Processing PagesController#date_helper (for 127.0.0.1 at 2008-08-26 17:40:10) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"date_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_helper
+Compiling template _run_erb_47app47views47pages47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.02900 (34 reqs/sec) | Rendering: 0.02279 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_helper]
+
+
+Processing PagesController#date_helper (for 127.0.0.1 at 2008-08-26 17:40:12) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"date_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_helper
+Compiling template _run_erb_47app47views47pages47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.03019 (33 reqs/sec) | Rendering: 0.02385 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_helper]
+
+
+Processing PagesController#date_helper (for 127.0.0.1 at 2008-08-26 17:40:14) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"date_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_helper
+Compiling template _run_erb_47app47views47pages47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.03482 (28 reqs/sec) | Rendering: 0.02830 (81%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_helper]
+
+
+Processing PagesController#date_helper (for 127.0.0.1 at 2008-08-26 17:40:16) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"date_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_helper
+Compiling template _run_erb_47app47views47pages47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.09991 (10 reqs/sec) | Rendering: 0.09450 (94%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_helper]
+
+
+Processing PagesController#date_helper (for 127.0.0.1 at 2008-08-26 17:40:21) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"date_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_helper
+Compiling template _run_erb_47app47views47pages47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.03076 (32 reqs/sec) | Rendering: 0.02422 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_helper]
+
+
+Processing PagesController#date_helper (for 127.0.0.1 at 2008-08-26 17:40:23) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"date_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_helper
+Compiling template _run_erb_47app47views47pages47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.02784 (35 reqs/sec) | Rendering: 0.02256 (81%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_helper]
+
+
+Processing PagesController#date_helper (for 127.0.0.1 at 2008-08-26 17:41:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"date_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_helper
+Compiling template _run_erb_47app47views47pages47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.03422 (29 reqs/sec) | Rendering: 0.02738 (80%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_helper]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:41:29) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01065 (93 reqs/sec) | Rendering: 0.00684 (64%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:41:32) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"index", "controller"=>"pages", "locale"=>"en-US"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01129 (88 reqs/sec) | Rendering: 0.00736 (65%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:41:34) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"index", "controller"=>"pages", "locale"=>"gibberish"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01048 (95 reqs/sec) | Rendering: 0.00655 (62%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:41:37) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.00975 (102 reqs/sec) | Rendering: 0.00601 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:46:08) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"index", "controller"=>"pages", "locale"=>"en-US"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01121 (89 reqs/sec) | Rendering: 0.00734 (65%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-26 17:46:10) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.02578 (38 reqs/sec) | Rendering: 0.02118 (82%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-26 17:46:18) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"about", "controller"=>"pages", "locale"=>"en-US"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01219 (82 reqs/sec) | Rendering: 0.00695 (57%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-26 17:46:20) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"about", "controller"=>"pages", "locale"=>"pt-BR"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01196 (83 reqs/sec) | Rendering: 0.00729 (60%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-26 17:47:02) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"about", "controller"=>"pages", "locale"=>"pt-BR"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01102 (90 reqs/sec) | Rendering: 0.00705 (64%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-26 17:47:13) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"about", "controller"=>"pages", "locale"=>"pt-BR"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01973 (50 reqs/sec) | Rendering: 0.01482 (75%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-26 17:47:16) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01172 (85 reqs/sec) | Rendering: 0.00777 (66%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-26 17:47:22) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"about", "controller"=>"pages", "locale"=>"pt-BR"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01245 (80 reqs/sec) | Rendering: 0.00799 (64%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-26 17:47:26) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01143 (87 reqs/sec) | Rendering: 0.00759 (66%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-26 17:47:26) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01411 (70 reqs/sec) | Rendering: 0.00751 (53%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-26 17:48:12) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01162 (86 reqs/sec) | Rendering: 0.00762 (65%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-26 17:51:08) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01166 (85 reqs/sec) | Rendering: 0.00780 (66%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-26 17:51:10) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01221 (81 reqs/sec) | Rendering: 0.00745 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-26 17:51:13) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"about", "controller"=>"pages", "locale"=>"pt-BR"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01501 (66 reqs/sec) | Rendering: 0.00839 (55%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-26 17:53:25) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"about", "controller"=>"pages", "locale"=>"pt-BR"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+ERROR: compiling _run_erb_47app47views47pages47about46html46erb RAISED compile error
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/about.html.erb:4: syntax error, unexpected tSTRING_BEG, expecting kDO or '{' or '('
+@output_buffer.concat "  <p>"; @output_buffer.concat(( I18n.t 'txt.about.feedback', :address => link_to "www.railway.at", "http://www.railway.at" ).to_s); @output_buffer.concat "</p>\n"
+                                                                                                         ^
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/about.html.erb:4: syntax error, unexpected ',', expecting ')'
+@output_buffer.concat "  <p>"; @output_buffer.concat(( I18n.t 'txt.about.feedback', :address => link_to "www.railway.at", "http://www.railway.at" ).to_s); @output_buffer.concat "</p>\n"
+                                                                                                                         ^
+Function body:           def _run_erb_47app47views47pages47about46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h2>"; @output_buffer.concat(( I18n.t 'txt.about.title' ).to_s); @output_buffer.concat "</h2>\n"
+@output_buffer.concat "<div>\n"
+@output_buffer.concat "  <p>"; @output_buffer.concat(( I18n.t 'txt.about.author', :mail_1 => mail_to("clemens@railway.at", "Clemens Kofler"), :mail_2 => mail_to("fabioakita@gmail.com", "Fabio Akita") ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "  <p>"; @output_buffer.concat(( I18n.t 'txt.about.feedback', :address => link_to "www.railway.at", "http://www.railway.at" ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "  <p>"; @output_buffer.concat(( I18n.t 'txt.about.licence' ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "  <p>"; @output_buffer.concat(( link_to image_tag("http://i.creativecommons.org/l/by-nc-sa/2.0/at/88x31.png"), "http://creativecommons.org/licenses/by-nc-sa/2.0/at/" ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "</div>"; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/about.html.erb:10:in `compile!'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/renderable.rb:51:in `compile'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/renderable.rb:49:in `synchronize'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/renderable.rb:49:in `compile'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/renderable.rb:27:in `render'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/template.rb:66:in `render_template'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/base.rb:363:in `render_file'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:1145:in `render_for_file'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:866:in `render_with_no_layout'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:1194:in `default_render'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:1205:in `perform_action_without_filters'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/filters.rb:604:in `call_filters'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/filters.rb:597:in `perform_action_without_benchmark'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/rescue.rb:205:in `perform_action_without_caching'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:548:in `send'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+/usr/local/lib/ruby/1.8/monitor.rb:238:in `synchronize'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/filters.rb:593:in `process_without_session_management_support'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:409:in `process'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:151:in `handle_request'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:116:in `dispatch_cgi'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:33:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load_without_new_constant_marking'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/railties/lib/commands/server.rb:49
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/about.html.erb:4: syntax error, unexpected tSTRING_BEG, expecting kDO or '{' or '('
+@output_buffer.concat "  <p>"; @output_buffer.concat(( I18n.t 'txt.about.feedback', :address => link_to "www.railway.at", "http://www.railway.at" ).to_s); @output_buffer.concat "</p>\n"
+                                                                                                         ^
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/about.html.erb:4: syntax error, unexpected ',', expecting ')'
+@output_buffer.concat "  <p>"; @output_buffer.concat(( I18n.t 'txt.about.feedback', :address => link_to "www.railway.at", "http://www.railway.at" ).to_s); @output_buffer.concat "</p>\n"
+                                                                                                                         ^) on line #4 of app/views//about.html.erb:
+1: <h2><%= I18n.t 'txt.about.title' %></h2>
+2: <div>
+3:   <p><%= I18n.t 'txt.about.author', :mail_1 => mail_to("clemens@railway.at", "Clemens Kofler"), :mail_2 => mail_to("fabioakita@gmail.com", "Fabio Akita") %></p>
+4:   <p><%= I18n.t 'txt.about.feedback', :address => link_to "www.railway.at", "http://www.railway.at" %></p>
+5:   <p><%= I18n.t 'txt.about.licence' %></p>
+6:   <p><%= link_to image_tag("http://i.creativecommons.org/l/by-nc-sa/2.0/at/88x31.png"), "http://creativecommons.org/licenses/by-nc-sa/2.0/at/" %></p>
+7: </div>
+    app/views/pages/about.html.erb:10:in `compile!'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:51:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:49:in `synchronize'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:49:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:27:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:66:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:363:in `render_file'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1145:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:866:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1194:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1205:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:604:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:597:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:205:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    /usr/local/lib/ruby/1.8/monitor.rb:238:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:593:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:409:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:151:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:116:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:33:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47template_error46erb
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_trace46erb
+Rendered /Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (0.03190)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_request_and_response46erb
+Rendered /Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.00117)
+Rendering /Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47layout46erb
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-26 17:53:32) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"about", "controller"=>"pages", "locale"=>"pt-BR"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+ERROR: compiling _run_erb_47app47views47pages47about46html46erb RAISED compile error
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/about.html.erb:4: syntax error, unexpected tSTRING_BEG, expecting kDO or '{' or '('
+@output_buffer.concat "  <p>"; @output_buffer.concat(( I18n.t 'txt.about.feedback', :address => link_to "www.railway.at", "http://www.railway.at" ).to_s); @output_buffer.concat "</p>\n"
+                                                                                                         ^
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/about.html.erb:4: syntax error, unexpected ',', expecting ')'
+@output_buffer.concat "  <p>"; @output_buffer.concat(( I18n.t 'txt.about.feedback', :address => link_to "www.railway.at", "http://www.railway.at" ).to_s); @output_buffer.concat "</p>\n"
+                                                                                                                         ^
+Function body:           def _run_erb_47app47views47pages47about46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h2>"; @output_buffer.concat(( I18n.t 'txt.about.title' ).to_s); @output_buffer.concat "</h2>\n"
+@output_buffer.concat "<div>\n"
+@output_buffer.concat "  <p>"; @output_buffer.concat(( I18n.t 'txt.about.author', :mail_1 => mail_to("clemens@railway.at", "Clemens Kofler"), :mail_2 => mail_to("fabioakita@gmail.com", "Fabio Akita") ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "  <p>"; @output_buffer.concat(( I18n.t 'txt.about.feedback', :address => link_to "www.railway.at", "http://www.railway.at" ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "  <p>"; @output_buffer.concat(( I18n.t 'txt.about.licence' ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "  <p>"; @output_buffer.concat(( link_to image_tag("http://i.creativecommons.org/l/by-nc-sa/2.0/at/88x31.png"), "http://creativecommons.org/licenses/by-nc-sa/2.0/at/" ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "</div>"; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/about.html.erb:10:in `compile!'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/renderable.rb:51:in `compile'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/renderable.rb:49:in `synchronize'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/renderable.rb:49:in `compile'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/renderable.rb:27:in `render'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/template.rb:66:in `render_template'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/base.rb:363:in `render_file'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:1145:in `render_for_file'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:866:in `render_with_no_layout'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:1194:in `default_render'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:1205:in `perform_action_without_filters'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/filters.rb:604:in `call_filters'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/filters.rb:597:in `perform_action_without_benchmark'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/rescue.rb:205:in `perform_action_without_caching'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:548:in `send'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+/usr/local/lib/ruby/1.8/monitor.rb:238:in `synchronize'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/filters.rb:593:in `process_without_session_management_support'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:409:in `process'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:151:in `handle_request'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:116:in `dispatch_cgi'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:33:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load_without_new_constant_marking'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/railties/lib/commands/server.rb:49
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/about.html.erb:4: syntax error, unexpected tSTRING_BEG, expecting kDO or '{' or '('
+@output_buffer.concat "  <p>"; @output_buffer.concat(( I18n.t 'txt.about.feedback', :address => link_to "www.railway.at", "http://www.railway.at" ).to_s); @output_buffer.concat "</p>\n"
+                                                                                                         ^
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/about.html.erb:4: syntax error, unexpected ',', expecting ')'
+@output_buffer.concat "  <p>"; @output_buffer.concat(( I18n.t 'txt.about.feedback', :address => link_to "www.railway.at", "http://www.railway.at" ).to_s); @output_buffer.concat "</p>\n"
+                                                                                                                         ^) on line #4 of app/views//about.html.erb:
+1: <h2><%= I18n.t 'txt.about.title' %></h2>
+2: <div>
+3:   <p><%= I18n.t 'txt.about.author', :mail_1 => mail_to("clemens@railway.at", "Clemens Kofler"), :mail_2 => mail_to("fabioakita@gmail.com", "Fabio Akita") %></p>
+4:   <p><%= I18n.t 'txt.about.feedback', :address => link_to "www.railway.at", "http://www.railway.at" %></p>
+5:   <p><%= I18n.t 'txt.about.licence' %></p>
+6:   <p><%= link_to image_tag("http://i.creativecommons.org/l/by-nc-sa/2.0/at/88x31.png"), "http://creativecommons.org/licenses/by-nc-sa/2.0/at/" %></p>
+7: </div>
+    app/views/pages/about.html.erb:10:in `compile!'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:51:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:49:in `synchronize'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:49:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:27:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:66:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:363:in `render_file'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1145:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:866:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1194:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1205:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:604:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:597:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:205:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    /usr/local/lib/ruby/1.8/monitor.rb:238:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:593:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:409:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:151:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:116:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:33:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47template_error46erb
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_trace46erb
+Rendered /Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (0.02724)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_request_and_response46erb
+Rendered /Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.00101)
+Rendering /Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47layout46erb
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-26 17:53:34) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"about", "controller"=>"pages", "locale"=>"pt-BR"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+ERROR: compiling _run_erb_47app47views47pages47about46html46erb RAISED compile error
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/about.html.erb:4: syntax error, unexpected tSTRING_BEG, expecting kDO or '{' or '('
+@output_buffer.concat "  <p>"; @output_buffer.concat(( I18n.t 'txt.about.feedback', :address => link_to "www.railway.at", "http://www.railway.at" ).to_s); @output_buffer.concat "</p>\n"
+                                                                                                         ^
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/about.html.erb:4: syntax error, unexpected ',', expecting ')'
+@output_buffer.concat "  <p>"; @output_buffer.concat(( I18n.t 'txt.about.feedback', :address => link_to "www.railway.at", "http://www.railway.at" ).to_s); @output_buffer.concat "</p>\n"
+                                                                                                                         ^
+Function body:           def _run_erb_47app47views47pages47about46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h2>"; @output_buffer.concat(( I18n.t 'txt.about.title' ).to_s); @output_buffer.concat "</h2>\n"
+@output_buffer.concat "<div>\n"
+@output_buffer.concat "  <p>"; @output_buffer.concat(( I18n.t 'txt.about.author', :mail_1 => mail_to("clemens@railway.at", "Clemens Kofler"), :mail_2 => mail_to("fabioakita@gmail.com", "Fabio Akita") ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "  <p>"; @output_buffer.concat(( I18n.t 'txt.about.feedback', :address => link_to "www.railway.at", "http://www.railway.at" ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "  <p>"; @output_buffer.concat(( I18n.t 'txt.about.licence' ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "  <p>"; @output_buffer.concat(( link_to image_tag("http://i.creativecommons.org/l/by-nc-sa/2.0/at/88x31.png"), "http://creativecommons.org/licenses/by-nc-sa/2.0/at/" ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "</div>"; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/about.html.erb:10:in `compile!'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/renderable.rb:51:in `compile'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/renderable.rb:49:in `synchronize'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/renderable.rb:49:in `compile'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/renderable.rb:27:in `render'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/template.rb:66:in `render_template'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/base.rb:363:in `render_file'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:1145:in `render_for_file'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:866:in `render_with_no_layout'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:1194:in `default_render'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:1205:in `perform_action_without_filters'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/filters.rb:604:in `call_filters'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/filters.rb:597:in `perform_action_without_benchmark'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/rescue.rb:205:in `perform_action_without_caching'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:548:in `send'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+/usr/local/lib/ruby/1.8/monitor.rb:238:in `synchronize'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/filters.rb:593:in `process_without_session_management_support'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:409:in `process'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:151:in `handle_request'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:116:in `dispatch_cgi'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:33:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load_without_new_constant_marking'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/railties/lib/commands/server.rb:49
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/about.html.erb:4: syntax error, unexpected tSTRING_BEG, expecting kDO or '{' or '('
+@output_buffer.concat "  <p>"; @output_buffer.concat(( I18n.t 'txt.about.feedback', :address => link_to "www.railway.at", "http://www.railway.at" ).to_s); @output_buffer.concat "</p>\n"
+                                                                                                         ^
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/about.html.erb:4: syntax error, unexpected ',', expecting ')'
+@output_buffer.concat "  <p>"; @output_buffer.concat(( I18n.t 'txt.about.feedback', :address => link_to "www.railway.at", "http://www.railway.at" ).to_s); @output_buffer.concat "</p>\n"
+                                                                                                                         ^) on line #4 of app/views//about.html.erb:
+1: <h2><%= I18n.t 'txt.about.title' %></h2>
+2: <div>
+3:   <p><%= I18n.t 'txt.about.author', :mail_1 => mail_to("clemens@railway.at", "Clemens Kofler"), :mail_2 => mail_to("fabioakita@gmail.com", "Fabio Akita") %></p>
+4:   <p><%= I18n.t 'txt.about.feedback', :address => link_to "www.railway.at", "http://www.railway.at" %></p>
+5:   <p><%= I18n.t 'txt.about.licence' %></p>
+6:   <p><%= link_to image_tag("http://i.creativecommons.org/l/by-nc-sa/2.0/at/88x31.png"), "http://creativecommons.org/licenses/by-nc-sa/2.0/at/" %></p>
+7: </div>
+    app/views/pages/about.html.erb:10:in `compile!'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:51:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:49:in `synchronize'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:49:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:27:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:66:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:363:in `render_file'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1145:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:866:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1194:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1205:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:604:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:597:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:205:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    /usr/local/lib/ruby/1.8/monitor.rb:238:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:593:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:409:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:151:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:116:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:33:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47template_error46erb
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_trace46erb
+Rendered /Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (0.03154)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_request_and_response46erb
+Rendered /Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.00153)
+Rendering /Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47layout46erb
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-26 17:53:48) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"about", "controller"=>"pages", "locale"=>"pt-BR"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01300 (76 reqs/sec) | Rendering: 0.00911 (70%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-26 17:55:01) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"about", "controller"=>"pages", "locale"=>"pt-BR"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01188 (84 reqs/sec) | Rendering: 0.00773 (65%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-26 17:56:24) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"about", "controller"=>"pages", "locale"=>"pt-BR"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01414 (70 reqs/sec) | Rendering: 0.00944 (66%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-26 17:56:29) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"about", "controller"=>"pages", "locale"=>"gibberish"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01889 (52 reqs/sec) | Rendering: 0.01400 (74%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 17:56:32) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01093 (91 reqs/sec) | Rendering: 0.00655 (59%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 18:00:38) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01194 (83 reqs/sec) | Rendering: 0.00747 (62%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#active_record_helper (for 127.0.0.1 at 2008-08-26 18:00:42) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"active_record_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/active_record_helper
+Compiling template _run_erb_47app47views47pages47active_record_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01085 (92 reqs/sec) | Rendering: 0.00714 (65%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/active_record_helper]
+
+
+Processing PagesController#active_record_helper (for 127.0.0.1 at 2008-08-26 18:00:46) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"active_record_helper", "controller"=>"pages", "locale"=>"pt-BR"}
+Rendering template within layouts/application
+Rendering pages/active_record_helper
+Compiling template _run_erb_47app47views47pages47active_record_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01224 (81 reqs/sec) | Rendering: 0.00772 (63%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/active_record_helper]
+
+
+Processing PagesController#active_record_helper (for 127.0.0.1 at 2008-08-26 18:00:49) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"active_record_helper", "controller"=>"pages", "locale"=>"gibberish"}
+Rendering template within layouts/application
+Rendering pages/active_record_helper
+Compiling template _run_erb_47app47views47pages47active_record_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01233 (81 reqs/sec) | Rendering: 0.00778 (63%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/active_record_helper]
+
+
+Processing PagesController#active_record_helper (for 127.0.0.1 at 2008-08-26 18:01:43) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"active_record_helper", "controller"=>"pages", "locale"=>"gibberish"}
+Rendering template within layouts/application
+Rendering pages/active_record_helper
+Compiling template _run_erb_47app47views47pages47active_record_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01942 (51 reqs/sec) | Rendering: 0.01454 (74%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/active_record_helper]
+
+
+Processing PagesController#active_record_helper (for 127.0.0.1 at 2008-08-26 18:01:48) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"active_record_helper", "controller"=>"pages", "locale"=>"pt-BR"}
+Rendering template within layouts/application
+Rendering pages/active_record_helper
+Compiling template _run_erb_47app47views47pages47active_record_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01235 (80 reqs/sec) | Rendering: 0.00761 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/active_record_helper]
+
+
+Processing PagesController#active_record_helper (for 127.0.0.1 at 2008-08-26 18:01:55) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"active_record_helper", "controller"=>"pages", "locale"=>"gibberish"}
+Rendering template within layouts/application
+Rendering pages/active_record_helper
+Compiling template _run_erb_47app47views47pages47active_record_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01213 (82 reqs/sec) | Rendering: 0.00736 (60%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/active_record_helper]
+
+
+Processing PagesController#active_record_helper (for 127.0.0.1 at 2008-08-26 18:01:58) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"active_record_helper", "controller"=>"pages", "locale"=>"ja-JP"}
+Rendering template within layouts/application
+Rendering pages/active_record_helper
+Compiling template _run_erb_47app47views47pages47active_record_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01239 (80 reqs/sec) | Rendering: 0.00774 (62%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/active_record_helper]
+
+
+Processing PagesController#active_record_helper (for 127.0.0.1 at 2008-08-26 18:02:01) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"active_record_helper", "controller"=>"pages", "locale"=>"en-US"}
+Rendering template within layouts/application
+Rendering pages/active_record_helper
+Compiling template _run_erb_47app47views47pages47active_record_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01241 (80 reqs/sec) | Rendering: 0.00733 (59%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/active_record_helper]
+
+
+Processing PagesController#date_formats (for 127.0.0.1 at 2008-08-26 18:05:01) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"date_formats", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_formats
+Compiling template _run_erb_47app47views47pages47date_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01697 (58 reqs/sec) | Rendering: 0.01166 (68%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_formats]
+
+
+Processing PagesController#date_formats (for 127.0.0.1 at 2008-08-26 18:05:05) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"date_formats", "controller"=>"pages", "locale"=>"pt-BR"}
+Rendering template within layouts/application
+Rendering pages/date_formats
+Compiling template _run_erb_47app47views47pages47date_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01868 (53 reqs/sec) | Rendering: 0.01221 (65%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_formats]
+
+
+Processing PagesController#date_formats (for 127.0.0.1 at 2008-08-26 18:05:17) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"date_formats", "controller"=>"pages", "locale"=>"gibberish"}
+Rendering template within layouts/application
+Rendering pages/date_formats
+Compiling template _run_erb_47app47views47pages47date_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01802 (55 reqs/sec) | Rendering: 0.01188 (65%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_formats]
+
+
+Processing PagesController#date_formats (for 127.0.0.1 at 2008-08-26 18:05:27) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"date_formats", "controller"=>"pages", "locale"=>"pt-BR"}
+Rendering template within layouts/application
+Rendering pages/date_formats
+Compiling template _run_erb_47app47views47pages47date_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01688 (59 reqs/sec) | Rendering: 0.01170 (69%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_formats]
+
+
+Processing PagesController#date_helper (for 127.0.0.1 at 2008-08-26 18:07:06) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"date_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_helper
+Compiling template _run_erb_47app47views47pages47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.05376 (18 reqs/sec) | Rendering: 0.04793 (89%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_helper]
+
+
+Processing PagesController#date_helper (for 127.0.0.1 at 2008-08-26 18:07:11) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"date_helper", "controller"=>"pages", "locale"=>"pt-BR"}
+Rendering template within layouts/application
+Rendering pages/date_helper
+Compiling template _run_erb_47app47views47pages47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.03149 (31 reqs/sec) | Rendering: 0.02475 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_helper]
+
+
+Processing PagesController#date_helper (for 127.0.0.1 at 2008-08-26 18:13:41) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"date_helper", "controller"=>"pages", "locale"=>"pt-BR"}
+Rendering template within layouts/application
+Rendering pages/date_helper
+Compiling template _run_erb_47app47views47pages47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.05626 (17 reqs/sec) | Rendering: 0.04954 (88%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_helper]
+
+
+Processing PagesController#date_helper (for 127.0.0.1 at 2008-08-26 18:13:46) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"date_helper", "controller"=>"pages", "locale"=>"gibberish"}
+Rendering template within layouts/application
+Rendering pages/date_helper
+Compiling template _run_erb_47app47views47pages47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.03001 (33 reqs/sec) | Rendering: 0.02312 (77%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_helper]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-26 18:13:49) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01861 (53 reqs/sec) | Rendering: 0.00856 (45%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-26 18:13:52) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01280 (78 reqs/sec) | Rendering: 0.00773 (60%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 18:13:54) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+ERROR: compiling _run_erb_47app47views47pages47index46html46erb RAISED compile error
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/index.html.erb:6: unknown regexp option - p
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/index.html.erb:6: unmatched ): /p>
+  <p><%= I18n.t 'txt.index.story_so_far' ).to_s); @output_buffer.concat "</
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/index.html.erb:6: syntax error, unexpected $undefined
+  <p><%= I18n.t 'txt.index.story_so_far' ).to_s); @output_buffer.concat "</p>\n"
+                                                                              ^
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/index.html.erb:9: unknown regexp option - p
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/index.html.erb:9: unterminated string meets end of file
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/index.html.erb:9: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_47app47views47pages47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h2>"; @output_buffer.concat(( I18n.t 'txt.menu.introduction' ).to_s); @output_buffer.concat "</h2>\n"
+@output_buffer.concat "<div>\n"
+@output_buffer.concat "  <p>"; @output_buffer.concat(( I18n.t 'txt.index.introduction', 
+				:sven_blog => link_to("Sven Fuchs", "http://www.artweb-design.de/"), 
+				:sven_github => link_to("outros", "http://github.com/svenfuchs/i18n/tree/48ff00d2af07693171ec341500537b30e23e83bc/README.textile")</p>
+  <p><%= I18n.t 'txt.index.story_so_far' ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p style=\"text-align:right;\">"; @output_buffer.concat(( link_to "&raquo; #{I18n.t 'txt.menu.setup'}", :action => 'setup' ).to_s); @output_buffer.concat "</p>"; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/index.html.erb:9:in `compile!'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/renderable.rb:51:in `compile'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/renderable.rb:49:in `synchronize'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/renderable.rb:49:in `compile'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/renderable.rb:27:in `render'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/template.rb:66:in `render_template'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/base.rb:363:in `render_file'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:1145:in `render_for_file'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:866:in `render_with_no_layout'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:1194:in `default_render'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:1205:in `perform_action_without_filters'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/filters.rb:604:in `call_filters'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/filters.rb:597:in `perform_action_without_benchmark'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/rescue.rb:205:in `perform_action_without_caching'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:548:in `send'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+/usr/local/lib/ruby/1.8/monitor.rb:238:in `synchronize'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/filters.rb:593:in `process_without_session_management_support'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/base.rb:409:in `process'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:151:in `handle_request'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:116:in `dispatch_cgi'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:33:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load_without_new_constant_marking'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/railties/lib/commands/server.rb:49
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/index.html.erb:6: unknown regexp option - p
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/index.html.erb:6: unmatched ): /p>
+  <p><%= I18n.t 'txt.index.story_so_far' ).to_s); @output_buffer.concat "</
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/index.html.erb:6: syntax error, unexpected $undefined
+  <p><%= I18n.t 'txt.index.story_so_far' ).to_s); @output_buffer.concat "</p>\n"
+                                                                              ^
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/index.html.erb:9: unknown regexp option - p
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/index.html.erb:9: unterminated string meets end of file
+/Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/app/views/pages/index.html.erb:9: syntax error, unexpected $end, expecting ')') on line #6 of app/views//index.html.erb:
+3:   <p><%= I18n.t 'txt.index.introduction', 
+4: 				:sven_blog => link_to("Sven Fuchs", "http://www.artweb-design.de/"), 
+5: 				:sven_github => link_to("outros", "http://github.com/svenfuchs/i18n/tree/48ff00d2af07693171ec341500537b30e23e83bc/README.textile")</p>
+6:   <p><%= I18n.t 'txt.index.story_so_far' %></p>
+7: </div>
+8: 
+9: <p style="text-align:right;"><%= link_to "&raquo; #{I18n.t 'txt.menu.setup'}", :action => 'setup' %></p>
+    app/views/pages/index.html.erb:9:in `compile!'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:51:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:49:in `synchronize'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:49:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:27:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:66:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:363:in `render_file'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1145:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:866:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1194:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1205:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:604:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:597:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:205:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    /usr/local/lib/ruby/1.8/monitor.rb:238:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:593:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:409:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:151:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:116:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:33:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47template_error46erb
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_trace46erb
+Rendered /Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (0.09444)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_request_and_response46erb
+Rendered /Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.00086)
+Rendering /Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47layout46erb
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 18:15:41) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01097 (91 reqs/sec) | Rendering: 0.00672 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 18:15:46) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"index", "controller"=>"pages", "locale"=>"en-US"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01249 (80 reqs/sec) | Rendering: 0.00787 (63%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 18:15:53) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"index", "controller"=>"pages", "locale"=>"gibberish"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01125 (88 reqs/sec) | Rendering: 0.00743 (66%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 18:15:56) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"index", "controller"=>"pages", "locale"=>"pt-BR"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01242 (80 reqs/sec) | Rendering: 0.00770 (62%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 18:17:47) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"index", "controller"=>"pages", "locale"=>"pt-BR"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01150 (86 reqs/sec) | Rendering: 0.00768 (66%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 18:17:53) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"index", "controller"=>"pages", "locale"=>"gibberish"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01238 (80 reqs/sec) | Rendering: 0.00787 (63%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 18:23:31) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"index", "controller"=>"pages", "locale"=>"gibberish"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01155 (86 reqs/sec) | Rendering: 0.00770 (66%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-26 18:23:34) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01967 (50 reqs/sec) | Rendering: 0.00970 (49%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#date_formats (for 127.0.0.1 at 2008-08-26 18:23:36) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"date_formats", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_formats
+Compiling template _run_erb_47app47views47pages47date_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01719 (58 reqs/sec) | Rendering: 0.01231 (71%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_formats]
+
+
+Processing PagesController#time_formats (for 127.0.0.1 at 2008-08-26 18:23:38) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"time_formats", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/time_formats
+Compiling template _run_erb_47app47views47pages47time_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01480 (67 reqs/sec) | Rendering: 0.00994 (67%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/time_formats]
+
+
+Processing PagesController#in_place_editing (for 127.0.0.1 at 2008-08-26 18:24:19) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"in_place_editing", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/in_place_editing
+Compiling template _run_erb_47app47views47pages47in_place_editing46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.02149 (46 reqs/sec) | Rendering: 0.01683 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/in_place_editing]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 18:24:32) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01272 (78 reqs/sec) | Rendering: 0.00732 (57%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-26 18:24:35) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"about", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01190 (84 reqs/sec) | Rendering: 0.00774 (65%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#setup (for 127.0.0.1 at 2008-08-26 18:24:36) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"setup", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/setup
+Compiling template _run_erb_47app47views47pages47setup46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01955 (51 reqs/sec) | Rendering: 0.00975 (49%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/setup]
+
+
+Processing PagesController#date_formats (for 127.0.0.1 at 2008-08-26 18:24:37) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"date_formats", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_formats
+Compiling template _run_erb_47app47views47pages47date_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01780 (56 reqs/sec) | Rendering: 0.01256 (70%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_formats]
+
+
+Processing PagesController#date_helper (for 127.0.0.1 at 2008-08-26 18:24:40) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"date_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/date_helper
+Compiling template _run_erb_47app47views47pages47date_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.12112 (8 reqs/sec) | Rendering: 0.04180 (34%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/date_helper]
+
+
+Processing PagesController#time_formats (for 127.0.0.1 at 2008-08-26 18:24:41) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"time_formats", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/time_formats
+Compiling template _run_erb_47app47views47pages47time_formats46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01585 (63 reqs/sec) | Rendering: 0.00994 (62%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/time_formats]
+
+
+Processing PagesController#active_record_helper (for 127.0.0.1 at 2008-08-26 18:24:42) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"active_record_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/active_record_helper
+Compiling template _run_erb_47app47views47pages47active_record_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01156 (86 reqs/sec) | Rendering: 0.00710 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/active_record_helper]
+
+
+Processing PagesController#number_helper (for 127.0.0.1 at 2008-08-26 18:24:43) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"number_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/number_helper
+Compiling template _run_erb_47app47views47pages47number_helper46html46erb
+
+
+ActionView::TemplateError (interpolation argument globalize missing in "Note: <code>number_to_phone</code> hasn't been localized yet and probably never will be - at least not in core. Look out for new internationalization/localization plugins like a new version of {{globalize}} as they will probably support stuff like that.") on line #5 of app/views//number_helper.html.erb:
+2: <div>
+3:   <p><%= I18n.t 'txt.number_helper.note_one', :globalize => link_to("Globalize", "http://globalize.rubyforge.org/") %></p>
+4: 
+5:   <p><%= I18n.t 'txt.number_helper.note_one' %></p>
+6: 
+7:   <h3>number_to_currency</h3>
+8:   <div>
+
+    vendor/rails/activesupport/lib/active_support/vendor/i18n-0.0.1/lib/i18n/backend/simple.rb:123:in `interpolate'
+    vendor/rails/activesupport/lib/active_support/vendor/i18n-0.0.1/lib/i18n/backend/simple.rb:35:in `translate'
+    vendor/rails/activesupport/lib/active_support/vendor/i18n-0.0.1/lib/i18n.rb:146:in `t'
+    app/views/pages/number_helper.html.erb:5
+    vendor/rails/actionpack/lib/action_view/base.rb:397:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:397:in `execute'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:34:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:34:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:66:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:363:in `render_file'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1145:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:866:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1194:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1205:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:604:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:597:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:205:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    /usr/local/lib/ruby/1.8/monitor.rb:238:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/base.rb:548:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:593:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:409:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:151:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:116:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:33:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:137:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:144:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47template_error46erb
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_trace46erb
+Rendered /Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (0.03147)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47_request_and_response46erb
+Rendered /Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.00102)
+Rendering /Users/simon/Documents/01.Code/01.Now/git/i18n_demo_app/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+Compiling template _run_erb_47vendor47rails47actionpack47lib47action_controller47templates47rescues47layout46erb
+
+
+Processing PagesController#number_helper (for 127.0.0.1 at 2008-08-26 18:25:31) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"number_helper", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/number_helper
+Compiling template _run_erb_47app47views47pages47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.10206 (9 reqs/sec) | Rendering: 0.09407 (92%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/number_helper]
+
+
+Processing PagesController#number_helper (for 127.0.0.1 at 2008-08-26 18:25:40) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"authenticity_token"=>"e97bb80ccc71d3b8c7d5eb37e24cfc940c0be0dc", "action"=>"number_helper", "controller"=>"pages", "locale"=>"pt-BR"}
+Rendering template within layouts/application
+Rendering pages/number_helper
+Compiling template _run_erb_47app47views47pages47number_helper46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.02500 (39 reqs/sec) | Rendering: 0.01684 (67%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/number_helper]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-26 18:27:42) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjJlMjJhM2VjOTIzYzUzMTczY2FjODY0MThiY2JmZjYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e94fd4dd20440e470773b1e6d0ae7c53f6709b9b
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/index
+Compiling template _run_erb_47app47views47pages47index46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01241 (80 reqs/sec) | Rendering: 0.00846 (68%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]

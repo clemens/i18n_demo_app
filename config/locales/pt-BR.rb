@@ -103,15 +103,16 @@ I18n.backend.store_translations :'pt-BR', {
     :contents => "Conteúdo",
     :menu => {
       :introduction => "Introdução",
+      :about => "Sobre",
       :setup => "Configuração",
       :date_formats => "Formatos de Data",
       :time_formats => "Formatos de Hora"
     },
     :about => {
       :title => "Sobre esta aplicação de demonstração",
-      :author => "Esta aplicação de demonstração foi escrita por <%= mail_to \"clemens@railway.at\", \"Clemens Kofler\" %> e traduzida para português brasileiro por <%= mail_to \"fabioakita@gmail.com\", \"Fabio Akita\" %>.",
-      :feedback => "Se tiver qualquer feedback, por favor sinta-se à vontade para me escrever. Também visite  <%= link_to \"www.railway.at\", \"http://www.railway.at\" %> onde eu blogo regularmente sobre Rails e outras coisas.",
-      :licence => "Esta aplicação de demonstração e seu conteúdo estão licenciados sobre a <%= link_to \"Creative Commons Attribution Noncommercial Share Alike License\", \"http://creativecommons.org/licenses/by-nc-sa/2.0/at/\" %>. Se quiser utilizar isso de maneiras proibidas pela licença, por favor entre em contato comigo e peça minha permissão."
+      :author => "Esta aplicação de demonstração foi escrita por {{mail_1}} e traduzida para português brasileiro por {{mail_2}}.",
+      :feedback => "Se tiver qualquer feedback, por favor sinta-se à vontade para me escrever. Também visite {{blog_href}} onde eu blogo regularmente sobre Rails e outras coisas.",
+      :licence => "Esta aplicação de demonstração e seu conteúdo estão licenciados sobre a {{licence_href}}. Se quiser utilizar isso de maneiras proibidas pela licença, por favor entre em contato comigo e peça minha permissão."
     },
     :active_record => {
       :too_lazy => "Nenhum exemplo aqui já que sou muito preguiçoso para pensar em atributos para mostrar <strong>todas</strong> as mensagens customizadas de erro. ;-)",
@@ -125,11 +126,11 @@ I18n.backend.store_translations :'pt-BR', {
       :forms_title => "Formulários"
     },
     :index => {
-      :introduction => "Recentemente, muito trabalho foi feito por <%= link_to \"Sven Fuchs\", \"http://www.artweb-design.de/\" %> e <%= link_to \"others\", \"http://github.com/svenfuchs/i18n/tree/48ff00d2af07693171ec341500537b30e23e83bc/README.textile\" %> para facilitar futuras internacionalizações e localizações no Rails.",
+      :introduction => "Recentemente, muito trabalho foi feito por {{sven_blog}} e {{sven_github}} para facilitar futuras internacionalizações e localizações no Rails.",
       :story_so_far => "Esta aplicação de demonstração tenta demonstrar como usar as funcionalidades que foram implementadas até agora para localizar grandes partes de sua aplicação Rails."
     },
     :number_helper => {
-      :note_one => "Nota: <code>number_to_phone</code> não foi localizado e provavelmente nunca será - pelo menos não no core. Procurem por novos plugins de internacionalização/localização para uma nova versão do  <%= link_to \"Globalize\", \"http://globalize.rubyforge.org/\" %> já que eles provavelmente suportarão coisas como essa.",
+      :note_one => "Nota: <code>number_to_phone</code> não foi localizado e provavelmente nunca será - pelo menos não no core. Procurem por novos plugins de internacionalização/localização para uma nova versão do {{globalize}} já que eles provavelmente suportarão coisas como essa.",
       :note_two => "Outra nota: <code>number_to_currency</code>, <code>number_to_percentage</code> e <code>number_to_human_size</code> todos usam <code>number_with_precision</code> internamente e <code>number_with_precision</code> usa <code>number_with_delimiter</code> internamente."
     }
   }

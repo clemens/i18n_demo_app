@@ -1,7 +1,9 @@
-<h2>Introdução</h2>
+<h2><%= I18n.t 'txt.menu.introduction' %></h2>
 <div>
-  <p>Recentemente, muito trabalho foi feito por <%= link_to "Sven Fuchs", "http://www.artweb-design.de/" %> e <%= link_to "outros", "http://github.com/svenfuchs/i18n/tree/48ff00d2af07693171ec341500537b30e23e83bc/README.textile" %> para facilitar futuras internacionalizações e localizações no Rails.</p>
-  <p>Esta aplicação de demonstração tenta demonstrar como usar as funcionalidades que foram implementadas até agora para localizar grandes partes de sua aplicação Rails.</p>
+  <p><%= I18n.t 'txt.index.introduction', 
+				:sven_blog => link_to("Sven Fuchs", "http://www.artweb-design.de/"), 
+				:sven_github => link_to("outros", "http://github.com/svenfuchs/i18n/tree/48ff00d2af07693171ec341500537b30e23e83bc/README.textile") %></p>
+  <p><%= I18n.t 'txt.index.story_so_far' %></p>
 </div>
 
-<p style="text-align:right;"><%= link_to '&raquo; Configuração', :action => 'setup' %></p>
+<p style="text-align:right;"><%= link_to "&raquo; #{I18n.t 'txt.menu.setup'}", :action => 'setup' %></p>

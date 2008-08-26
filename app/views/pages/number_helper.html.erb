@@ -1,8 +1,7 @@
 <h2>NumberHelper</h2>
 <div>
-  <p>Nota: <code>number_to_phone</code> não foi localizado e provavelmente nunca será - pelo menos não no core. Procurem por novos plugins de internacionalização/localização para uma nova versão do  <%= link_to "Globalize", "http://globalize.rubyforge.org/" %> já que eles provavelmente suportarão coisas como essa.</p>
-
-  <p>Outra nota: <code>number_to_currency</code>, <code>number_to_percentage</code> e <code>number_to_human_size</code> todos usam <code>number_with_precision</code> internamente e <code>number_with_precision</code> usa <code>number_with_delimiter</code> internamente.</p>
+  <p><%= I18n.t 'txt.number_helper.note_one', :globalize => link_to("Globalize", "http://globalize.rubyforge.org/") %></p>
+  <p><%= I18n.t 'txt.number_helper.note_two' %></p>
 
   <h3>number_to_currency</h3>
   <div>

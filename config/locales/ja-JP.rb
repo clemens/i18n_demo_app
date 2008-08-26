@@ -98,6 +98,7 @@ I18n.backend.store_translations :'ja-JP', {
     :contents => "Contents",
     :menu => {
       :introduction => "Introduction",
+      :about => "について",
       :setup => "Setup",
       :date_formats => "Date formats",
       :time_formats => "Time formats"

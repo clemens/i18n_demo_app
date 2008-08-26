@@ -16,10 +16,11 @@
 	      <div id="navigation">
 	        <h4 style="margin:0; margin-bottom:5px;"><%= I18n.t 'txt.contents' %></h4>
 	        <ul>
-	          <li><%= link_to I18n.t 'txt.menu.introduction', :action => 'index' %></li>
-	          <li><%= link_to I18n.t 'txt.menu.setup', :action => 'setup' %></li>
-	          <li><%= link_to I18n.t 'txt.menu.date_formats', :action => 'date_formats' %></li>
-	          <li><%= link_to I18n.t 'txt.menu.time_formats', :action => 'time_formats' %></li>
+	          <li><%= link_to I18n.t('txt.menu.introduction'), :action => 'index' %></li>
+	          <li><%= link_to I18n.t('txt.menu.about'), :action => 'about' %></li>
+	          <li><%= link_to I18n.t('txt.menu.setup'), :action => 'setup' %></li>
+	          <li><%= link_to I18n.t('txt.menu.date_formats'), :action => 'date_formats' %></li>
+	          <li><%= link_to I18n.t('txt.menu.time_formats'), :action => 'time_formats' %></li>
 	          <li><%= link_to "DateHelper", :action => 'date_helper' %></li>
 	          <li><%= link_to "ActiveRecordHelper", :action => 'active_record_helper' %></li>
 	          <li><%= link_to "NumberHelper", :action => 'number_helper' %></li>
