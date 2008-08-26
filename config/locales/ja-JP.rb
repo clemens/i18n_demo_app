@@ -92,41 +92,41 @@ I18n.backend.store_translations :'ja-JP', {
     }
   },
   :txt => {
-    :main_title => "Localizing Rails",
-    :app_name => "Demo Application",
-    :sub_title => "how to localize your app with Rails' new i18n features",
-    :contents => "Contents",
+    :main_title => "Railsをローカライズ",
+    :app_name => "デモ アプリケーション",
+    :sub_title => "新しいi18nの特徴を用いてアプリをローカライズする方法",
+    :contents => "コンテンツ",
     :menu => {
-      :introduction => "Introduction",
       :about => "について",
-      :setup => "Setup",
-      :date_formats => "Date formats",
-      :time_formats => "Time formats"
+      :introduction => "導入",
+      :setup => "設定",
+      :date_formats => "日付フォーマット",
+      :time_formats => "時間フォーマット"
     },
     :about => {
-      :title => "About this demo app",
-      :author => "This demo app was written by <%= mail_to \"clemens@railway.at\", \"Clemens Kofler\" %>.",
-      :feedback => "If you have any feedback, please feel free to drop me a line. Also visit <%= link_to \"www.railway.at\", \"http://www.railway.at\" %> where I regularly blog about Rails and other stuff.",
-      :licence => "This demo app and all its contents are licensed under the <%= link_to \"Creative Commons Attribution Noncommercial Share Alike License\", \"http://creativecommons.org/licenses/by-nc-sa/2.0/at/\" %>. If you want to use it in ways prohibited by this license, please contact me and ask my permission."
+      :title => "デモアプリについて",
+      :author => "このデモアプリは、<%= mail_to \"clemens@railway.at\", \"Clemens Kofler\" %>によって書かれています。",
+      :feedback => "もし、なんらかのツッコミがありましたら、お気軽にメールください。また、Railsやいろんなことについて定期的に更新している私のブログも是非<%= link_to \"www.railway.at\", \"http://www.railway.at\" %>。",
+      :licence => "このデモアプリとすべてのコンテンツライセンスは、<%= link_to \"Creative Commons Attribution Noncommercial Share Alike License\", \"http://creativecommons.org/licenses/by-nc-sa/2.0/at/\" %>にあります。 もし、このライセンスによって禁止されている方法で使用をご検討の場合は、事前に私の許可を得るようにしてください。"
     },
     :active_record => {
       :too_lazy => "No examples here since I'm too lazy to think of attributes to show <strong>all</strong> custom error messages. ;-)",
-      :easy_to_understand => "It's quite easy to understand, though."
+      :easy_to_understand => "まぁ、理解するのは簡単だと思うんだけど・・・."
     }, 
     :date_formats => {
-      :rails_standards_work => "Rails standard formats (Date::DATE_FORMATS) still work:"
+      :rails_standards_work => "Railsの標準フォーマット(Date::DATE_FORMATS)はまだ動きます:"
     },
     :date_helper => {
-      :date_time_title => "Date/Time distance",
-      :forms_title => "Forms"
+      :date_time_title => "日付/時間 距離",
+      :forms_title => "フォーム"
     },
     :index => {
-      :introduction => "Lately, a lot of work has been done by <%= link_to \"Sven Fuchs\", \"http://www.artweb-design.de/\" %> and <%= link_to \"others\", \"http://github.com/svenfuchs/i18n/tree/48ff00d2af07693171ec341500537b30e23e83bc/README.textile\" %> to facilitate future internationalization and localization of Rails.",
-      :story_so_far => "This demo app tries to show you how you can use the features that have been implemented so far to localize big parts of your Rails application."
+      :introduction => "最近になり、<%= link_to \"Sven Fuchs\", \"http://www.artweb-design.de/\" %> や <%= link_to \"others\", \"http://github.com/svenfuchs/i18n/tree/48ff00d2af07693171ec341500537b30e23e83bc/README.textile\" %>によって、Railsにおける国際化や局所化を促進するたくさん仕事がなされました。",
+      :story_so_far => "このデモアプリは、あなたのアプリにおける大部分をローカライズするために、今まで実装されてきた特徴をどのように使用するかを示しています。"
     },
     :number_helper => {
-      :note_one => "Note: <code>number_to_phone</code> hasn't been localized yet and probably never will be - at least not in core. Look out for new internationalization/localization plugins like a new version of <%= link_to \"Globalize\", \"http://globalize.rubyforge.org/\" %> as they will probably support stuff like that.",
-      :note_two => "Another note: <code>number_to_currency</code>, <code>number_to_percentage</code> and <code>number_to_human_size</code> all use <code>number_with_precision</code> internally and <code>number_with_precision</code> uses <code>number_with_delimiter</code> internally."
+      :note_one => "注意１: <code>number_to_phone</code> は、まだローカライズされていません。 そして、 おそらく今後もローカライズはされません。-少なくともコアには。 新しいバージョンのインターナショナライゼーションもしくは、ローカライゼーションプラグインはこちらでお探しください。<%= link_to \"Globalize\", \"http://globalize.rubyforge.org/\" %>おそらく、彼らはそのようなプラグインをサポートするので。",
+      :note_two => "注意２: <code>number_to_currency</code>、<code>number_to_percentage</code>、 <code>number_to_human_size</code>は、すべて<code>number_with_precision</code>を内部的に使用しています。そして <code>number_with_precision</code>は、<code>number_with_delimiter</code>を内部的に使用しています。"
     }
   }
 }
