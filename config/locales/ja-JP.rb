@@ -8,11 +8,10 @@ I18n.backend.store_translations :'ja-JP', {
       :long_ordinal => lambda { |date| "%B #{date.day}ish, %Y" },
       :only_day     => lambda { |date| "#{date.day}ish"}
     },
-    :day_names => %w(Sunday-ish Monday-ish Tuesday-ish Wednesday-ish Thursday-ish Friday-ish Saturday-ish),
-    :abbr_day_names => %w(Sun-i Mon-i Tue-i Wed-i Thu-i Fri-i Sat-i),
-    :month_names => [nil] + %w(January-ish February-ish March-ish April-ish May-ish June-ish
-                               July-ish August-ish September-ish October-ish November-rish December-ish),
-    :abbr_month_names => [nil] + %w(Jan-i Feb-i Mar-i Apr-i May-i Jun-i Jul-i Aug-i Sep-i Oct-i Nov-i Dec-i),
+    :day_names => %w(日曜日 月曜日 火曜日 水曜日 木曜日 金曜日 土曜日),
+    :abbr_day_names => %w(日 月 火 水 木 金 土),
+    :month_names => [nil] + %w(一月 二月 三月 四月 五月 六月　七月 八月 九月 十月 十一月 十二月),
+    :abbr_month_names => [nil] + %w(一月 二月 三月 四月 五月 六月　七月 八月 九月 十月 十一月 十二月),
     :order => [:day, :month, :year]
   },
   :time => {
