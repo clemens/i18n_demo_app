@@ -22,10 +22,6 @@ module ActiveRecord
     
       def find_target
         super.first
-      end
-
-      def reset_target!
-        @target = nil
       end        
     end        
   end

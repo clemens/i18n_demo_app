@@ -1,5 +1,4 @@
 $:.unshift(File.dirname(__FILE__) + '/../../lib')
-$:.unshift(File.dirname(__FILE__) + '/../../../activesupport/lib')
 
 require 'config'
 require 'test/unit'

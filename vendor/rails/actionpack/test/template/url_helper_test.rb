@@ -1,4 +1,3 @@
-# encoding: utf-8
 require 'abstract_unit'
 
 RequestMock = Struct.new("Request", :request_uri, :protocol, :host_with_port, :env)

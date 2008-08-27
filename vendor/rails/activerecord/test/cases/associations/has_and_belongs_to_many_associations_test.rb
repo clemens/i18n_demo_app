@@ -450,13 +450,6 @@ class HasAndBelongsToManyAssociationsTest < ActiveRecord::TestCase
     assert_equal developers(:david), active_record.developers_with_finder_sql.find(developers(:david).id), "Ruby find"
   end
 
-  def test_find_in_association_with_custom_finder_sql_and_multiple_interpolations
-    # interpolate once:
-    assert_equal [developers(:david), developers(:jamis), developers(:poor_jamis)], projects(:active_record).developers_with_finder_sql, "first interpolation"
-    # interpolate again, for a different project id
-    assert_equal [developers(:david)], projects(:action_controller).developers_with_finder_sql, "second interpolation"
-  end
-
   def test_find_in_association_with_custom_finder_sql_and_string_id
     assert_equal developers(:david), projects(:active_record).developers_with_finder_sql.find(developers(:david).id.to_s), "SQL find"
   end
@@ -647,7 +640,8 @@ class HasAndBelongsToManyAssociationsTest < ActiveRecord::TestCase
     developer.save
     developer.reload
     assert_equal 2, developer.projects.length
-    assert_equal [projects(:active_record), projects(:action_controller)].map(&:id).sort, developer.project_ids.sort
+    assert_equal projects(:active_record), developer.projects[0]
+    assert_equal projects(:action_controller), developer.projects[1]
   end
 
   def test_assign_ids_ignoring_blanks
@@ -656,7 +650,8 @@ class HasAndBelongsToManyAssociationsTest < ActiveRecord::TestCase
     developer.save
     developer.reload
     assert_equal 2, developer.projects.length
-    assert_equal [projects(:active_record), projects(:action_controller)].map(&:id).sort, developer.project_ids.sort
+    assert_equal projects(:active_record), developer.projects[0]
+    assert_equal projects(:action_controller), developer.projects[1]
   end
 
   def test_select_limited_ids_list

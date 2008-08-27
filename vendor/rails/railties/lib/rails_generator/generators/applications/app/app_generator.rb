@@ -1,5 +1,6 @@
 require 'rbconfig'
 require 'digest/md5' 
+require 'rails_generator/secret_key_generator'
 
 class AppGenerator < Rails::Generator::Base
   DEFAULT_SHEBANG = File.join(Config::CONFIG['bindir'],
@@ -35,7 +36,7 @@ class AppGenerator < Rails::Generator::Base
     md5 << @app_name
 
     # Do our best to generate a secure secret key for CookieStore
-    secret = ActiveSupport::SecureRandom.hex(64)
+    secret = Rails::SecretKeyGenerator.new(@app_name).generate_secret
 
     record do |m|
       # Root directory and all subdirectories.
@@ -45,6 +46,7 @@ class AppGenerator < Rails::Generator::Base
       # Root
       m.file "fresh_rakefile", "Rakefile"
       m.file "README",         "README"
+      m.file "config.ru",      "config.ru"
 
       # Application
       m.template "helpers/application.rb",        "app/controllers/application.rb", :assigns => { :app_name => @app_name, :app_secret => md5.hexdigest }

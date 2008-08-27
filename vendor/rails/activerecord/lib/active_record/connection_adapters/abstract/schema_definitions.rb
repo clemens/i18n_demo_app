@@ -138,11 +138,7 @@ module ActiveRecord
 
         # convert something to a boolean
         def value_to_boolean(value)
-          if value.is_a?(String) && value.blank?
-            nil
-          else
-            TRUE_VALUES.include?(value)
-          end
+          TRUE_VALUES.include?(value)
         end
 
         # convert something to a BigDecimal
@@ -447,10 +443,9 @@ module ActiveRecord
 
       # Appends <tt>:datetime</tt> columns <tt>:created_at</tt> and
       # <tt>:updated_at</tt> to the table.
-      def timestamps(*args)
-        options = args.extract_options!
-        column(:created_at, :datetime, options)
-        column(:updated_at, :datetime, options)
+      def timestamps
+        column(:created_at, :datetime)
+        column(:updated_at, :datetime)
       end
 
       def references(*args)

@@ -470,9 +470,8 @@ module ActionMailer #:nodoc:
         # also render a "normal" template (without the content type). If a
         # normal template exists (or if there were no implicit parts) we render
         # it.
-        template_exists = @parts.empty?
-        template_exists ||= template_root["#{mailer_name}/#{@template}"]
-        @body = render_message(@template, @body) if template_exists
+        template = template_root["#{mailer_name}/#{@template}"]
+        @body = render_message(@template, @body) if template
 
         # Finally, if there are other message parts and a textual body exists,
         # we shift it onto the front of the parts and set the body to nil (so

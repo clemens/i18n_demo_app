@@ -16,11 +16,7 @@ module ActionView
     memoize :counter_name
 
     def render(view, local_assigns = {})
-      if defined? ActionController
-        ActionController::Base.benchmark("Rendered #{path_without_format_and_extension}", Logger::DEBUG, false) do
-          super
-        end
-      else
+      ActionController::Base.benchmark("Rendered #{path_without_format_and_extension}", Logger::DEBUG, false) do
         super
       end
     end

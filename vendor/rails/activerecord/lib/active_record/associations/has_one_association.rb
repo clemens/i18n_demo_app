@@ -21,8 +21,8 @@ module ActiveRecord
       def replace(obj, dont_save = false)
         load_target
 
-        unless @target.nil? || @target == obj
-          if dependent? && !dont_save
+        unless @target.nil?
+          if dependent? && !dont_save && @target != obj
             @target.destroy unless @target.new_record?
             @owner.clear_association_cache
           else

@@ -21,15 +21,6 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #++
 
-begin
-  require 'active_support'
-rescue LoadError
-  activesupport_path = "#{File.dirname(__FILE__)}/../../activesupport/lib"
-  if File.directory?(activesupport_path)
-    $:.unshift activesupport_path
-    require 'active_support'
-  end
-end
 
 require 'action_view/template_handlers'
 require 'action_view/renderable'
@@ -44,12 +35,13 @@ require 'action_view/partials'
 require 'action_view/template_error'
 
 I18n.backend.populate do
-  I18n.load_translations "#{File.dirname(__FILE__)}/action_view/locale/en-US.yml"
+  require 'action_view/locale/en-US.rb'
 end
-
-require 'action_view/helpers'
 
 ActionView::Base.class_eval do
   include ActionView::Partials
-  include ActionView::Helpers
+
+  ActionView::Base.helper_modules.each do |helper_module|
+    include helper_module
+  end
 end

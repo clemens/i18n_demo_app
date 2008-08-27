@@ -185,10 +185,6 @@ module ActiveSupport
         @new_const = new_const
       end
 
-      def class
-        target.class
-      end
-
       private
         def target
           @new_const.to_s.constantize

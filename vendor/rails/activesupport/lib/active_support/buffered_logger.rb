@@ -33,10 +33,11 @@ module ActiveSupport
 
     attr_accessor :level
     attr_reader :auto_flushing
+    attr_reader :buffer
 
     def initialize(log, level = DEBUG)
       @level         = level
-      @buffer        = {}
+      @buffer        = []
       @auto_flushing = 1
       @guard = Mutex.new
 
@@ -59,7 +60,9 @@ module ActiveSupport
       # If a newline is necessary then create a new message ending with a newline.
       # Ensures that the original message is not mutated.
       message = "#{message}\n" unless message[-1] == ?\n
-      buffer << message
+      @guard.synchronize do
+        buffer << message
+      end
       auto_flush
       message
     end
@@ -93,8 +96,8 @@ module ActiveSupport
     def flush
       @guard.synchronize do
         unless buffer.empty?
-          old_buffer = buffer
-          clear_buffer
+          old_buffer    = @buffer
+          @buffer       = []
           @log.write(old_buffer.join)
         end
       end
@@ -109,14 +112,6 @@ module ActiveSupport
     protected
       def auto_flush
         flush if buffer.size >= @auto_flushing
-      end
-
-      def buffer
-        @buffer[Thread.current] ||= []
-      end
-
-      def clear_buffer
-        @buffer[Thread.current] = []
       end
   end
 end

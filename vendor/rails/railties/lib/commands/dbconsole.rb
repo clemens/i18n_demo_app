@@ -47,7 +47,7 @@ when "mysql"
 
   args << config['database']
 
-  exec(find_cmd('mysql', 'mysql5'), *args)
+  exec(find_cmd('mysql5', 'mysql'), *args)
 
 when "postgresql"
   ENV['PGUSER']     = config["username"] if config["username"]

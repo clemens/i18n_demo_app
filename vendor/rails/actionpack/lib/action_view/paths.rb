@@ -1,9 +1,9 @@
 module ActionView #:nodoc:
-  class PathSet < Array #:nodoc:
+  class PathSet < ActiveSupport::TypedArray #:nodoc:
     def self.type_cast(obj)
       if obj.is_a?(String)
         if Base.warn_cache_misses && defined?(Rails) && Rails.initialized?
-          Base.logger.debug "[PERFORMANCE] Processing view path during a " +
+          Rails.logger.debug "[PERFORMANCE] Processing view path during a " +
             "request. This an expense disk operation that should be done at " +
             "boot. You can manually process this view path with " +
             "ActionView::Base.process_view_paths(#{obj.inspect}) and set it " +
@@ -13,30 +13,6 @@ module ActionView #:nodoc:
       else
         obj
       end
-    end
-
-    def initialize(*args)
-      super(*args).map! { |obj| self.class.type_cast(obj) }
-    end
-
-    def <<(obj)
-      super(self.class.type_cast(obj))
-    end
-
-    def concat(array)
-      super(array.map! { |obj| self.class.type_cast(obj) })
-    end
-
-    def insert(index, obj)
-      super(index, self.class.type_cast(obj))
-    end
-
-    def push(*objs)
-      super(*objs.map { |obj| self.class.type_cast(obj) })
-    end
-
-    def unshift(*objs)
-      super(*objs.map { |obj| self.class.type_cast(obj) })
     end
 
     class Path #:nodoc:

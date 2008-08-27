@@ -12,5 +12,4 @@ actionpack/pkg
 actionmailer/pkg
 activesupport/pkg
 railties/pkg
-railties/test/500.html
 *.rbc

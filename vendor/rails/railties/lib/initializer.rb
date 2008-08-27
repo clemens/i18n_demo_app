@@ -33,11 +33,7 @@ module Rails
     end
 
     def logger
-      if defined?(RAILS_DEFAULT_LOGGER)
-        RAILS_DEFAULT_LOGGER
-      else
-        nil
-      end
+      RAILS_DEFAULT_LOGGER
     end
 
     def root
@@ -49,7 +45,6 @@ module Rails
     end
 
     def env
-      require 'active_support/string_inquirer'
       ActiveSupport::StringInquirer.new(RAILS_ENV)
     end
 
@@ -357,7 +352,7 @@ Run `rake gems:install` to install the missing gems.
       if configuration.cache_classes
         configuration.eager_load_paths.each do |load_path|
           matcher = /\A#{Regexp.escape(load_path)}(.*)\.rb\Z/
-          Dir.glob("#{load_path}/**/*.rb").sort.each do |file|
+          Dir.glob("#{load_path}/**/*.rb").each do |file|
             require_dependency file.sub(matcher, '\1')
           end
         end
@@ -408,7 +403,7 @@ Run `rake gems:install` to install the missing gems.
     # +STDERR+, with a log level of +WARN+.
     def initialize_logger
       # if the environment has explicitly defined a logger, use it
-      return if Rails.logger
+      return if defined?(RAILS_DEFAULT_LOGGER)
 
       unless logger = configuration.logger
         begin
@@ -436,11 +431,10 @@ Run `rake gems:install` to install the missing gems.
     # RAILS_DEFAULT_LOGGER.
     def initialize_framework_logging
       for framework in ([ :active_record, :action_controller, :action_mailer ] & configuration.frameworks)
-        framework.to_s.camelize.constantize.const_get("Base").logger ||= Rails.logger
+        framework.to_s.camelize.constantize.const_get("Base").logger ||= RAILS_DEFAULT_LOGGER
       end
 
-      ActiveSupport::Dependencies.logger ||= Rails.logger
-      Rails.cache.logger ||= Rails.logger
+      RAILS_CACHE.logger ||= RAILS_DEFAULT_LOGGER
     end
 
     # Sets +ActionController::Base#view_paths+ and +ActionMailer::Base#template_root+
@@ -537,7 +531,7 @@ Run `rake gems:install` to install the missing gems.
       return unless configuration.frameworks.include?(:action_controller)
       require 'dispatcher' unless defined?(::Dispatcher)
       Dispatcher.define_dispatcher_callbacks(configuration.cache_classes)
-      Dispatcher.new(Rails.logger).send :run_callbacks, :prepare_dispatch
+      Dispatcher.new(RAILS_DEFAULT_LOGGER).send :run_callbacks, :prepare_dispatch
     end
 
     def disable_dependency_loading

@@ -18,6 +18,7 @@ class RailsFCGIHandler
   attr_accessor :log_file_path
   attr_accessor :gc_request_period
 
+
   # Initialize and run the FastCGI instance, passing arguments through to new.
   def self.process!(*args, &block)
     new(*args, &block).process!
@@ -66,6 +67,7 @@ class RailsFCGIHandler
       end
     end
   end
+
 
   protected
     def process_each_request(provider)
@@ -195,7 +197,7 @@ class RailsFCGIHandler
       # close resources as they won't be closed by
       # the OS when using exec
       logger.close rescue nil
-      Rails.logger.close rescue nil
+      RAILS_DEFAULT_LOGGER.close rescue nil
 
       exec(command_line)
     end

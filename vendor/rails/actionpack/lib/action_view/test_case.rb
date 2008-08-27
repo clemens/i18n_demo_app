@@ -25,7 +25,9 @@ module ActionView
       end
     end
 
-    include ActionView::Helpers
+    ActionView::Base.helper_modules.each do |helper_module|
+      include helper_module
+    end
     include ActionController::PolymorphicRoutes
     include ActionController::RecordIdentifier
 

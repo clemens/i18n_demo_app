@@ -39,10 +39,6 @@ module ActiveSupport #:nodoc:
     mattr_accessor :explicitly_unloadable_constants
     self.explicitly_unloadable_constants = []
 
-    # The logger is used for generating information on the action run-time (including benchmarking) if available.
-    # Can be set to nil for no logging. Compatible with both Ruby's own Logger and Log4r loggers.
-    mattr_accessor :logger
-
     # Set to true to enable logging of const_missing and file loads
     mattr_accessor :log_activity
     self.log_activity = false
@@ -588,7 +584,7 @@ module ActiveSupport #:nodoc:
 
     protected
       def log_call(*args)
-        if logger && log_activity
+        if defined?(RAILS_DEFAULT_LOGGER) && RAILS_DEFAULT_LOGGER && log_activity
           arg_str = args.collect { |arg| arg.inspect } * ', '
           /in `([a-z_\?\!]+)'/ =~ caller(1).first
           selector = $1 || '<unknown>'
@@ -597,8 +593,8 @@ module ActiveSupport #:nodoc:
       end
 
       def log(msg)
-        if logger && log_activity
-          logger.debug "Dependencies: #{msg}"
+        if defined?(RAILS_DEFAULT_LOGGER) && RAILS_DEFAULT_LOGGER && log_activity
+          RAILS_DEFAULT_LOGGER.debug "Dependencies: #{msg}"
         end
       end
   end

@@ -211,7 +211,7 @@ module ActiveRecord
 
           sql << " ORDER BY #{options[:order]} "       if options[:order]
           add_limit!(sql, options, scope)
-          sql << ') AS #{aggregate_alias}_subquery' if use_workaround
+          sql << ')' if use_workaround
           sql
         end
 
@@ -260,14 +260,7 @@ module ActiveRecord
         #   column_alias_for("count(*)")                 # => "count_all"
         #   column_alias_for("count", "id")              # => "count_id"
         def column_alias_for(*keys)
-          table_name = keys.join(' ')
-          table_name.downcase!
-          table_name.gsub!(/\*/, 'all')
-          table_name.gsub!(/\W+/, ' ')
-          table_name.strip!
-          table_name.gsub!(/ +/, '_')
-
-          connection.table_alias_for(table_name)
+          connection.table_alias_for(keys.join(' ').downcase.gsub(/\*/, 'all').gsub(/\W+/, ' ').strip.gsub(/ +/, '_'))
         end
 
         def column_for(field)

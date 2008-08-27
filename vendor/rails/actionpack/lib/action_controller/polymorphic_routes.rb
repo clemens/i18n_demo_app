@@ -102,12 +102,6 @@ module ActionController
       args << format if format
       
       named_route = build_named_route_call(record_or_hash_or_array, namespace, inflection, options)
-
-      url_options = options.except(:action, :routing_type, :format)
-      unless url_options.empty?
-        args.last.kind_of?(Hash) ? args.last.merge!(url_options) : args << url_options
-      end
-
       send!(named_route, *args)
     end
 
@@ -120,19 +114,19 @@ module ActionController
 
     %w(edit new formatted).each do |action|
       module_eval <<-EOT, __FILE__, __LINE__
-        def #{action}_polymorphic_url(record_or_hash, options = {})
-          polymorphic_url(record_or_hash, options.merge(:action => "#{action}"))
+        def #{action}_polymorphic_url(record_or_hash)
+          polymorphic_url(record_or_hash, :action => "#{action}")
         end
 
-        def #{action}_polymorphic_path(record_or_hash, options = {})
-          polymorphic_url(record_or_hash, options.merge(:action => "#{action}", :routing_type => :path))
+        def #{action}_polymorphic_path(record_or_hash)
+          polymorphic_url(record_or_hash, :action => "#{action}", :routing_type => :path)
         end
       EOT
     end
 
     private
       def action_prefix(options)
-        options[:action] ? "#{options[:action]}_" : options[:format] ? "formatted_" : ""
+        options[:action] ? "#{options[:action]}_" : ""
       end
 
       def routing_type(options)

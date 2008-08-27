@@ -158,7 +158,6 @@ module ActionView #:nodoc:
   # See the ActionView::Helpers::PrototypeHelper::GeneratorMethods documentation for more details.
   class Base
     include ERB::Util
-    extend ActiveSupport::Memoizable
 
     attr_accessor :base_path, :assigns, :template_extension
     attr_accessor :controller
@@ -170,7 +169,6 @@ module ActionView #:nodoc:
 
     class << self
       delegate :erb_trim_mode=, :to => 'ActionView::TemplateHandlers::ERB'
-      delegate :logger, :to => 'ActionController::Base'
     end
 
     def self.cache_template_loading=(*args)
@@ -204,28 +202,27 @@ module ActionView #:nodoc:
     end
     include CompiledTemplates
 
-    def self.process_view_paths(value)
-      ActionView::PathSet.new(Array(value))
+    def self.helper_modules #:nodoc:
+      helpers = []
+      Dir.entries(File.expand_path("#{File.dirname(__FILE__)}/helpers")).sort.each do |file|
+        next unless file =~ /^([a-z][a-z_]*_helper).rb$/
+        require "action_view/helpers/#{$1}"
+        helper_module_name = $1.camelize
+        if Helpers.const_defined?(helper_module_name)
+          helpers << Helpers.const_get(helper_module_name)
+        end
+      end
+      return helpers
     end
 
-    attr_reader :helpers
-
-    class ProxyModule < Module
-      def initialize(receiver)
-        @receiver = receiver
-      end
-
-      def include(*args)
-        super(*args)
-        @receiver.extend(*args)
-      end
+    def self.process_view_paths(value)
+      ActionView::PathSet.new(Array(value))
     end
 
     def initialize(view_paths = [], assigns_for_first_render = {}, controller = nil)#:nodoc:
       @assigns = assigns_for_first_render
       @assigns_added = nil
       @controller = controller
-      @helpers = ProxyModule.new(self)
       self.view_paths = view_paths
     end
 
@@ -241,7 +238,7 @@ module ActionView #:nodoc:
       local_assigns ||= {}
 
       if options.is_a?(String)
-        render(:file => options, :locals => local_assigns)
+        render_file(options, nil, local_assigns)
       elsif options == :update
         update_page(&block)
       elsif options.is_a?(Hash)
@@ -249,32 +246,29 @@ module ActionView #:nodoc:
 
         if partial_layout = options.delete(:layout)
           if block_given?
-            begin
-              @_proc_for_layout = block
+            wrap_content_for_layout capture(&block) do
               concat(render(options.merge(:partial => partial_layout)))
-            ensure
-              @_proc_for_layout = nil
             end
           else
-            begin
-              original_content_for_layout, @content_for_layout = @content_for_layout, render(options)
+            wrap_content_for_layout render(options) do
               render(options.merge(:partial => partial_layout))
-            ensure
-              @content_for_layout = original_content_for_layout
             end
           end
         elsif options[:file]
-          if options[:use_full_path]
-            ActiveSupport::Deprecation.warn("use_full_path option has been deprecated and has no affect.", caller)
-          end
-
-          pick_template(options[:file]).render_template(self, options[:locals])
+          render_file(options[:file], nil, options[:locals])
+        elsif options[:partial] && options[:collection]
+          render_partial_collection(options[:partial], options[:collection], options[:spacer_template], options[:locals], options[:as])
         elsif options[:partial]
-          render_partial(options)
+          render_partial(options[:partial], options[:object], options[:locals])
         elsif options[:inline]
-          InlineTemplate.new(options[:inline], options[:type]).render(self, options[:locals])
+          render_inline(options[:inline], options[:locals], options[:type])
         end
       end
+    end
+
+    # Returns true is the file may be rendered implicitly.
+    def file_public?(template_path)#:nodoc:
+      template_path.split('/').last[0,1] != '_'
     end
 
     # The format to be used when choosing between multiple templates with
@@ -328,7 +322,7 @@ module ActionView #:nodoc:
       else
         template = Template.new(template_path, view_paths)
 
-        if self.class.warn_cache_misses && logger
+        if self.class.warn_cache_misses && logger = ActionController::Base.logger
           logger.debug "[PERFORMANCE] Rendering a template that was " +
             "not found in view path. Templates outside the view path are " +
             "not cached and result in expensive disk operations. Move this " +
@@ -339,9 +333,47 @@ module ActionView #:nodoc:
         template
       end
     end
+
+    extend ActiveSupport::Memoizable
     memoize :pick_template
 
     private
+      # Renders the template present at <tt>template_path</tt>. The hash in <tt>local_assigns</tt>
+      # is made available as local variables.
+      def render_file(template_path, use_full_path = nil, local_assigns = {}) #:nodoc:
+        unless use_full_path == nil
+          ActiveSupport::Deprecation.warn("use_full_path option has been deprecated and has no affect.", caller)
+        end
+
+        if defined?(ActionMailer) && defined?(ActionMailer::Base) && controller.is_a?(ActionMailer::Base) &&
+            template_path.is_a?(String) && !template_path.include?("/")
+          raise ActionViewError, <<-END_ERROR
+  Due to changes in ActionMailer, you need to provide the mailer_name along with the template name.
+
+    render "user_mailer/signup"
+    render :file => "user_mailer/signup"
+
+  If you are rendering a subtemplate, you must now use controller-like partial syntax:
+
+    render :partial => 'signup' # no mailer_name necessary
+          END_ERROR
+        end
+
+        template = pick_template(template_path)
+        template.render_template(self, local_assigns)
+      end
+
+      def render_inline(text, local_assigns = {}, type = nil)
+        InlineTemplate.new(text, type).render(self, local_assigns)
+      end
+
+      def wrap_content_for_layout(content)
+        original_content_for_layout, @content_for_layout = @content_for_layout, content
+        yield
+      ensure
+        @content_for_layout = original_content_for_layout
+      end
+
       # Evaluate the local assigns and pushes them to the view.
       def evaluate_assigns
         unless @assigns_added
@@ -358,6 +390,12 @@ module ActionView #:nodoc:
       def set_controller_content_type(content_type)
         if controller.respond_to?(:response)
           controller.response.content_type ||= content_type
+        end
+      end
+
+      def execute(method, local_assigns = {})
+        send(method, local_assigns) do |*names|
+          instance_variable_get "@content_for_#{names.first || 'layout'}"
         end
       end
   end

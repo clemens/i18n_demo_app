@@ -35,11 +35,8 @@ module ActiveRecord
           else
             @reflection.klass.count(:conditions => @counter_sql, :include => @reflection.options[:include])
           end
-
-          # If there's nothing in the database and @target has no new records
-          # we are certain the current target is an empty array. This is a
-          # documented side-effect of the method that may avoid an extra SELECT.
-          @target ||= [] and loaded if count == 0
+          
+          @target = [] and loaded if count == 0
           
           if @reflection.options[:limit]
             count = [ @reflection.options[:limit], count ].min
