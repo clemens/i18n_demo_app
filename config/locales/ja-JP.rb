@@ -113,7 +113,7 @@ I18n.backend.store_translations :'ja-JP', {
       :easy_to_understand => "まぁ、理解するのは簡単だと思うんだけど・・・."
     }, 
     :date_formats => {
-      :rails_standards_work => "Railsの標準フォーマット(Date::DATE_FORMATS)も有効です:"
+      :rails_standards_work => "Railsの標準フォーマット(Date::DATE_FORMATS)は有効です:"
     },
     :date_helper => {
       :date_time_title => "日付/時間 距離",
@@ -128,19 +128,19 @@ I18n.backend.store_translations :'ja-JP', {
       :note_two => "注意２: <code>number_to_currency</code>、<code>number_to_percentage</code>、 <code>number_to_human_size</code>は、すべて<code>number_with_precision</code>を内部的に使用しています。そして <code>number_with_precision</code>は、<code>number_with_delimiter</code>を内部的に使用しています。"
     },
       :setup => {
-        :freezing_edge_and_adding => "Freezing Edge and installing the localized_dates plugin",
-        :you_need_to_be_on_edge => "You need to be on Edge Rails in order to use the Rails i18n features:",
-        :date_time_formats => "For date and time formats, you also need to install the {{localized_dates_link}}:",
-        :config_locale => "Configuring the locale",
-        :best_place => "The best place to put your locale configuration, in my opinion, is <code>config/locales</code>. The localized_dates plugin will copy two locales, en-US and de-AT, in this directory. You can extend or modify them and also create new locales.",
-        :locale => "Here's the demo locale that was used for this demo application:",
-        :defaults => "You also need to set up the default locale and/or locale in your <code>environment.rb</code> or an initializer.",
-        :locale_structure_title => "A word on the structure of locales",
-        :locale_structure_number => "You may have noticed that inside the <code>:number</code> part of the locale, we defined <code>:format</code> and <code>:currency</code>. In general, locales are structured hierarchically - i.e. a currencies are numbers, percentages are numbers, etc. <code>:currency</code> can either override the basic <code>:format</code> settings (in our case, we set <code>:precision</code> to 2 instead of 3) or extend them (we add two new options, <code>:unit</code> and <code>:format</code>).",
-        :locale_structure_date_time => "The same holds true for dates and times: If needed, <code>:datetime</code> and <code>:time_with_zone</code> can be used to specifically address formatting of their respective types instead of just relying on the settings for <code>:time</code>. Note, however, that usually you want to use the same formats as <code>:time</code>."   
+        :freezing_edge_and_adding => "Edgeを解凍し、localized_datesプラグインをインストールします。",
+        :you_need_to_be_on_edge => "Rails i18nの特徴を使用するためには、Edge Rails上でアプリを動作させる必要があります:",
+        :date_time_formats => "日付と時間のフォーマットには、{{localized_dates_link}}も併せてインストールする必要があります:",
+        :config_locale => "ローカルの設定",
+        :best_place => "自身のlocale設定ファイルを格納すべき、一番最適な場所は、私の意見では、<code>config/locales</code>が良いだろうと思います。localized_datesプラグインは、このディレクトリにen-USとde-AT、２つのlocaleファイルをコピーします。あなたは、それらを拡張もしくは、修正することもできますし、新しいローカルファイルを作る事もできます。",
+        :locale => "こちらが、このデモアプリケーションで使用したデモ・localeファイルです。:",
+        :defaults => "default locale かつ／もしくは、 localeをあなた自身の<code>environment.rb</code>かinitializerに設定します.",
+        :locale_structure_title => "localeの構造について",
+        :locale_structure_number => "お気づきの通り、localeの<code>:number</code>パート内部に、<code>:format</code>と<code>:currency</code>を定義しています。一般的に、ローカルファイルは階層構造になっています。 - つまり、通貨は数字ですし、パーセンテージも数字です、などなど。<code>:currency</code>は、 基本となる<code>:format</code>設定を上書きするか、(私たちのケースでは、<code>:precision</code>に３の代わりに２を設定しています。)それらを拡張します(２つの新しいオプション<code>:unit</code>と<code>:format</code>を追加しています。)。",
+        :locale_structure_date_time => "同様のことが日付と時間にも言えます: 必要ならば、<code>:datetime</code>と<code>:time_with_zone</code>は、<code>:time</code>の設定に依存している代わりに、明確なアドレスフォーマットを使用することもできます。しかしながら、たいていは、<code>:time</code>と同様のフォーマットを使用したいはずです。"   
       },
        :time_formats => {
-          :rails_standards_work => "Rails standard formats (Time::DATE_FORMATS) still work:"
+          :rails_standards_work => "Railsの標準フォーマット(Time::DATE_FORMATS)は有効です:"
       },
         :ipe =>{
           :click => "クリック！"
