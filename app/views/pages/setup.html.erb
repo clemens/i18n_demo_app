@@ -1,15 +1,15 @@
-<h2>Configuração</h2>
+<h2><%= I18n.t 'txt.menu.setup' %></h2>
 <div>
-  <h3>Congelando Edge e instalando o plugin localized_dates</h3>
+  <h3><%= I18n.t 'txt.setup.freezing_edge_and_adding' %></h3>
   <div>
-	Você precisa estar no Edge Rails para usar as funcionalidades de i18n (internacionalização):
+	<%= I18n.t 'txt.setup.you_need_to_be_on_edge' %>
     <blockquote>
       <pre>
 rails i18n_test
 rake rails:freeze:edge
       </pre>
     </blockquote>
-	Para formatos de data e hora, você também precisa instalar o <%= link_to "plugin localized_dates", "http://github.com/clemens/localized_dates" %>:
+		<%= I18n.t 'txt.setup.date_time_formats', :localized_dates_link => link_to("plugin localized_dates", "http://github.com/clemens/localized_dates") %>
     <blockquote>
       <pre>
 ./script/plugin install git://github.com/clemens/localized_dates.git
@@ -23,127 +23,34 @@ rake rails:freeze:edge
     </blockquote>
   </div>
 
-  <h3>Configurando o local</h3>
+  <h3>	<%= I18n.t 'txt.setup.config_locale' %></h3>
   <div>
-    <p>O melhor lugar para colocar sua configuração local, na minha opinião, é em <code>config/locales</code>. O plugin localized_dates copiará dois locais, en-US e de-AT, em seu diretório. Você pode extender ou modificá-los e também criar novos locais.</p>
-    <p>Aqui está o local de demonstração que foi usado para esta aplicação de demonstração:</p>
+    <p>	<%= I18n.t 'txt.setup.best_place' %></p>
+    <p>	<%= I18n.t 'txt.setup.locale' %></p>
     <blockquote>
       <pre>
-I18n.backend.store_translations :'pt-BR', {
-  # formatos de data e hora
-  :date => {
-    :formats => {
-      :default      => "%d/%m/%Y",
-      :short        => lambda { |date| "#{date.day} %b" },
-      :long         => lambda { |date| "#{date.day} de %B de %Y" }
-    },
-    :day_names => %w(Domingo Segunda Terça Quarta Quinta Sexta Sábado),
-    :abbr_day_names => %w(Do Se Te Qa Qi Sx Sa),
-    :month_names => [nil] + %w(Janeiro Fevereiro Março Abril Maio Junho Julho Agosto Setembro Outubro Novembro Dezembro),
-    :abbr_month_names => [nil] + %w(Jan Fev Mar Abr Mai Jun Jul Ago Set Out Nov Dez),
-    :order => [:day, :month, :year]
-  },
-  :time => {
-    :formats => {
-      :default      => lambda { |time| "%A, #{time.day} de %B de %Y, %H:%M hs" },
-      :time         => "%H:%M hs",
-      :short        => lambda { |time| "#{time.day}/%m, %H:%M hs" },
-      :long         => lambda { |time| "%A, #{time.day} de %B de %Y, %H:%M hs" }
-    },
-    :am => '',
-    :pm => ''
-  },
-
-  # date helper distanca em palavras
-  :datetime => {
-    :distance_in_words => {
-      :half_a_minute       => 'meio minuto',
-      :less_than_x_seconds => ['menos de 1 segundo', 'menos de {{count}} segundos'],
-      :x_seconds           => ['1 segundo', '{{count}} segundos'],
-      :less_than_x_minutes => ['menos de um minuto', 'menos de {{count}} minutos'],
-      :x_minutes           => ['1 minuto', '{{count}} minutos'],
-      :about_x_hours       => ['aproximadamente 1 hora', 'aproximadamente {{count}} horas'],
-      :x_days              => ['1 dia', '{{count}} dias'],
-      :about_x_months      => ['aproximadamente 1 mês', '{{count}} meses'],
-      :x_months            => ['1 mês', '{{count}} meses'],
-      :about_x_years       => ['aproximadamente 1 ano', '{{count}} anos'],
-      :over_x_years        => ['mais de 1 ano', '{{count}} anos']
-    }
-  },
-
-  # numeros
-  :number => {
-    :format => {
-      :precision => 3,
-      :separator => '.',
-      :delimiter => ','
-    },
-    :currency => {
-      :format => {
-        :unit => 'R$',
-        :precision => 2,
-        :format => '%n %u'
-      }
-    }
-  },
-
-  # Active Record
-  :active_record => {
-    :error => {
-      :header_message => ["{{object_name}} não pôde ser salvo: 1 erro", "{{object_name}} não pôde ser salvo: {{count}} erros."],
-      :message => "Por favor, cheque os seguintes campos:"
-    }
-  },
-  :active_record => {
-    :error_messages => {
-      :inclusion => "não está incluso na lista",
-      :exclusion => "não está disponível",
-      :invalid => "não é válido",
-      :confirmation => "não bate com a confirmação",
-      :accepted  => "precisa ser aceito",
-      :empty => "não pode ser vazio",
-      :blank => "não pode ser vazio",
-      :too_long => "é muito longo (não mais do que {{count}} caracteres)",
-      :too_short => "é muito curto (não menos do que {{count}} caracteres)",
-      :wrong_length => "não é do tamanho correto (precisa ter {{count}} caracteres)",
-      :taken => "não está disponível",
-      :not_a_number => "não é um número",
-      :greater_than => "precisa ser maior do que {{count}}",
-      :greater_than_or_equal_to => "precisa ser maior ou igual a {{count}}",
-      :equal_to => "precisa ser igual a {{count}}",
-      :less_than => "precisa ser menor do que {{count}}",
-      :less_than_or_equal_to => "precisa ser menor ou igual a {{count}}",
-      :odd => "precisa ser ímpar",
-      :even => "precisa ser par"
-    }
-  },
-
-  # Plugin in_place_editing
-  :in_place_editing => {
-    :text => {
-      :cancel => "cancelar",
-      :loading => "carregando...",
-      :save => "salvar",
-      :saving => "salvando..."
-    }
-  }
-}
+<% counter = 0 %>
+<% lineWidth = 80 %>
+<% while (line = @locale_file.gets) -%>
+<%= "#{counter}: #{line}" -%>
+<% counter = counter + 1 -%>
+<% end -%>	
       </pre>
     </blockquote>
-    <p>Você também precisa configurar o local padrão e/ou local em seu seu <code>environment.rb</code> ou um inicializador.</p>
+    <p><%= I18n.t 'txt.setup.defaults' %></p>
     <blockquote>
       <pre>
-I18n.default_locale = 'pt-BR'
-I18n.locale         = 'pt-BR'
+I18n.default_locale = '<%= I18n.default_locale %>'
+I18n.locale         = '<%= I18n.locale %>'
       </pre>
     </blockquote>
   </div>
 
-  <h3>Uma palavra sobre a estrutura de locais</h3>
+  <h3><%= I18n.t 'txt.setup.defaults' %></h3>
   <div>
-    <p>Você deve ter notado que dentro da parte <code>:number</code> do local, nós definimos <code>:format</code> e <code>:currency</code>. Em geral, locais são estruturas hierárquicas - isto é, moedas são números, porcentagens são números, etc. <code>:currency</code> pode tanto se sobrepor à configuração <code>:format</code> básica (em nosso caso, nós configuramos <code>:precision</code> para 2 em vez de 3) ou extendê-la (adicionamos duas novas opções, <code>:unit</code> e <code>:format</code>).</p>
-	<p>O mesmo é válido para datas e horas: se for necessário, <code>:datetime</code> e <code>:time_with_zone</code> podem ser usados para resolver especificamente formatação de seus respectivos tipos em vez de depender das configurações para <code>:time</code>. Note, entretanto, que normalmente você quer usar as mesmas formatações que <code>:time</code>.</p>
+    <p><%= I18n.t 'txt.setup.locale_structure_number' %></p>
+  	<p><%= I18n.t 'txt.setup.locale_structure_date_time' %></p>
   </div>
 </div>
 
-<p style="text-align:right;"><%= link_to '&raquo; Formatos de Data', :action => 'date_formats' %></p>
+<p style="text-align:right;"><%= link_to "&raquo; #{I18n.t('txt.menu.date_formats')}", :action => 'date_formats' %></p>

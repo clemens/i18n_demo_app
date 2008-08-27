@@ -1,4 +1,4 @@
-<h2>Formatos de Hora</h2>
+<h2><%= I18n.t 'txt.menu.time_formats' %></h2>
 <div>
   <table>
     <tr>
@@ -26,7 +26,7 @@
       <td><%= Time.now.to_s(:only_second) %></td>
     </tr>
   </table>
-  <p>Formatos padrão Rails (Time::DATE_FORMATS) ainda funcionam:</p>
+  <p><%= I18n.t 'txt.time_formats.rails_standards_work' %></p>
   <table>
     <tr>
       <th scope="row">Time.now.to_s(:db)</th>

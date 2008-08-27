@@ -132,6 +132,21 @@ I18n.backend.store_translations :'pt-BR', {
     :number_helper => {
       :note_one => "Nota: <code>number_to_phone</code> não foi localizado e provavelmente nunca será - pelo menos não no core. Procurem por novos plugins de internacionalização/localização para uma nova versão do {{globalize}} já que eles provavelmente suportarão coisas como essa.",
       :note_two => "Outra nota: <code>number_to_currency</code>, <code>number_to_percentage</code> e <code>number_to_human_size</code> todos usam <code>number_with_precision</code> internamente e <code>number_with_precision</code> usa <code>number_with_delimiter</code> internamente."
+    },
+    :setup => {
+      :freezing_edge_and_adding => "Congelando Edge e instalando o plugin localized_dates",
+      :you_need_to_be_on_edge => "Você precisa estar no Edge Rails para usar as funcionalidades de i18n (internacionalização):",
+      :date_time_formats => "Para formatos de data e hora, você também precisa instalar o {{localized_dates_link}}:",
+      :config_locale => "Configurando o local",
+      :best_place => "O melhor lugar para colocar sua configuração local, na minha opinião, é em <code>config/locales</code>. O plugin localized_dates copiará dois locais, en-US e de-AT, em seu diretório. Você pode extender ou modificá-los e também criar novos locais.",
+      :locale => "Aqui está o local de demonstração que foi usado para esta aplicação de demonstração:",
+      :defaults => "Você também precisa configurar o local padrão e/ou local em seu seu <code>environment.rb</code> ou um inicializador.",
+      :locale_structure_title => "Uma palavra sobre a estrutura de locais",
+      :locale_structure_number => "Você deve ter notado que dentro da parte <code>:number</code> do local, nós definimos <code>:format</code> e <code>:currency</code>. Em geral, locais são estruturas hierárquicas - isto é, moedas são números, porcentagens são números, etc. <code>:currency</code> pode tanto se sobrepor à configuração <code>:format</code> básica (em nosso caso, nós configuramos <code>:precision</code> para 2 em vez de 3) ou extendê-la (adicionamos duas novas opções, <code>:unit</code> e <code>:format</code>).",
+      :locale_structure_date_time => "O mesmo é válido para datas e horas: se for necessário, <code>:datetime</code> e <code>:time_with_zone</code> podem ser usados para resolver especificamente formatação de seus respectivos tipos em vez de depender das configurações para <code>:time</code>. Note, entretanto, que normalmente você quer usar as mesmas formatações que <code>:time</code>."           
+    },
+    :time_format => {
+      :rails_standards_work => "Formatos padrão Rails (Time::DATE_FORMATS) ainda funcionam:"
     }
   }
 }

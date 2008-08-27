@@ -44,6 +44,14 @@ code, blockquote pre {
   font-size: 0.7em;
 }
 
+pre {
+  width: 99.8%;
+  background: #eee;
+  padding: 10px 10px 0 10px;
+  font: 1em "Lucida Console", monospace;
+  overflow: auto;
+}
+
 div#blank_wrap {
   position: absolute;
   left: 50%;

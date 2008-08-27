@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
   
   before_filter :set_locale
-  
+    
   def set_locale
     
     #update session if passed
@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
     
     #load local from settings
     I18n.populate do 
-      require "#{RAILS_ROOT}/config/locales/#{locale}.rb"
+      require "#{LOCALES_DIRECTORY}#{locale}.rb"
     end
   end
 end

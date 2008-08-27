@@ -6,9 +6,8 @@
   </head>
   <body>
 		<div id="blank_wrap">
-
 		<% form_tag '' do %>
-			<%= select_tag("locale", options_for_select(%w[gibberish en-US pt-BR ja-JP de-AT], I18n.locale), { :index => nil, :onchange => 'this.form.submit()'}) %>
+			<%= select_tag("locale", options_for_select(LOCALES_AVAILABLE, I18n.locale), { :index => nil, :onchange => 'this.form.submit()'}) %>
 		<% end %>
 		
 	    <div id="page">

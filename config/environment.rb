@@ -67,3 +67,6 @@ Rails::Initializer.run do |config|
 end
 
 I18n.default_locale = 'gibberish'
+
+LOCALES_DIRECTORY = "#{RAILS_ROOT}/config/locales/"
+LOCALES_AVAILABLE = Dir.new(LOCALES_DIRECTORY).entries.collect {|x| x =~ /\.rb/ ? x.sub(/\.rb/,"") : nil }.compact

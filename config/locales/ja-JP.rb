@@ -126,6 +126,21 @@ I18n.backend.store_translations :'ja-JP', {
     :number_helper => {
       :note_one => "注意１: <code>number_to_phone</code> は、まだローカライズされていません。 そして、 おそらく今後もローカライズはされないのではと思います。- 少なくともコアには。 {{globalize}}の新しいバージョンのような新しいインターナショナライゼーションもしくは、ローカライゼーション・プラグインはこちらでお探しください。おそらく、彼らもプラグインをサポートすると思うので。",
       :note_two => "注意２: <code>number_to_currency</code>、<code>number_to_percentage</code>、 <code>number_to_human_size</code>は、すべて<code>number_with_precision</code>を内部的に使用しています。そして <code>number_with_precision</code>は、<code>number_with_delimiter</code>を内部的に使用しています。"
-    }
+    },
+      :setup => {
+        :freezing_edge_and_adding => "Freezing Edge and installing the localized_dates plugin",
+        :you_need_to_be_on_edge => "You need to be on Edge Rails in order to use the Rails i18n features:",
+        :date_time_formats => "For date and time formats, you also need to install the {{localized_dates_link}}:",
+        :config_locale => "Configuring the locale",
+        :best_place => "The best place to put your locale configuration, in my opinion, is <code>config/locales</code>. The localized_dates plugin will copy two locales, en-US and de-AT, in this directory. You can extend or modify them and also create new locales.",
+        :locale => "Here's the demo locale that was used for this demo application:",
+        :defaults => "You also need to set up the default locale and/or locale in your <code>environment.rb</code> or an initializer.",
+        :locale_structure_title => "A word on the structure of locales",
+        :locale_structure_number => "You may have noticed that inside the <code>:number</code> part of the locale, we defined <code>:format</code> and <code>:currency</code>. In general, locales are structured hierarchically - i.e. a currencies are numbers, percentages are numbers, etc. <code>:currency</code> can either override the basic <code>:format</code> settings (in our case, we set <code>:precision</code> to 2 instead of 3) or extend them (we add two new options, <code>:unit</code> and <code>:format</code>).",
+        :locale_structure_date_time => "The same holds true for dates and times: If needed, <code>:datetime</code> and <code>:time_with_zone</code> can be used to specifically address formatting of their respective types instead of just relying on the settings for <code>:time</code>. Note, however, that usually you want to use the same formats as <code>:time</code>."   
+      },
+      :time_format => {
+        :rails_standards_work => "Rails standard formats (Time::DATE_FORMATS) still work:"
+      }
   }
 }
