@@ -92,16 +92,16 @@ I18n.backend.store_translations :'gibberish', {
     }
   },
   :txt => {
-    :main_title => "Localizing Rails",
-    :app_name => "Demo Application",
+    :main_title => "Localizing Rails (ish)",
+    :app_name => "Demo Applicationomnomnom",
     :sub_title => "how to localize your app with Rails' new i18n features",
     :contents => "Contents",
     :menu => {
-      :introduction => "Introduction",
-      :about => "About",
-      :setup => "Setup",
-      :date_formats => "Date formats",
-      :time_formats => "Time formats"
+      :introduction => "Introductionarinos",
+      :about => "Abouteroo",
+      :setup => "Setupupup",
+      :date_formats => "Date formatsks",
+      :time_formats => "Time formatsks"
     },
     :about => {
       :title => "About this demo app",
@@ -140,8 +140,11 @@ I18n.backend.store_translations :'gibberish', {
       :locale_structure_number => "You may have noticed that inside the <code>:number</code> part of the locale, we defined <code>:format</code> and <code>:currency</code>. In general, locales are structured hierarchically - i.e. a currencies are numbers, percentages are numbers, etc. <code>:currency</code> can either override the basic <code>:format</code> settings (in our case, we set <code>:precision</code> to 2 instead of 3) or extend them (we add two new options, <code>:unit</code> and <code>:format</code>).",
       :locale_structure_date_time => "The same holds true for dates and times: If needed, <code>:datetime</code> and <code>:time_with_zone</code> can be used to specifically address formatting of their respective types instead of just relying on the settings for <code>:time</code>. Note, however, that usually you want to use the same formats as <code>:time</code>."   
     },
-    :time_format => {
+    :time_formats => {
       :rails_standards_work => "Rails standard formats (Time::DATE_FORMATS) still work:"
+    },
+    :ipe =>{
+      :click => "click here boyo!"
     }
   }
 }

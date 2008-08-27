@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
     session[:locale] = params[:locale] if params[:locale]
     
     #set locale based on session or default 
-    locale = session[:locale] || 'gibberish'
+    locale = session[:locale] || I18n.default_locale
     I18n.locale = locale
     
     #load local from settings

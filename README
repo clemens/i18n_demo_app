@@ -24,6 +24,13 @@ This demo app contains examples and tutorials on localizing the following parts 
 * NumberHelper
 * ActiveRecordHelper (incomplete at this point)
 
+
+Adding Translations
+===================
+
+It's easy to add a translation to this demo app, simply drop your locale file into the config/locales directory. As long as it follows the correct format (see config/locales/en-US.rb) it should all work fine.
+
+
 Bugs and Feedback
 =================
 

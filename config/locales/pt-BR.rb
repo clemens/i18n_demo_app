@@ -145,8 +145,11 @@ I18n.backend.store_translations :'pt-BR', {
       :locale_structure_number => "Você deve ter notado que dentro da parte <code>:number</code> do local, nós definimos <code>:format</code> e <code>:currency</code>. Em geral, locais são estruturas hierárquicas - isto é, moedas são números, porcentagens são números, etc. <code>:currency</code> pode tanto se sobrepor à configuração <code>:format</code> básica (em nosso caso, nós configuramos <code>:precision</code> para 2 em vez de 3) ou extendê-la (adicionamos duas novas opções, <code>:unit</code> e <code>:format</code>).",
       :locale_structure_date_time => "O mesmo é válido para datas e horas: se for necessário, <code>:datetime</code> e <code>:time_with_zone</code> podem ser usados para resolver especificamente formatação de seus respectivos tipos em vez de depender das configurações para <code>:time</code>. Note, entretanto, que normalmente você quer usar as mesmas formatações que <code>:time</code>."           
     },
-    :time_format => {
+    :time_formats => {
       :rails_standards_work => "Formatos padrão Rails (Time::DATE_FORMATS) ainda funcionam:"
-    }
+    },
+      :ipe =>{
+        :click => "click aqui!"
+      }
   }
 }

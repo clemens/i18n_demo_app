@@ -5,18 +5,18 @@
     <tr>
       <th scope="row">in_place_editor('id1', :url => {:action => 'update_value'}, :locale => 'en-US')</th>
       <td>
-		<div id="id1">click aqui!</div>
+		<div id="id1"><%= I18n.t 'txt.ipe.click' %></div>
 		<%= in_place_editor('id1', :url => {:action => 'update_value'}, :locale => 'en-US') %>
 	  </td>
     </tr>
     <tr>
       <th scope="row">in_place_editor('some_input', :url => {:action => 'update_value'})</th>
       <td>
-		<div id="id2">click aqui!</div>
+		<div id="id2"><%= I18n.t 'txt.ipe.click' %></div>
 		<%= in_place_editor('id2', :url => {:action => 'update_value'}) %>
 	  </td>
     </tr>
   </table>
 </div>
 
-<p style="text-align:right;"><%= link_to '&raquo; Sobre essa aplicação de demonstração', :action => 'about' %></p>
+<p style="text-align:right;"><%= link_to "&raquo; #{I18n.t('txt.menu.about')}", :action => 'about' %></p>

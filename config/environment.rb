@@ -66,7 +66,7 @@ Rails::Initializer.run do |config|
   # config.active_record.observers = :cacher, :garbage_collector
 end
 
-I18n.default_locale = 'gibberish'
+I18n.default_locale = 'en-US'
 
 LOCALES_DIRECTORY = "#{RAILS_ROOT}/config/locales/"
 LOCALES_AVAILABLE = Dir.new(LOCALES_DIRECTORY).entries.collect {|x| x =~ /\.rb/ ? x.sub(/\.rb/,"") : nil }.compact
