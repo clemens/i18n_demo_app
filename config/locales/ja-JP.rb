@@ -91,12 +91,12 @@ I18n.backend.store_translations :'ja-JP', {
     }
   },
   :txt => {
-    :main_title => "Railsをローカライズ",
+    :main_title => "Railsをローカライズする",
     :app_name => "デモ アプリケーション",
-    :sub_title => "新しいi18nの特徴を用いてアプリをローカライズする方法",
+    :sub_title => "新しいi18nの特徴を用いてアプリケーションをローカライズする方法",
     :contents => "コンテンツ",
     :menu => {
-      :about => "について",
+      :about => "デモアプリについて",
       :introduction => "導入",
       :setup => "設定",
       :date_formats => "日付フォーマット",
@@ -104,27 +104,27 @@ I18n.backend.store_translations :'ja-JP', {
     },
     :about => {
       :title => "デモアプリについて",
-      :author => "このデモアプリは、<%= mail_to \"clemens@railway.at\", \"Clemens Kofler\" %>によって書かれています。",
-      :feedback => "もし、なんらかのツッコミがありましたら、お気軽にメールください。また、Railsやいろんなことについて定期的に更新している私のブログも是非<%= link_to \"www.railway.at\", \"http://www.railway.at\" %>。",
-      :licence => "このデモアプリとすべてのコンテンツライセンスは、<%= link_to \"Creative Commons Attribution Noncommercial Share Alike License\", \"http://creativecommons.org/licenses/by-nc-sa/2.0/at/\" %>にあります。 もし、このライセンスによって禁止されている方法で使用をご検討の場合は、事前に私の許可を得るようにしてください。"
+      :author => "このデモアプリは、{{mail_1}}と{{mail_2}}によって書かれています。",
+      :feedback => "ご意見ご感想がありましたら、気軽にメールを頂ければ幸いです。また、Railsやその他のことについて、定期的に更新している私のブログも是非{{blog_href}}ご覧ください。",
+      :licence => "このデモアプリとすべてのコンテンツライセンスは、{{licence_href}}にあります。もし、このライセンスによって禁止されている方法での使用をご検討の場合は、事前に私の許可を得るようにしてください。"
     },
     :active_record => {
-      :too_lazy => "No examples here since I'm too lazy to think of attributes to show <strong>all</strong> custom error messages. ;-)",
+      :too_lazy => "例はまだ載せていません。カスタムエラーメッセージの<strong>全て</strong>を表示するアトリビュートを考えるのがめんどくさくて・・・ ;-)",
       :easy_to_understand => "まぁ、理解するのは簡単だと思うんだけど・・・."
     }, 
     :date_formats => {
-      :rails_standards_work => "Railsの標準フォーマット(Date::DATE_FORMATS)はまだ動きます:"
+      :rails_standards_work => "Railsの標準フォーマット(Date::DATE_FORMATS)も有効です:"
     },
     :date_helper => {
       :date_time_title => "日付/時間 距離",
       :forms_title => "フォーム"
     },
     :index => {
-      :introduction => "最近になり、<%= link_to \"Sven Fuchs\", \"http://www.artweb-design.de/\" %> や <%= link_to \"others\", \"http://github.com/svenfuchs/i18n/tree/48ff00d2af07693171ec341500537b30e23e83bc/README.textile\" %>によって、Railsにおける国際化や局所化を促進するたくさん仕事がなされました。",
+      :introduction => "最近になり、{{sven_blog}} や {{sven_github}}によって、Railsにおけるインターナショナライゼーションやローカライゼーションを促進する多くの仕事がなされました。",
       :story_so_far => "このデモアプリは、あなたのアプリにおける大部分をローカライズするために、今まで実装されてきた特徴をどのように使用するかを示しています。"
     },
     :number_helper => {
-      :note_one => "注意１: <code>number_to_phone</code> は、まだローカライズされていません。 そして、 おそらく今後もローカライズはされません。-少なくともコアには。 新しいバージョンのインターナショナライゼーションもしくは、ローカライゼーションプラグインはこちらでお探しください。<%= link_to \"Globalize\", \"http://globalize.rubyforge.org/\" %>おそらく、彼らはそのようなプラグインをサポートするので。",
+      :note_one => "注意１: <code>number_to_phone</code> は、まだローカライズされていません。 そして、 おそらく今後もローカライズはされないのではと思います。- 少なくともコアには。 {{globalize}}の新しいバージョンのような新しいインターナショナライゼーションもしくは、ローカライゼーション・プラグインはこちらでお探しください。おそらく、彼らもプラグインをサポートすると思うので。",
       :note_two => "注意２: <code>number_to_currency</code>、<code>number_to_percentage</code>、 <code>number_to_human_size</code>は、すべて<code>number_with_precision</code>を内部的に使用しています。そして <code>number_with_precision</code>は、<code>number_with_delimiter</code>を内部的に使用しています。"
     }
   }
