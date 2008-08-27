@@ -16,7 +16,8 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
   
   def set_locale
-    locale = params[:locale] || 'gibberish'
+    session[:locale] = params[:locale] if params[:locale]
+    locale = params[:locale] || session[:locale] || 'gibberish'
     I18n.locale = locale
     I18n.populate do 
       require "#{RAILS_ROOT}/config/locales/#{locale}.rb"
