@@ -4897,3 +4897,53 @@ Rendering pages/about
 Compiling template _run_erb_47app47views47pages47about46html46erb
 Compiling template _run_erb_47app47views47layouts47application46html46erb
 Completed in 0.01285 (77 reqs/sec) | Rendering: 0.00803 (62%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-27 15:29:07) [POST]
+  Session ID: BAh7CDoLbG9jYWxlIgplbi1VUzoMY3NyZl9pZCIlOTg3MTZhOWZiZDA0YzlkZThlZDQzYTlkZWQxYTdlYjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--68ddbaba0712efb324f0c5ee9896b9704d2e0898
+  Parameters: {"authenticity_token"=>"a4b25a8e47662544d7e1139bb6ec526204fc065f", "action"=>"about", "controller"=>"pages", "locale"=>"ja-JP"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01159 (86 reqs/sec) | Rendering: 0.00772 (66%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-27 15:29:17) [POST]
+  Session ID: BAh7CDoMY3NyZl9pZCIlOTg3MTZhOWZiZDA0YzlkZThlZDQzYTlkZWQxYTdlYjA6C2xvY2FsZSIKamEtSlAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--0d5221a9b8812385b2e8d2d84fa335cb6a6cf055
+  Parameters: {"authenticity_token"=>"a4b25a8e47662544d7e1139bb6ec526204fc065f", "action"=>"about", "controller"=>"pages", "locale"=>"en-US"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01169 (85 reqs/sec) | Rendering: 0.00697 (59%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-27 15:29:20) [POST]
+  Session ID: BAh7CDoLbG9jYWxlIgplbi1VUzoMY3NyZl9pZCIlOTg3MTZhOWZiZDA0YzlkZThlZDQzYTlkZWQxYTdlYjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--68ddbaba0712efb324f0c5ee9896b9704d2e0898
+  Parameters: {"authenticity_token"=>"a4b25a8e47662544d7e1139bb6ec526204fc065f", "action"=>"about", "controller"=>"pages", "locale"=>"gibberish"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01268 (78 reqs/sec) | Rendering: 0.00787 (62%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-27 15:29:24) [POST]
+  Session ID: BAh7CDoMY3NyZl9pZCIlOTg3MTZhOWZiZDA0YzlkZThlZDQzYTlkZWQxYTdlYjA6C2xvY2FsZSIOZ2liYmVyaXNoIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--308d4329aa73482b0b88f76ab7dae099797b64c0
+  Parameters: {"authenticity_token"=>"a4b25a8e47662544d7e1139bb6ec526204fc065f", "action"=>"about", "controller"=>"pages", "locale"=>"ja-JP"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01205 (83 reqs/sec) | Rendering: 0.00778 (64%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2008-08-27 15:30:50) [POST]
+  Session ID: BAh7CDoLbG9jYWxlIgpqYS1KUDoMY3NyZl9pZCIlOTg3MTZhOWZiZDA0YzlkZThlZDQzYTlkZWQxYTdlYjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--563a33507eb05f471be40121e3d56fcd455f9f39
+  Parameters: {"authenticity_token"=>"a4b25a8e47662544d7e1139bb6ec526204fc065f", "action"=>"about", "controller"=>"pages", "locale"=>"ja-JP"}
+Rendering template within layouts/application
+Rendering pages/about
+Compiling template _run_erb_47app47views47pages47about46html46erb
+Compiling template _run_erb_47app47views47layouts47application46html46erb
+Completed in 0.01107 (90 reqs/sec) | Rendering: 0.00690 (62%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pages/about]
