@@ -85,16 +85,7 @@ I18n.backend.store_translations :'pt-BR', {
       :odd => "precisa ser ímpar",
       :even => "precisa ser par"
     }
-  },
-  
-  # Plugin in_place_editing
-  :in_place_editing => {
-    :text => {
-      :cancel => "cancelar",
-      :loading => "carregando...",
-      :save => "salvar",
-      :saving => "salvando..."
-    }
+  }
   },
   :txt => {
     :main_title => "Localizando Rails",
@@ -117,7 +108,7 @@ I18n.backend.store_translations :'pt-BR', {
     :active_record => {
       :too_lazy => "Nenhum exemplo aqui já que sou muito preguiçoso para pensar em atributos para mostrar <strong>todas</strong> as mensagens customizadas de erro. ;-)",
       :easy_to_understand => "Mas é bem fácil de entender.."
-    }, 
+    },
     :date_formats => {
       :rails_standards_work => "Formatos padrão do Rails (Date::DATE_FORMATS) ainda funcionam:"
     },
