@@ -37,19 +37,21 @@
       :pm => 'pm'
     },
     # date helper distance in words
+    #NOTE: Pluralization rules have changed! Rather than simply submitting an array, i18n now allows for a hash with the keys:
+    # :zero, :one & :other   - FUNKY (but a pain to find...)!
     :datetime => {
       :distance_in_words => {
         :half_a_minute       => 'half a minute',
-        :less_than_x_seconds => ['less than 1 second', '{{count}} seconds'],
-        :x_seconds           => ['1 second', '{{count}} seconds'],
-        :less_than_x_minutes => ['less than a minute', '{{count}} minutes'],
-        :x_minutes           => ["1 minute", "{{count}} minutes"],
-        :about_x_hours       => ['about 1 hour', '{{count}} hours'],
-        :x_days              => ['1 day', '{{count}} days'],
-        :about_x_months      => ['about 1 month', '{{count}} months'],
-        :x_months            => ['1 month', '{{count}} months'],
-        :about_x_years       => ['about 1 year', '{{count}} year'],
-        :over_x_years        => ['over 1 year', '{{count}} years']
+        :less_than_x_seconds => {:zero => 'less than 1 second', :one => '1 second', :other => '{{count}} seconds'},
+        :x_seconds           => {:one => '1 second', :other => '{{count}} seconds'},
+        :less_than_x_minutes => {:zero => 'less than a minute', :one => '1 minute', :other => '{{count}} minutes'},
+        :x_minutes           => {:one => "1 minute", :other => "{{count}} minutes"},
+        :about_x_hours       => {:one => 'about 1 hour', :other => '{{count}} hours'},
+        :x_days              => {:one => '1 day', :other => '{{count}} days'},
+        :about_x_months      => {:one => 'about 1 month', :other => '{{count}} months'},
+        :x_months            => {:one => '1 month', :other => '{{count}} months'},
+        :about_x_years       => {:one => 'about 1 year', :other => '{{count}} years'},
+        :over_x_years        => {:one => 'over 1 year', :other => '{{count}} years'}
       }
     },
 
