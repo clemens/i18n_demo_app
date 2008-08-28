@@ -116,6 +116,7 @@ I18n.backend.store_translations :'pt-BR', {
       :forms_title => "Formulários"
     },
     :index => {
+      :others => "outros",
       :introduction => "Recentemente, muito trabalho foi feito por {{sven_blog}} e {{sven_github}} para facilitar futuras internacionalizações e localizações no Rails.",
       :story_so_far => "Esta aplicação de demonstração tenta demonstrar como usar as funcionalidades que foram implementadas até agora para localizar grandes partes de sua aplicação Rails."
     },

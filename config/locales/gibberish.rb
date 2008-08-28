@@ -121,6 +121,7 @@ I18n.backend.store_translations :'gibberish', {
       :forms_title => "Forms"
     },
     :index => {
+      :others => "others",
       :introduction => "Lately, a lot of work has been done by {{sven_blog}} and {{sven_github}} to facilitate future internationalization and localization of Rails.",
       :story_so_far => "This demo app tries to show you how you can use the features that have been implemented so far to localize big parts of your Rails application."
     },

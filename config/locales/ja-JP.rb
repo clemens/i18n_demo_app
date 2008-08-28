@@ -120,6 +120,7 @@ I18n.backend.store_translations :'ja-JP', {
       :forms_title => "フォーム"
     },
     :index => {
+      :others => "others",
       :introduction => "最近になり、{{sven_blog}} や {{sven_github}}によって、Railsにおけるインターナショナライゼーションやローカライゼーションを促進する多くの仕事がなされました。",
       :story_so_far => "このデモアプリは、あなたのアプリにおける大部分をローカライズするために、今まで実装されてきた特徴をどのように使用するかを示しています。"
     },

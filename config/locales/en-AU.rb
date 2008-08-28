@@ -114,7 +114,7 @@ I18n.backend.store_translations :'en-AU', {
     :active_record => {
       :too_lazy => "Bugger. No examples here since I'm too lazy to think of attributes to show <strong>all</strong> custom error messages. ;-)",
       :easy_to_understand => "It's quite easy to understand, though, champ."
-    }, 
+    },
     :date_formats => {
       :rails_standards_work => "Rails standard formats (Date::DATE_FORMATS) still work:"
     },
@@ -123,6 +123,7 @@ I18n.backend.store_translations :'en-AU', {
       :forms_title => "Forms"
     },
     :index => {
+      :others => "others",
       :introduction => "Strewth! Lately, a lot of work has been done by {{sven_blog}} and {{sven_github}} to facilitate future internationalization and localization of Rails.",
       :story_so_far => "This demo app tries to show you how you can use the features that have been implemented so far to localize big parts of your Rails application."
     },
