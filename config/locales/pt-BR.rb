@@ -86,16 +86,6 @@ I18n.backend.store_translations :'pt-BR', {
       :even => "precisa ser par"
     }
   },
-  
-  # Plugin in_place_editing
-  :in_place_editing => {
-    :text => {
-      :cancel => "cancelar",
-      :loading => "carregando...",
-      :save => "salvar",
-      :saving => "salvando..."
-    }
-  },
   :txt => {
     :main_title => "Localizando Rails",
     :app_name => "Aplicação de Demonstração",
@@ -117,7 +107,7 @@ I18n.backend.store_translations :'pt-BR', {
     :active_record => {
       :too_lazy => "Nenhum exemplo aqui já que sou muito preguiçoso para pensar em atributos para mostrar <strong>todas</strong> as mensagens customizadas de erro. ;-)",
       :easy_to_understand => "Mas é bem fácil de entender.."
-    }, 
+    },
     :date_formats => {
       :rails_standards_work => "Formatos padrão do Rails (Date::DATE_FORMATS) ainda funcionam:"
     },
@@ -126,6 +116,7 @@ I18n.backend.store_translations :'pt-BR', {
       :forms_title => "Formulários"
     },
     :index => {
+      :others => "outros",
       :introduction => "Recentemente, muito trabalho foi feito por {{sven_blog}} e {{sven_github}} para facilitar futuras internacionalizações e localizações no Rails.",
       :story_so_far => "Esta aplicação de demonstração tenta demonstrar como usar as funcionalidades que foram implementadas até agora para localizar grandes partes de sua aplicação Rails."
     },
@@ -149,8 +140,8 @@ I18n.backend.store_translations :'pt-BR', {
     :time_formats => {
       :rails_standards_work => "Formatos padrão Rails (Time::DATE_FORMATS) ainda funcionam:"
     },
-      :ipe =>{
-        :click => "click aqui!"
-      }
+    :ipe =>{
+      :click => "click aqui!"
+    }
   }
 }
