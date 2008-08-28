@@ -21,12 +21,9 @@ class ApplicationController < ActionController::Base
     session[:locale] = params[:locale] if params[:locale]
     
     #set locale based on session or default 
-    locale = session[:locale] || I18n.default_locale
-    I18n.locale = locale
+    I18n.locale = session[:locale] || I18n.default_locale
     
-    #load local from settings
-    I18n.populate do 
-      require "#{LOCALES_DIRECTORY}#{locale}.rb"
-    end
+    #load locale from settings
+    I18n.load_translations "#{LOCALES_DIRECTORY}#{I18n.locale}.rb"
   end
 end
