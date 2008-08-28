@@ -15,7 +15,7 @@ rake rails:freeze:edge
 ./script/plugin install git://github.com/clemens/localized_dates.git
       </pre>
     </blockquote>
-	Para instalar o <%= link_to "plugin in_place_editing", "http://github.com/dcrec1/in_place_editing/" %> com suporte a i18n:
+    <%= I18n.t 'txt.setup.in_place_editing', :in_place_editing_link => link_to("plugin in_place_editing", "http://github.com/dcrec1/in_place_editing/") %>
     <blockquote>
       <pre>
 ./script/plugin install git://github.com/dcrec1/in_place_editing.git
