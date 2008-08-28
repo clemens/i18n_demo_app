@@ -24,8 +24,18 @@ I18n.backend.store_translations :'gibberish', {
       :long_ordinal => lambda { |time| "%B #{time.day}ish, %Y %H:%M" },
       :only_second  => "%S (ish)"
     },
-    :am => '',
-    :pm => ''
+      :datetime => {
+        :formats => {
+          :default => "%Y-%m-%dT%H:%M:%S%Z"
+        }
+      },
+      :time_with_zone => {
+        :formats => {
+          :default => lambda { |time| "%Y-%m-%d %H:%M:%S #{time.formatted_offset(false, 'UTC')}" }
+        }
+      },
+    :am => 'am-ish',
+    :pm => 'pm-ish'
   },
 
   # date helper distance in words
@@ -143,9 +153,6 @@ I18n.backend.store_translations :'gibberish', {
     },
     :time_formats => {
       :rails_standards_work => "Rails standard formats (Time::DATE_FORMATS) still work:"
-    },
-    :ipe =>{
-      :click => "click here boyo!"
     }
   }
 }

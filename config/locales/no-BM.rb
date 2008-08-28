@@ -11,6 +11,7 @@ I18n.backend.store_translations :"no-BM", {
       :default => "%Y-%m-%d",
       :short => "%b %d",
       :long => "%B %d, %Y",
+      :only_day     => "%e"
     },
     :day_names => Date::DAYNAMES,
     :abbr_day_names => Date::ABBR_DAYNAMES,
@@ -23,6 +24,7 @@ I18n.backend.store_translations :"no-BM", {
       :default => "%a, %d %b %Y %H:%M:%S %z",
       :short => "%d %b %H:%M",
       :long => "%B %d, %Y %H:%M",
+      :only_second  => "%S"
     },
     :am => "am",
     :pm => "pm"

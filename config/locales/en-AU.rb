@@ -4,7 +4,8 @@ I18n.backend.store_translations :'en-AU', {
       :default      => "%d/%m/%Y",
       :short        => "%e %b",
       :long         => "%e %B, %Y",
-      :long_ordinal => lambda { |date| "#{date.day.ordinalize} %B, %Y" }
+      :long_ordinal => lambda { |date| "#{date.day.ordinalize} %B, %Y" },
+      :only_day     => "%e"
     },
     :day_names => Date::DAYNAMES,
     :abbr_day_names => Date::ABBR_DAYNAMES,
@@ -18,7 +19,8 @@ I18n.backend.store_translations :'en-AU', {
       :time         => "%H:%M",
       :short        => "%d %b %H:%M",
       :long         => "%d %B, %Y %H:%M",
-      :long_ordinal => lambda { |time| "#{time.day.ordinalize} %B, %Y %H:%M" }
+      :long_ordinal => lambda { |time| "#{time.day.ordinalize} %B, %Y %H:%M" },
+      :only_second  => "%S"
     },
     :datetime => {
       :formats => {
@@ -145,9 +147,6 @@ I18n.backend.store_translations :'en-AU', {
     },
     :time_formats => {
       :rails_standards_work => "Rails standard formats (Time::DATE_FORMATS) still work:"
-    },
-    :ipe => {
-      :click => "click here, mate!"
     }
   }
 }
