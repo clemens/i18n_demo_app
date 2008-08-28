@@ -127,23 +127,23 @@ I18n.backend.store_translations :'ja-JP', {
       :note_one => "注意１: <code>number_to_phone</code> は、まだローカライズされていません。 そして、 おそらく今後もローカライズはされないのではと思います。- 少なくともコアには。 {{globalize}}の新しいバージョンのような新しいインターナショナライゼーションもしくは、ローカライゼーション・プラグインはこちらでお探しください。おそらく、彼らもプラグインをサポートすると思うので。",
       :note_two => "注意２: <code>number_to_currency</code>、<code>number_to_percentage</code>、 <code>number_to_human_size</code>は、すべて<code>number_with_precision</code>を内部的に使用しています。そして <code>number_with_precision</code>は、<code>number_with_delimiter</code>を内部的に使用しています。"
     },
-      :setup => {
-        :freezing_edge_and_adding => "Edgeを解凍し、localized_datesプラグインをインストールします。",
-        :you_need_to_be_on_edge => "Rails i18nの特徴を使用するためには、Edge Rails上でアプリを動作させる必要があります:",
-        :date_time_formats => "日付と時間のフォーマットには、{{localized_dates_link}}も併せてインストールする必要があります:",
-        :config_locale => "ローカルの設定",
-        :best_place => "自身のlocale設定ファイルを格納すべき、一番最適な場所は、私の意見では、<code>config/locales</code>が良いだろうと思います。localized_datesプラグインは、このディレクトリにen-USとde-AT、２つのlocaleファイルをコピーします。あなたは、それらを拡張もしくは、修正することもできますし、新しいローカルファイルを作る事もできます。",
-        :locale => "こちらが、このデモアプリケーションで使用したデモ・localeファイルです。:",
-        :defaults => "default locale かつ／もしくは、 localeをあなた自身の<code>environment.rb</code>かinitializerに設定します.",
-        :locale_structure_title => "localeの構造について",
-        :locale_structure_number => "お気づきの通り、localeの<code>:number</code>パート内部に、<code>:format</code>と<code>:currency</code>を定義しています。一般的に、ローカルファイルは階層構造になっています。 - つまり、通貨は数字ですし、パーセンテージも数字です、などなど。<code>:currency</code>は、 基本となる<code>:format</code>設定を上書きするか、(私たちのケースでは、<code>:precision</code>に３の代わりに２を設定しています。)それらを拡張します(２つの新しいオプション<code>:unit</code>と<code>:format</code>を追加しています。)。",
-        :locale_structure_date_time => "同様のことが日付と時間にも言えます: 必要ならば、<code>:datetime</code>と<code>:time_with_zone</code>は、<code>:time</code>の設定に依存している代わりに、明確なアドレスフォーマットを使用することもできます。しかしながら、たいていは、<code>:time</code>と同様のフォーマットを使用したいはずです。"   
-      },
-       :time_formats => {
-          :rails_standards_work => "Railsの標準フォーマット(Time::DATE_FORMATS)は有効です:"
-      },
-        :ipe =>{
-          :click => "クリック！"
-      }
+    :setup => {
+      :freezing_edge_and_adding => "Edgeを解凍し、localized_datesプラグインをインストールします。",
+      :you_need_to_be_on_edge => "Rails i18nの特徴を使用するためには、Edge Rails上でアプリを動作させる必要があります:",
+      :date_time_formats => "日付と時間のフォーマットには、{{localized_dates_link}}も併せてインストールする必要があります:",
+      :config_locale => "ローカルの設定",
+      :best_place => "自身のlocale設定ファイルを格納すべき、一番最適な場所は、私の意見では、<code>config/locales</code>が良いだろうと思います。localized_datesプラグインは、このディレクトリにen-USとde-AT、２つのlocaleファイルをコピーします。あなたは、それらを拡張もしくは、修正することもできますし、新しいローカルファイルを作る事もできます。",
+      :locale => "こちらが、このデモアプリケーションで使用したデモ・localeファイルです。:",
+      :defaults => "default locale かつ／もしくは、 localeをあなた自身の<code>environment.rb</code>かinitializerに設定します.",
+      :locale_structure_title => "localeの構造について",
+      :locale_structure_number => "お気づきの通り、localeの<code>:number</code>パート内部に、<code>:format</code>と<code>:currency</code>を定義しています。一般的に、ローカルファイルは階層構造になっています。 - つまり、通貨は数字ですし、パーセンテージも数字です、などなど。<code>:currency</code>は、 基本となる<code>:format</code>設定を上書きするか、(私たちのケースでは、<code>:precision</code>に３の代わりに２を設定しています。)それらを拡張します(２つの新しいオプション<code>:unit</code>と<code>:format</code>を追加しています。)。",
+      :locale_structure_date_time => "同様のことが日付と時間にも言えます: 必要ならば、<code>:datetime</code>と<code>:time_with_zone</code>は、<code>:time</code>の設定に依存している代わりに、明確なアドレスフォーマットを使用することもできます。しかしながら、たいていは、<code>:time</code>と同様のフォーマットを使用したいはずです。"   
+    },
+     :time_formats => {
+        :rails_standards_work => "Railsの標準フォーマット(Time::DATE_FORMATS)は有効です:"
+    },
+      :ipe =>{
+        :click => "クリック！"
+    }
   }
 }
