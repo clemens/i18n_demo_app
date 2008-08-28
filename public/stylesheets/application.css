@@ -71,7 +71,7 @@ div#navigation {
   width: 175px;
 }
 
-div#navigation ul {
+div#navigation ul, ul {
   list-style-type: none;
   margin: 0;
   padding: 0;

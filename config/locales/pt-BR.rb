@@ -4,7 +4,8 @@ I18n.backend.store_translations :'pt-BR', {
     :formats => {
       :default      => "%d/%m/%Y",
       :short        => lambda { |date| "#{date.day} %b" },
-      :long         => lambda { |date| "#{date.day} de %B de %Y" }
+      :long         => lambda { |date| "#{date.day} de %B de %Y" },
+      :only_day     => "%e"
     },
     :day_names => %w(Domingo Segunda Terça Quarta Quinta Sexta Sábado),
     :abbr_day_names => %w(Do Se Te Qa Qi Sx Sa),
@@ -17,7 +18,8 @@ I18n.backend.store_translations :'pt-BR', {
       :default      => lambda { |time| "%A, #{time.day} de %B de %Y, %H:%M hs" },
       :time         => "%H:%M hs",
       :short        => lambda { |time| "#{time.day}/%m, %H:%M hs" },
-      :long         => lambda { |time| "%A, #{time.day} de %B de %Y, %H:%M hs" }
+      :long         => lambda { |time| "%A, #{time.day} de %B de %Y, %H:%M hs" },
+      :only_second  => "%S"
     },
     :am => '',
     :pm => ''
@@ -86,16 +88,6 @@ I18n.backend.store_translations :'pt-BR', {
       :even => "precisa ser par"
     }
   },
-  
-  # Plugin in_place_editing
-  :in_place_editing => {
-    :text => {
-      :cancel => "cancelar",
-      :loading => "carregando...",
-      :save => "salvar",
-      :saving => "salvando..."
-    }
-  },
   :txt => {
     :main_title => "Localizando Rails",
     :app_name => "Aplicação de Demonstração",
@@ -117,7 +109,7 @@ I18n.backend.store_translations :'pt-BR', {
     :active_record => {
       :too_lazy => "Nenhum exemplo aqui já que sou muito preguiçoso para pensar em atributos para mostrar <strong>todas</strong> as mensagens customizadas de erro. ;-)",
       :easy_to_understand => "Mas é bem fácil de entender.."
-    }, 
+    },
     :date_formats => {
       :rails_standards_work => "Formatos padrão do Rails (Date::DATE_FORMATS) ainda funcionam:"
     },
@@ -126,6 +118,7 @@ I18n.backend.store_translations :'pt-BR', {
       :forms_title => "Formulários"
     },
     :index => {
+      :others => "outros",
       :introduction => "Recentemente, muito trabalho foi feito por {{sven_blog}} e {{sven_github}} para facilitar futuras internacionalizações e localizações no Rails.",
       :story_so_far => "Esta aplicação de demonstração tenta demonstrar como usar as funcionalidades que foram implementadas até agora para localizar grandes partes de sua aplicação Rails."
     },
@@ -147,9 +140,6 @@ I18n.backend.store_translations :'pt-BR', {
     },
     :time_formats => {
       :rails_standards_work => "Formatos padrão Rails (Time::DATE_FORMATS) ainda funcionam:"
-    },
-      :ipe =>{
-        :click => "click aqui!"
-      }
+    }
   }
 }

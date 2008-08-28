@@ -15,12 +15,6 @@ rake rails:freeze:edge
 ./script/plugin install git://github.com/clemens/localized_dates.git
       </pre>
     </blockquote>
-	Para instalar o <%= link_to "plugin in_place_editing", "http://github.com/dcrec1/in_place_editing/" %> com suporte a i18n:
-    <blockquote>
-      <pre>
-./script/plugin install git://github.com/dcrec1/in_place_editing.git
-      </pre>
-    </blockquote>
   </div>
 
   <h3>	<%= I18n.t 'txt.setup.config_locale' %></h3>
@@ -29,12 +23,7 @@ rake rails:freeze:edge
     <p>	<%= I18n.t 'txt.setup.locale' %></p>
     <blockquote>
       <pre>
-<% counter = 0 %>
-<% lineWidth = 80 %>
-<% while (line = @locale_file.gets) -%>
-<%= "#{counter}: #{line}" -%>
-<% counter = counter + 1 -%>
-<% end -%>	
+<%= show_source(@locale_file)%>	
       </pre>
     </blockquote>
     <p><%= I18n.t 'txt.setup.defaults' %></p>
