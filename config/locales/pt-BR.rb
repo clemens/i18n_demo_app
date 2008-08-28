@@ -85,7 +85,6 @@ I18n.backend.store_translations :'pt-BR', {
       :odd => "precisa ser ímpar",
       :even => "precisa ser par"
     }
-  }
   },
   :txt => {
     :main_title => "Localizando Rails",
