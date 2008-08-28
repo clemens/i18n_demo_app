@@ -54,7 +54,7 @@ I18n.backend.store_translations :'en-US', {
       :active_record => {
         :too_lazy => "No examples here since I'm too lazy to think of attributes to show <strong>all</strong> custom error messages. ;-)",
         :easy_to_understand => "It's quite easy to understand, though."
-      }, 
+      },
       :date_formats => {
         :rails_standards_work => "Rails standard formats (Date::DATE_FORMATS) still work:"
       },
