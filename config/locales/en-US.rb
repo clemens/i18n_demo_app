@@ -74,6 +74,7 @@ I18n.backend.store_translations :'en-US', {
         :freezing_edge_and_adding => "Freezing Edge and installing the localized_dates plugin",
         :you_need_to_be_on_edge => "You need to be on Edge Rails in order to use the Rails i18n features:",
         :date_time_formats => "For date and time formats, you also need to install the {{localized_dates_link}}:",
+        :in_place_editing => "And installs {{in_place_editing_link}} which supports i18n:",
         :config_locale => "Configuring the locale",
         :best_place => "The best place to put your locale configuration, in my opinion, is <code>config/locales</code>. The localized_dates plugin will copy two locales, en-US and de-AT, in this directory. You can extend or modify them and also create new locales.",
         :locale => "Here's the demo locale that was used for this demo application:",
