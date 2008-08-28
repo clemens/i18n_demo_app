@@ -54,7 +54,7 @@ I18n.backend.store_translations :'th-TH', {
   # numbers
   :number => {
     :format => {
-      :precision => 2,
+      :precision => 3,
       :separator => '.',
       :delimiter => ','
     },
@@ -108,47 +108,47 @@ I18n.backend.store_translations :'th-TH', {
       :setup => "การติดตั้ง",
       :date_formats => "รูปแบบของวันที่",
       :time_formats => "รูปแบบของเวลา"
+    },
+    :about => {
+      :title => "เกี่ยวกับ Application ตัวอย่างอันนี้",
+      :author => "Application ตัวนี้ถูกเขียนขึ้นโดย {{mail_1}}.",
+      :feedback => "ถ้าคุณมีข้อเสนอแนะต่างๆ อย่าลืมที่จะเขียนมาบอกเรา (เป็นภาษาอังกฤษ) ที่อีเมล์ข้างต้น และอย่าลืมเข้าไปติดตามข่าวคราวใหม่ๆ เกี่ยวกับ Rails และอื่นๆ ที่ {{blog_href}}",
+      :licence => "Demo Application อันนี้ และเนื้อหาทั้งหมดของมัน ถูกปกป้องอยู่ภายใต้ {{licence_href}} ซึ่งถ้าคุณต้องการใช้มันในกรณีที่ไม่ตรงกับสัญญาฉบับนี้ โปรดติดต่อมาที่ผม"
+    },
+    :active_record => {
+      :too_lazy => "ไม่มีตัวอย่างภายในหน้านี้ เนื่องจากผมขี้เกียจที่จะนั่งคิดค่าต่างๆ ที่จะแสดง error <strong>ทุกอัน</strong> ;-)",
+      :easy_to_understand => "แต่อย่างไรก็ตาม มันไม่น่ายากเกินที่คุณจะทำความเข้าใจครับ ลองเปิดดู source file ดู คุณน่าจะมองเห็นภาพนะครับ :D"
+    },
+    :date_formats => {
+      :rails_standards_work => "รูปแบบมาตรฐานของ Rails (Date::DATE_FORMATS) ยังสามารถใช้การได้:"
+    },
+    :date_helper => {
+      :date_time_title => "ระยะห่างของ Date/Time",
+      :forms_title => "ฟอร์ม"
+    },
+    :index => {
+      :others => "อีกหลายคน",
+      :introduction => "ที่ผ่านมานั้น {{sven_blog}} ได้ทำงานส่วนใหญ่พร้อมกับนักพัฒนา {{sven_github}} เพื่อเตรียมพร้อมสำหรับการทำ Internationalization และ Localization ใน Rails",
+      :story_so_far => "Application ตัวอย่างนี้พยายามที่จะแสดงให้คุณเห็นว่าคุณสามารถใช้งานฟีเจอร์เกี่ยวกับการแปลภาษา ที่ถูกเพิ่มเข้าไปใน Rails ได้อย่างไร คุณจะได้สามารถนำไปใช้ใน Rails application ของคุณต่อไป"
+    },
+    :number_helper => {
+      :note_one => "หมายเหตุ: <code>number_to_phone</code> นั้นยังไม่ได้ถูกแปล และอาจจะไม่ได้อยู่ในส่วนที่ถูกแปล (อย่างน้อยๆ คืออาจจะไม่ได้อยู่ในส่วนกลาง) ดังนั้นถ้าคุณต้องการใช้เราขอแนะนำให้คุณลองมองหา plugin สำหรับการ internationalization/localization อย่างเช่น {{globalize}} ซึ่งเราคิดว่าพวกเขาน่าจะเตรียมเอาไว้รองรับในส่วนนี้",
+      :note_two => "อีกหมายเหตุ: <code>number_to_currency</code>, <code>number_to_percentage</code> และ <code>number_to_human_size</code> นั้นได้เรียกใช้ <code>number_with_precision</code> ภายในเมธอด และ <code>number_with_precision</code> เรียกใช้ <code>number_with_delimiter</code> ภายในเมธอด"
+    },
+    :setup => {
+      :freezing_edge_and_adding => "ทำการ Freezing Edge และลง plugin localized_dates",
+      :you_need_to_be_on_edge => "คุณจำเป็นที่จะต้องใช้ Edge Rails เพื่อที่จะใช้ฟีเจอร์ i18n ของ Rails:",
+      :date_time_formats => "สำหรับการปรับรูปแบบของวันที่และเวลา คุณจำเป็นที่จะต้องลง {{localized_dates_link}}:",
+      :config_locale => "การตั้งค่าภาษา",
+      :best_place => "ในความคิดของเรา ที่ที่ดีที่สุดที่จะใส่ข้อมูลการตั้งค่านั้นอยู่ที่ <code>config/locales</code> โดยที่ plugin localized_dates นั้นจะทำการคัดลอกการตั้งค่าของภาษา en-US และ de-AT ลงใน directory นี้ คุณสามารถแก้ไข เพิ่มเติม และสร้างภาษาใหม่ได้ที่นี่",
+      :locale => "นี่คือภาษาตัวอย่างที่ถูกใช้ใน application ตัวอย่างนี้",
+      :defaults => "คุณจำเป็นที่จะต้องตั้งค่าภาษาที่จะเป็น default ใน <code>environment.rb</code> หรือไว้ใน initializer ก็ได้",
+      :locale_structure_title => "เกี่ยวกับรูปแบบของการแปลภาษา",
+      :locale_structure_number => "คุณอาจจะสังเกตเห็นว่าในส่วนของ <code>:number</code> นั้น เราได้ระบุ <code>:format</code> และ <code>:currency</code> เพราะฉะนั้นอาจกล่าวได้ว่าการตั้งค่าเกี่ยวกับภาษานั้นจะถูกจัดเรียงเอาไว้เป็นลำดับชั้น อย่างเช่น currencies นั้นก็เป็น numbers และ percentage ก็เป็น numbers (สกุลเงิน และ เปอร์เซนต์ ต่างก็เป็นตัวเลข) โดยในที่นี้ <code>:currency</code> นั้นสามารถที่จะเขียนให้เอามาใช้แทนที่ <code>:format</code> ทั่วไป (ในโค้ดของเราเขียนให้ <code>:precision</code> เป็น 2 จากปกติ 3) หรือขยายความ (เราได้เพิ่ม option ใหม่สองอัน คือ <code>:unit</code> และ <code>:format</code>)",
+      :locale_structure_date_time => "และสำหรับวันที่และเวลาก็มีผลเช่นเดียวกับที่กล่าวไว้ด้านบน แต่ว่าถ้าคุณต้องการให้ <code>:datetime</code> และ <code>:time_with_zone</code> มีรูปแบบที่ต่างกันได้ โดยที่จะยึดถือตามประเภทของข้อมูล (data type) แต่ส่วนใหญ่แล้ว คุณอาจจะไม่เห็นถึงความจำเป็นมากนักที่จะให้รูปแบบต่างจาก <code>:time</code> หรอกครับ"
+    },
+    :time_formats => {
+      :rails_standards_work => "รูปแบบมาตรฐานของ Rails (Time::DATE_FORMATS) ยังสามารถใช้งานได้:"
     }
-  },
-  :about => {
-    :title => "เกี่ยวกับ Application ตัวอย่างอันนี้",
-    :author => "Application ตัวนี้ถูกเขียนขึ้นโดย {{mail_1}}.",
-    :feedback => "ถ้าคุณมีข้อเสนอแนะต่างๆ อย่าลืมที่จะเขียนมาบอกเรา (เป็นภาษาอังกฤษ) ที่อีเมล์ข้างต้น และอย่าลืมเข้าไปติดตามข่าวคราวใหม่ๆ เกี่ยวกับ Rails และอื่นๆ ที่ {{blog_href}}",
-    :licence => "Demo Application อันนี้ และเนื้อหาทั้งหมดของมัน ถูกปกป้องอยู่ภายใต้ {{licence_href}} ซึ่งถ้าคุณต้องการใช้มันในกรณีที่ไม่ตรงกับสัญญาฉบับนี้ โปรดติดต่อมาที่ผม"
-  },
-  :active_record => {
-    :too_lazy => "ไม่มีตัวอย่างภายในหน้านี้ เนื่องจากผมขี้เกียจที่จะนั่งคิดค่าต่างๆ ที่จะแสดง error <strong>ทุกอัน</strong> ;-)",
-    :easy_to_understand => "แต่อย่างไรก็ตาม มันไม่น่ายากเกินที่คุณจะทำความเข้าใจ"
-  },
-  :date_formats => {
-    :rails_standards_work => "รูปแบบมาตรฐานของ Rails (Date::DATE_FORMATS) ยังสามารถใช้การได้:"
-  },
-  :date_helper => {
-    :date_time_title => "ระยะห่างของ Date/Time",
-    :forms_title => "ฟอร์ม"
-  },
-  :index => {
-    :others => "others",
-    :introduction => "ที่ผ่านมานั้น {{sven_blog}} ได้เป็นผู้ทำงานส่วนใหญ่บน {{sven_github}} เพื่อเตรียมพร้อมสำหรับการทำ Internationalization และ Localization ใน Rails",
-    :story_so_far => "Application ตัวอย่างนี้พยายามที่จะแสดงให้คุณเห็นว่าคุณสามารถใช้งานฟีเจอร์เกี่ยวกับการแปลภาษา ที่ถูกเพิ่มเข้าไปใน Rails ได้อย่างไร คุณจะได้สามารถนำไปใช้ใน Rails application ของคุณต่อไป"
-  },
-  :number_helper => {
-    :note_one => "หมายเหตุ: <code>number_to_phone</code> นั้นยังไม่ได้ถูกแปล และอาจจะไม่ได้อยู่ในส่วนที่ถูกแปล (อย่างน้อยๆ คืออาจจะไม่ได้อยู่ในส่วนกลาง) ดังนั้นถ้าคุณต้องการใช้เราขอแนะนำให้คุณลองมองหา plugin สำหรับการ internationalization/localization อย่างเช่น {{globalize}} ซึ่งเราคิดว่าพวกเขาน่าจะเตรียมเอาไว้รองรับในส่วนนี้",
-    :note_two => "อีกหมายเหตุ: <code>number_to_currency</code>, <code>number_to_percentage</code> และ <code>number_to_human_size</code> นั้นได้เรียกใช้ <code>number_with_precision</code> ภายในเมธอด และ <code>number_with_precision</code> เรียกใช้ <code>number_with_delimiter</code> ภายในเมธอด"
-  },
-  :setup => {
-    :freezing_edge_and_adding => "ทำการ Freezing Edge และลง plugin localized_dates",
-    :you_need_to_be_on_edge => "คุณจำเป็นที่จะต้องใช้ Edge Rails เพื่อที่จะใช้ฟีเจอร์ i18n ของ Rails:",
-    :date_time_formats => "สำหรับการปรับรูปแบบของวันที่และเวลา คุณจำเป็นที่จะต้องลง {{localized_dates_link}}:",
-    :config_locale => "การตั้งค่าภาษา",
-    :best_place => "ในความคิดของเรา ที่ที่ดีที่สุดที่จะใส่ข้อมูลการตั้งค่านั้นอยู่ที่ <code>config/locales</code> โดยที่ plugin localized_dates นั้นจะทำการคัดลอกการตั้งค่าของภาษา en-US และ de-AT ลงใน directory นี้ คุณสามารถแก้ไข เพิ่มเติม และสร้างภาษาใหม่ได้ที่นี่",
-    :locale => "นี่คือภาษาตัวอย่างที่ถูกใช้ใน application ตัวอย่างนี้",
-    :defaults => "คุณจำเป็นที่จะต้องตั้งค่าภาษาที่จะเป็น default ใน <code>environment.rb</code> หรือไว้ใน initializer ก็ได้",
-    :locale_structure_title => "เกี่ยวกับรูปแบบของการแปลภาษา",
-    :locale_structure_number => "คุณอาจจะสังเกตเห็นว่าในส่วนของ <code>:number</code> นั้น เราได้ระบุ <code>:format</code> และ <code>:currency</code> เพราะฉะนั้นอาจกล่าวได้ว่าการตั้งค่าเกี่ยวกับภาษานั้นจะถูกจัดเรียงเอาไว้เป็นลำดับชั้น อย่างเช่น currencies (สกุลเงิน) นั้นก็เป็น numbers (ตัวเลข) และ percentage (เปอร์เซนต์) ก็เป็น numbers (ตัวเลข) โดยในที่นี้ <code>:currency</code> นั้นสามารถที่จะเขียนให้เอามาใช้แทนที่ <code>:format</code> ทั่วไป (ในโค้ดของเราเขียนให้ <code>:precision</code> เป็น 2 จากปกติ 3) หรือขยายความ (เราได้เพิ่ม option ใหม่สองอัน คือ <code>:unit</code> และ <code>:format</code>)",
-    :locale_structure_date_time => "และสำหรับวันที่และเวลาก็มีผลเช่นเดียวกับที่กล่าวไว้ด้านบน โดยถ้าคุณต้องการ คุณสามารถตั้งค่าให้ <code>:datetime</code> และ <code>:time_with_zone</code> ทำการปรับแต่งรูปแบบที่ตรงกับประเภทข้อมูล (data type) แทนที่จะยึดติดกับการตั้งค่าของ <code>:time</code> แต่ส่วนใหญ่คุณก็จะใช้รูปแบบเดียวกับ <code>:time</code>"
-  },
-  :time_formats => {
-    :rails_standards_work => "รูปแบบมาตรฐานของ Rails (Time::DATE_FORMATS) ยังสามารถใช้งานได้:"
   }
 }
