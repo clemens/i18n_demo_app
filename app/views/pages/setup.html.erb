@@ -23,12 +23,7 @@ rake rails:freeze:edge
     <p>	<%= I18n.t 'txt.setup.locale' %></p>
     <blockquote>
       <pre>
-<% counter = 0 %>
-<% lineWidth = 80 %>
-<% while (line = @locale_file.gets) -%>
-<%= "#{counter}: #{line}" -%>
-<% counter = counter + 1 -%>
-<% end -%>	
+<%= show_source(@locale_file)%>	
       </pre>
     </blockquote>
     <p><%= I18n.t 'txt.setup.defaults' %></p>
