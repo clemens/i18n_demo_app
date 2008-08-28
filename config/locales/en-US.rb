@@ -35,6 +35,69 @@ I18n.backend.store_translations :'en-US', {
     :am => 'am',
     :pm => 'pm'
   },
+  # date helper distance in words
+  :datetime => {
+    :distance_in_words => {
+      :half_a_minute       => 'half a minute',
+      :less_than_x_seconds => ['less than 1 second', '{{count}} seconds'],
+      :x_seconds           => ['1 second', '{{count}} seconds'],
+      :less_than_x_minutes => ['less than a minute', '{{count}} minutes'],
+      :x_minutes           => ['1 minute', '{{count}} minutes'],
+      :about_x_hours       => ['about 1 hour', '{{count}} hours'],
+      :x_days              => ['1 day', '{{count}} days'],
+      :about_x_months      => ['about 1 month', '{{count}} months'],
+      :x_months            => ['1 month', '{{count}} months'],
+      :about_x_years       => ['about 1 year', '{{count}} year'],
+      :over_x_years        => ['over 1 year', '{{count}} years']
+    }
+  },
+
+  # numbers
+  :number => {
+    :format => {
+      :precision => 3,
+      :separator => ',',
+      :delimiter => '.'
+    },
+    :currency => {
+      :format => {
+        :unit => '$',
+        :precision => 2,
+        :format => '%n %u'
+      }
+    }
+  },
+
+  # Active Record
+  :active_record => {
+    :error => {
+      :header_message => ["Couldn't save this {{object_name}}: 1 error", "Couldn't save this {{object_name}}: {{count}} errors."],
+      :message => "Please check the following fields:"
+    }
+  },
+  :active_record => {
+    :error_messages => {
+      :inclusion => "is not included in the list",
+      :exclusion => "is not available",
+      :invalid => "is not valid",
+      :confirmation => "does not match its confirmation",
+      :accepted  => "must be accepted",
+      :empty => "must be given",
+      :blank => "must be given",
+      :too_long => "is too long (no more than {{count}} characters)",
+      :too_short => "is too short (no less than {{count}} characters)",
+      :wrong_length => "is not the right length (must be {{count}} characters)",
+      :taken => "is not available",
+      :not_a_number => "is not a number",
+      :greater_than => "must be greater than {{count}}",
+      :greater_than_or_equal_to => "must be greater than or equal to {{count}}",
+      :equal_to => "must be equal to {{count}}",
+      :less_than => "must be less than {{count}}",
+      :less_than_or_equal_to => "must be less than or equal to {{count}}",
+      :odd => "must be odd",
+      :even => "must be even"
+    }
+  },
   :txt => {
     :main_title => "Localizing Rails",
     :app_name => "Demo Application",
