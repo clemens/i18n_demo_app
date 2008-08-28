@@ -111,7 +111,7 @@ I18n.backend.store_translations :'ja-JP', {
     :active_record => {
       :too_lazy => "例はまだ載せていません。カスタムエラーメッセージの<strong>全て</strong>を表示するアトリビュートを考えるのがめんどくさくて・・・ ;-)",
       :easy_to_understand => "まぁ、理解するのは簡単だと思うんだけど・・・."
-    }, 
+    },
     :date_formats => {
       :rails_standards_work => "Railsの標準フォーマット(Date::DATE_FORMATS)は有効です:"
     },
