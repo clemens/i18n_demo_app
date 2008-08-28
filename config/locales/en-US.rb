@@ -85,9 +85,6 @@ I18n.backend.store_translations :'en-US', {
     },
     :time_formats => {
       :rails_standards_work => "Rails standard formats (Time::DATE_FORMATS) still work:"
-    },
-    :ipe => {
-      :click => "click here!"
     }
   }
 }

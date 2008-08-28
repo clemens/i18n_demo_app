@@ -142,9 +142,6 @@ I18n.backend.store_translations :'ja-JP', {
     },
      :time_formats => {
         :rails_standards_work => "Railsの標準フォーマット(Time::DATE_FORMATS)は有効です:"
-    },
-      :ipe =>{
-        :click => "クリック！"
     }
   }
 }
