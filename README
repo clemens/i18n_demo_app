@@ -1,5 +1,5 @@
 Localize Rails demo application
-=================
+===================
 
 This demo application tries to show you how you can use the current Rails i18n features to localize your application.
 It uses current Edge Rails i18n functionality as well as the localized_date plugin
@@ -7,7 +7,7 @@ It uses current Edge Rails i18n functionality as well as the localized_date plug
 part of the app itself instead of being shown in a separate blog article.
 
 Setup
-=================
+===================
 
 To set up the Localize Rails demo application you need the following steps:
 * git clone git://github.com/clemens/i18n_demo_app.git
@@ -16,7 +16,7 @@ To set up the Localize Rails demo application you need the following steps:
 * Fire up your browser and go to localhost:3000 – the index page should be loaded automatically.
 
 Contents
-=================
+===================
 
 This demo app contains examples and tutorials on localizing the following parts of your application:
 * Date and Time Formats
@@ -30,9 +30,17 @@ Adding Translations
 
 It's easy to add a translation to this demo app, simply drop your locale file into the config/locales directory. As long as it follows the correct format (see config/locales/en-US.rb) it should all work fine.
 
+Contributors
+===================
+
+Dr Nic Williams - http://drnicwilliams.com - Australian locale
+Fabio Akita - http://www.akitaonrails.com/ - Portuguese locale
+Masayuki Nakamura - masayuki@japancentre.com - Content translation, Japanese locale
+Prem Sichanugrist - http://sikachu.com - Thai locale
+Simon Tokumine - simon@japancentre.com - Content translation, Japanese locale
 
 Bugs and Feedback
-=================
+===================
 
 If you discover any bugs I'd appreciate if you sent me an e-mail to clemens@railway.at. Please include a detailed
 description of your problem if you want me to help you.
