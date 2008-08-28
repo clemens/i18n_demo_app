@@ -2,10 +2,10 @@ I18n.backend.store_translations :'ja-JP', {
   # date and time formats
   :date => {
     :formats => {
-      :default      => "%Y-%m-%d (ish)",
-      :short        => "%e %b (ish)",
-      :long         => "%B %e, %Y (ish)",
-      :long_ordinal => lambda { |date| "%B #{date.day}ish, %Y" },
+      :default      => "%Y-%m-%d",
+      :short        => "%e %b",
+      :long         => "%B %e, %Y",
+      :long_ordinal => lambda { |date| "%B #{date.day}, %Y" },
       :only_day     => "%e"
     },
     :day_names => %w(日曜日 月曜日 火曜日 水曜日 木曜日 金曜日 土曜日),
@@ -16,11 +16,11 @@ I18n.backend.store_translations :'ja-JP', {
   },
   :time => {
     :formats => {
-      :default      => "%a %b %d %H:%M:%S %Z %Y (ish)",
-      :time         => "%H:%M (ish)",
-      :short        => "%d %b %H:%M (ish)",
-      :long         => "%B %d, %Y %H:%M (ish)",
-      :long_ordinal => lambda { |time| "%B #{time.day}ish, %Y %H:%M" },
+      :default      => "%a %b %d %H:%M:%S %Z %Y",
+      :time         => "%H:%M",
+      :short        => "%d %b %H:%M",
+      :long         => "%B %d, %Y %H:%M",
+      :long_ordinal => lambda { |time| "%B #{time.day}, %Y %H:%M" },
       :only_second  => "%S"
     },
     :am => '',
@@ -30,17 +30,17 @@ I18n.backend.store_translations :'ja-JP', {
   # date helper distance in words
   :datetime => {
     :distance_in_words => {
-      :half_a_minute       => 'a half-ish minute',
-      :less_than_x_seconds => ['less than 1 second', '{{count}}ish seconds'],
-      :x_seconds           => ['1 second', '{{count}}ish seconds'],
-      :less_than_x_minutes => ['less than a minute', '{{count}}ish minutes'],
-      :x_minutes           => ['1 minute', '{{count}}ish minutes'],
-      :about_x_hours       => ['about 1 hour', '{{count}}ish hours'],
-      :x_days              => ['1 day', '{{count}}ish days'],
-      :about_x_months      => ['about 1 month', '{{count}}ish months'],
-      :x_months            => ['1 month', '{{count}}ish months'],
-      :about_x_years       => ['about 1 year', '{{count}}ish year'],
-      :over_x_years        => ['over 1 year', '{{count}}ish years']
+      :half_a_minute       => 'a half minute',
+      :less_than_x_seconds => ['less than 1 second', '{{count}} seconds'],
+      :x_seconds           => ['1 second', '{{count}} seconds'],
+      :less_than_x_minutes => ['less than a minute', '{{count}} minutes'],
+      :x_minutes           => ['1 minute', '{{count}} minutes'],
+      :about_x_hours       => ['about 1 hour', '{{count}} hours'],
+      :x_days              => ['1 day', '{{count}} days'],
+      :about_x_months      => ['about 1 month', '{{count}} months'],
+      :x_months            => ['1 month', '{{count}} months'],
+      :about_x_years       => ['about 1 year', '{{count}} year'],
+      :over_x_years        => ['over 1 year', '{{count}} years']
     }
   },
 
@@ -53,7 +53,7 @@ I18n.backend.store_translations :'ja-JP', {
     },
     :currency => {
       :format => {
-        :unit => 'Gib-$',
+        :unit => '¥',
         :precision => 2,
         :format => '%n %u'
       }
