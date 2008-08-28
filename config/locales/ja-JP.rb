@@ -6,7 +6,7 @@ I18n.backend.store_translations :'ja-JP', {
       :short        => "%e %b (ish)",
       :long         => "%B %e, %Y (ish)",
       :long_ordinal => lambda { |date| "%B #{date.day}ish, %Y" },
-      :only_day     => lambda { |date| "#{date.day}ish"}
+      :only_day     => "%e"
     },
     :day_names => %w(日曜日 月曜日 火曜日 水曜日 木曜日 金曜日 土曜日),
     :abbr_day_names => %w(日 月 火 水 木 金 土),
@@ -21,7 +21,7 @@ I18n.backend.store_translations :'ja-JP', {
       :short        => "%d %b %H:%M (ish)",
       :long         => "%B %d, %Y %H:%M (ish)",
       :long_ordinal => lambda { |time| "%B #{time.day}ish, %Y %H:%M" },
-      :only_second  => "%S (ish)"
+      :only_second  => "%S"
     },
     :am => '',
     :pm => ''

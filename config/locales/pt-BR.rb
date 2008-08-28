@@ -4,7 +4,8 @@ I18n.backend.store_translations :'pt-BR', {
     :formats => {
       :default      => "%d/%m/%Y",
       :short        => lambda { |date| "#{date.day} %b" },
-      :long         => lambda { |date| "#{date.day} de %B de %Y" }
+      :long         => lambda { |date| "#{date.day} de %B de %Y" },
+      :only_day     => "%e"
     },
     :day_names => %w(Domingo Segunda Terça Quarta Quinta Sexta Sábado),
     :abbr_day_names => %w(Do Se Te Qa Qi Sx Sa),
@@ -17,7 +18,8 @@ I18n.backend.store_translations :'pt-BR', {
       :default      => lambda { |time| "%A, #{time.day} de %B de %Y, %H:%M hs" },
       :time         => "%H:%M hs",
       :short        => lambda { |time| "#{time.day}/%m, %H:%M hs" },
-      :long         => lambda { |time| "%A, #{time.day} de %B de %Y, %H:%M hs" }
+      :long         => lambda { |time| "%A, #{time.day} de %B de %Y, %H:%M hs" },
+      :only_second  => "%S"
     },
     :am => '',
     :pm => ''

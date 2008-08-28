@@ -4,7 +4,8 @@ I18n.backend.store_translations :'en-US', {
       :default      => "%Y-%m-%d",
       :short        => "%e %b",
       :long         => "%B %e, %Y",
-      :long_ordinal => lambda { |date| "%B #{date.day.ordinalize}, %Y" }
+      :long_ordinal => lambda { |date| "%B #{date.day.ordinalize}, %Y" },
+      :only_day     => "%e"
     },
     :day_names => Date::DAYNAMES,
     :abbr_day_names => Date::ABBR_DAYNAMES,
@@ -18,7 +19,8 @@ I18n.backend.store_translations :'en-US', {
       :time         => "%H:%M",
       :short        => "%d %b %H:%M",
       :long         => "%B %d, %Y %H:%M",
-      :long_ordinal => lambda { |time| "%B #{time.day.ordinalize}, %Y %H:%M" }
+      :long_ordinal => lambda { |time| "%B #{time.day.ordinalize}, %Y %H:%M" },
+      :only_second  => "%S"
     },
     :datetime => {
       :formats => {
