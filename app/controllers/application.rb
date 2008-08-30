@@ -23,9 +23,13 @@ class ApplicationController < ActionController::Base
     I18n.locale = session[:locale] || I18n.default_locale
 
     # load locale from settings
+    @locale_files = []
     ['yml', 'rb'].each do |type|
       locale_file = "#{LOCALES_DIRECTORY}#{I18n.locale}.#{type}"
-      I18n.load_translations locale_file if File.exists?(locale_file)
+      if File.exists?(locale_file)
+        @locale_files << locale_file
+        I18n.load_translations locale_file
+      end
     end
   end
 end
