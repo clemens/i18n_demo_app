@@ -1,7 +1,7 @@
 # Czech translation file for Rails internalization demo app at http://i18n-demo.phusion.nl/
 # Translation by Karel Minařík (karmi@karmi.cz)
 
-{ :cz => {
+{ :'cz-CZ' => {
 
     # Static texts
     :locale         => 'Jazyk',
