@@ -38,17 +38,17 @@
     },
     :datetime => {
       :distance_in_words => {
-        :half_a_minute       => 'about a half-ish minute',
-        :less_than_x_seconds => ['less than one second', '{{count}}ish seconds'],
-        :x_seconds           => ['one second', '{{count}}ish seconds'],
-        :less_than_x_minutes => ['less than a minute', '{{count}}ish minutes'],
-        :x_minutes           => ['one minute', '{{count}}ish minutes'],
-        :about_x_hours       => ['about one hour', '{{count}}ish hours'],
-        :x_days              => ['one day', '{{count}}ish days'],
-        :about_x_months      => ['about one month', '{{count}}ish months'],
-        :x_months            => ['one month', '{{count}}ish months'],
-        :about_x_years       => ['about a year or so', '{{count}}ish year'],
-        :over_x_years        => ['probably over a year', '{{count}}ish years']
+        :half_a_minute       => 'half a minute',
+        :less_than_x_seconds => {:zero => 'less than 1 second', :one => '1 second', :other => '{{count}} seconds'},
+        :x_seconds           => {:one => '1 second', :other => '{{count}} seconds'},
+        :less_than_x_minutes => {:zero => 'less than a minute', :one => '1 minute', :other => '{{count}} minutes'},
+        :x_minutes           => {:one => "1 minute", :other => "{{count}} minutes"},
+        :about_x_hours       => {:one => 'about 1 hour', :other => '{{count}} hours'},
+        :x_days              => {:one => '1 day', :other => '{{count}} days'},
+        :about_x_months      => {:one => 'about 1 month', :other => '{{count}} months'},
+        :x_months            => {:one => '1 month', :other => '{{count}} months'},
+        :about_x_years       => {:one => 'about 1 year', :other => '{{count}} years'},
+        :over_x_years        => {:one => 'over 1 year', :other => '{{count}} years'}
       }
     },
     :number => {

@@ -32,16 +32,16 @@
     :datetime => {
       :distance_in_words => {
         :half_a_minute       => '30分',
-        :less_than_x_seconds => ['1 秒以下', '{{count}} 秒以下'],
-        :x_seconds           => ['1 秒', '{{count}} 秒'],
-        :less_than_x_minutes => ['1 分以下', '{{count}} 分以下'],
-        :x_minutes           => ['1 分', '{{count}} 分'],
-        :about_x_hours       => ['約 1 時間', '約 {{count}} 時間'],
-        :x_days              => ['1 日', '{{count}} 日'],
-        :about_x_months      => ['約 1 ヶ月', '約 {{count}} ヶ月'],
-        :x_months            => ['1 ヶ月', '{{count}} ヶ月'],
-        :about_x_years       => ['約 1 年', '約　{{count}} 年'],
-        :over_x_years        => ['1 年以上', '{{count}} 年以上']
+        :less_than_x_seconds => '{{count}} 秒以下',
+        :x_seconds           => '{{count}} 秒',
+        :less_than_x_minutes => '{{count}} 分以下',
+        :x_minutes           => '{{count}} 分',
+        :about_x_hours       => '約 {{count}} 時間',
+        :x_days              => '{{count}} 日',
+        :about_x_months      => '約 {{count}} ヶ月',
+        :x_months            => '{{count}} ヶ月',
+        :about_x_years       => '約　{{count}} 年',
+        :over_x_years        => '{{count}} 年以上'
       }
     },
 

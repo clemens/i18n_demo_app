@@ -1,11 +1,14 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
-  def show_source(file)
+  def show_locale_files
     output = ''
-    counter, lineWidth = 1, 80
-    while(line = @locale_file.gets)
-      output << "#{sprintf('%3d', counter)}: #{line}"
-      counter += 1
+    @locale_files.sort.each do |locale_file|
+      output << "\n#{locale_file.sub(RAILS_ROOT + "/", "")}:\n\n"
+      counter, lineWidth = 1, 80
+      lines = *open(locale_file).map(&:rstrip).each do |line|
+        output << "#{sprintf('%3d', counter)}: #{line}\n"
+        counter += 1
+      end
     end
     output
   end
