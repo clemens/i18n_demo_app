@@ -20,7 +20,7 @@
         :skip_last_comma => true
       }
     },
-  
+
     # Date
     :date => {
       :formats => {
@@ -34,7 +34,7 @@
       :abbr_month_names  => %w{Led Úno Bře Dub Kvě Čvn Čvc Srp Zář Říj Lis Pro},
       :order             => [:day, :month, :year]
     },
-  
+
     # Time
     :time => {
       :formats => {
@@ -45,7 +45,7 @@
       :am => 'am',
       :pm => 'pm'
     },
-  
+
     # Numbers
     :number => {
       :format => {
@@ -79,26 +79,26 @@
         }
       }
     },
-  
+
     # Distance of time ... helper
     # NOTE: In Czech language, these values are different for the past and for the future. Preference has been given to past here.
     :datetime => {
       :distance_in_words => {
         :half_a_minute => 'půl minutou',
         :less_than_x_seconds => {
-          :one => 'asi před sekundou', 
+          :one => 'asi před sekundou',
           :other => 'asi před {{count}} sekundami'
         },
         :x_seconds => {
-          :one => 'sekundou', 
+          :one => 'sekundou',
           :other => '{{count}} sekundami'
         },
         :less_than_x_minutes => {
-          :one => 'před necelou minutou', 
+          :one => 'před necelou minutou',
           :other => 'před ani ne {{count}} minutami'
         },
         :x_minutes => {
-          :one => 'minutou', 
+          :one => 'minutou',
           :other => '{{count}} minutami'
         },
         :about_x_hours => {
@@ -106,23 +106,23 @@
           :other => 'asi {{count}} hodinami'
         },
         :x_days => {
-          :one => '24 hodinami', 
+          :one => '24 hodinami',
           :other => '{{count}} dny'
         },
         :about_x_months => {
-          :one => 'asi měsícem', 
+          :one => 'asi měsícem',
           :other => 'asi {{count}} měsíci'
         },
         :x_months => {
-          :one => 'měsícem', 
+          :one => 'měsícem',
           :other => '{{count}} měsíci'
         },
         :about_x_years => {
-          :one => 'asi rokem', 
+          :one => 'asi rokem',
           :other => 'asi {{count}} roky'
         },
         :over_x_years => {
-          :one => 'více než před rokem', 
+          :one => 'více než před rokem',
           :other => 'více než {{count}} roky'
         }
       }
@@ -154,14 +154,14 @@
         },
         :template => {
           :header   => {
-            :one => "Při ukládání objektu {{model}} došlo k chybám a nebylo jej možné uložit", 
+            :one => "Při ukládání objektu {{model}} došlo k chybám a nebylo jej možné uložit",
             :other => "Při ukládání objektu {{model}} došlo ke {{count}} chybám a nebylo možné jej uložit"
           },
           :body  => "Následující pole obsahují chybně vyplněné údaje:"
         }
       }
     },
-    
+
     # Static texts
     :txt => {
       :main_title => "Lokalizace Rails",
@@ -211,7 +211,7 @@
         :defaults => "Musíte také nastavit výchozí <em>locale</em> v <code>environment.rb</code> nebo v inicializeru.",
         :locale_structure_title => "O uspořádání lokalizačních souborů",
         :locale_structure_number => "Asi jste si povšimli, že v <code>:number</code> části lokalizačních souborů jsme definovali <code>:format</code> a <code>:currency</code>. Lokalizace jsou obecně uspořádány hierarchicky, tedy měny <em>(currencies)</em> jsou čísla, procenta <em>percentages</em> jsou čísla, atd. <code>:currency</code> může buď přetížit výchozí nastavení pro <code>:format</code> (v našem případě jsme nastavili <code>:precision</code> na 2 místo na 3) nebo je mohou rozšířit (přidáváme dvě nové volby, <code>:unit</code> a <code>:format</code>).",
-        :locale_structure_date_time => "Totéž platí pro data a čas. Pokud je to potřeba, <code>:datetime</code> a <code>:time_with_zone</code> mohou být využity pro specifické formátování těchto typů, místo aby se spolehly na nastavení z <code>:time</code>. Většinou však chcete použít totéž nastavení jako pro <code>:time</code>."   
+        :locale_structure_date_time => "Totéž platí pro data a čas. Pokud je to potřeba, <code>:datetime</code> a <code>:time_with_zone</code> mohou být využity pro specifické formátování těchto typů, místo aby se spolehly na nastavení z <code>:time</code>. Většinou však chcete použít totéž nastavení jako pro <code>:time</code>."
       },
       :time_formats => {
         :rails_standards_work => "Standardní formáty Rails jako (Time::DATE_FORMATS) fungují i nadále:"
