@@ -1,8 +1,4 @@
-# Czech translation file for standard Rails internalization
-# See www.rails-i18n.org for more information about Rails i18n 
-# 
-# NOTE: In real world, you would obviously split this file into more pieces and load them separately
-# 
+# Czech translation file for Rails internalization demo app at http://i18n-demo.phusion.nl/
 # Translation by Karel Minařík (karmi@karmi.cz)
 
 { :cz => {
@@ -163,6 +159,62 @@
           },
           :body  => "Následující pole obsahují chybně vyplněné údaje:"
         }
+      }
+    },
+    
+    # Static texts
+    :txt => {
+      :main_title => "Lokalizace Rails",
+      :app_name => "Ukázková aplikace",
+      :sub_title => "Jak lokalizovat vaše aplikace s novými „i18n“ funkcemi Rails",
+      :contents => "Obsah",
+      :menu => {
+        :introduction => "Úvod",
+        :about => "O aplikaci",
+        :setup => "Instalace",
+        :date_formats => "Formáty data",
+        :time_formats => "Formáty času"
+      },
+      :about => {
+        :title => "O aplikaci",
+        :author => "Tuto demo aplikaci napsal {{mail_1}}.",
+        :feedback => "Máte-li nějaké otázky, prosím, napište mi. Navštivte také {{blog_href}}, kde pravidelně publikuji články o Rails a jiných věcech.",
+        :licence => "Tato ukázková aplikace a její obsah jsou licencovány pod {{licence_href}}. Pokud ji chcete použít způsobem, na který se tato licence nevztahuje, prosím kontaktujte mně. "
+      },
+      :active_record => {
+        :too_lazy => "Zde nejsou žádné příklady, protože jsem moc líný vymýšlet atributy pro <strong>všechny</strong> chybové hlášky ;-)",
+        :easy_to_understand => "Nemělo by vám to ale činit obtíže, protože je to ale dost jednoduché."
+      },
+      :date_formats => {
+        :rails_standards_work => "Standardní formáty Rails jako (Date::DATE_FORMATS) fungují i nadále:"
+      },
+      :date_helper => {
+        :date_time_title => "Vzdálenost v čase",
+        :forms_title => "Formuláře"
+      },
+      :index => {
+        :others => "ostatní",
+        :introduction => "Nedávno vyvinuli {{sven_blog}} a {{sven_github}} hodně úsilí, aby usnadnili internacionalizaci a lokalizaci (<em>i18n</em> v počítačovém žargonu) Ruby on Rails.",
+        :story_so_far => "Tato ukázková aplikace vás naučí, jak tyto nové vlastnosti Rails využít."
+      },
+      :number_helper => {
+        :note_one => "Poznámka: <code>number_to_phone</code> zatím nebylo lokalizováno a asi nikdy nebude - alespoň ne v „core“ kódu Rails. Sledujte nové verze lokalizačních pluginů jako je {{globalize}}, které budou pravděpodobně takové věci podporovat.",
+        :note_two => "Další poznámka: <code>number_to_currency</code>, <code>number_to_percentage</code> a <code>number_to_human_size</code> interně používají <code>number_with_precision</code> a <code>number_with_precision</code> používá interně <code>number_with_delimiter</code>."
+      },
+      :setup => {
+        :freezing_edge_and_adding => "Instalace „edge“ verze Rails a <em>localized_dates</em> pluginu",
+        :you_need_to_be_on_edge => "Musíte mít nainstalovanou „edge“ verzi Rails (tedy aktuální kopii hlavní větve vývoje), abyste mohli nové lokalizační vlastnosti Rails využít:",
+        :date_time_formats => "Aby vám fungovaly formáty data a času, musíte si také nainstalovat {{localized_dates_link}}:",
+        :config_locale => "Konfigurace <em>locale</em>",
+        :best_place => "Konfiguraci <em>locale</em> je podle mého nejlépe uložit do <code>config/locales</code>. Plugin <code>localized_dates</code> do tohoto adresáře zkopíruje dva lokalizační soubory,  <em>en-US</em> <em>de-AT</em>. Můžete je rozšířit nebo modifikovat.",
+        :locale => "Toto je aktuální lokalizace pro tuto aplikaci:",
+        :defaults => "Musíte také nastavit výchozí <em>locale</em> v <code>environment.rb</code> nebo v inicializeru.",
+        :locale_structure_title => "O uspořádání lokalizačních souborů",
+        :locale_structure_number => "Asi jste si povšimli, že v <code>:number</code> části lokalizačních souborů jsme definovali <code>:format</code> a <code>:currency</code>. Lokalizace jsou obecně uspořádány hierarchicky, tedy měny <em>(currencies)</em> jsou čísla, procenta <em>percentages</em> jsou čísla, atd. <code>:currency</code> může buď přetížit výchozí nastavení pro <code>:format</code> (v našem případě jsme nastavili <code>:precision</code> na 2 místo na 3) nebo je mohou rozšířit (přidáváme dvě nové volby, <code>:unit</code> a <code>:format</code>).",
+        :locale_structure_date_time => "Totéž platí pro data a čas. Pokud je to potřeba, <code>:datetime</code> a <code>:time_with_zone</code> mohou být využity pro specifické formátování těchto typů, místo aby se spolehly na nastavení z <code>:time</code>. Většinou však chcete použít totéž nastavení jako pro <code>:time</code>."   
+      },
+      :time_formats => {
+        :rails_standards_work => "Standardní formáty Rails jako (Time::DATE_FORMATS) fungují i nadále:"
       }
     }
   }
