@@ -19,9 +19,9 @@
       short: "%e. %B, %H:%M Uhr"
       long: "%A, %e. %B %Y, %H:%M Uhr"
       only_second: "%S"
-          
-      am: ''
-      pm: ''
+
+    am: ""
+    pm: ""
       
   datetime:
     distance_in_words:
