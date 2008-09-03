@@ -1,0 +1,6 @@
+[30 August 2008]
+* Support new Rails i18n style for loading/storing translation (YAML and newly structured rb files). See
+  http://www.artweb-design.de/2008/8/28/ruby-on-rails-i18n-railsconf-europe-and-globalize2 for details.
+
+[3 August 2008]
+* Initial release on GitHub.

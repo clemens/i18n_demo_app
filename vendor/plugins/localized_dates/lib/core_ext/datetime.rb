@@ -4,7 +4,8 @@
     formatter = formats[format]
 
     unless formatter
-      default_formatters, datetime_formatters = I18n.translate([:'time.formats', :'time.datetime.formats']) || [{},{}]
+      default_formatters = I18n.translate(:'time.formats', :raise => true) rescue {}
+      datetime_formatters = I18n.translate(:'time.datetime.formats', :raise => true) rescue {}
       formatters = default_formatters.merge(datetime_formatters)
       formatter  = formatters[format]
     end

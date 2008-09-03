@@ -2,10 +2,10 @@ require 'localized_dates'
 
 # load all locales from config/locales
 locales_dir = File.join(RAILS_ROOT, 'config', 'locales')
-
-#TODO: clean up so that only responds to current locale - load order dependent.
-# load all ruby and YML hash locales
-Dir["#{locales_dir}/*.{rb,yml}"].each { |locale| I18n.load_translations locale }
+Dir["#{locales_dir}/*.{rb,yml}"].uniq.each do |locale_file|
+  puts "** [localized_dates] loading file #{locale_file}"
+  I18n.load_translations(locale_file)
+end
 
 puts '** [localized_dates] locales loaded from config/locales.'
 

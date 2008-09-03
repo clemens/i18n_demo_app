@@ -12,8 +12,8 @@ To install the plugin, change into an existing Rails application and run
   ruby script/plugin install git://github.com/clemens/localized_dates.git
 
 This will download the plugin and store it in vendor/plugins/localized_dates. It will also create a directory named
-config/locales and copy two locales, en-US and de-AT into this directory. While the en-US locale mimics current Rails
-formats, de-AT serves as a demo on how date and time formats can be customized.
+config/locales and copy three locale files, en-US.rb, en-US.yml, and de-AT.yml into this directory. While the en-US
+locale files mimic current Rails formats, de-AT serves as a demo on how date and time formats can be customized.
 
 Adding a new locale
 =================
@@ -24,37 +24,60 @@ locale and basing your new locale on it.
 Adding new date and time formats
 =================
 
-Adding new date and time formats is easy. Take a look at the basic structure of the locale file:
+Adding new date and time formats is easy. Take a look at the basic structure of the locale file en-US.yml:
 
-  I18n.backend.store_translations :'en-US', {
-    :date => {
-      :formats => {
-        # your formats here
-      }
-    },
-    :time => {
-      :formats => {
-        # your formats here
-      },
-      :datetime => {
+  "en-US":
+    date:
+      formats:
+        default: "%Y-%m-%d"
+        short: "%e %b"
+        long: "%B %e, %Y"
+        only_day: "%e"
+
+    time:
+      formats:
+        default: "%a %b %d %H:%M:%S %Z %Y"
+        time: "%H:%M"
+        short: "%d %b %H:%M"
+        long: "%B %d, %Y %H:%M"
+        only_second: "%S"
+
+        datetime:
+          formats:
+            default: "%Y-%m-%dT%H:%M:%S%Z"
+
+        am: 'am'
+        pm: 'pm'
+
+As you can see, there are two basic entites: date and time. time also has two children, datetime and time_with_zone
+that both inherit from :time so you usually don't even need to define them (the de-AT locale, for, example doesn't).
+
+If you need more complex Ruby constructs such as lambdas, you still need to define them in a separate Ruby file. Take
+a look at the following default formats of en-US.rb:
+
+  {
+    :'en-US' => {
+      :date => {
         :formats => {
-          # your formats here
+          :long_ordinal => lambda { |date| "%B #{date.day.ordinalize}, %Y" }
         }
       },
-      :time_with_zone => {
+      :time => {
         :formats => {
-          # your formats here
+          :long_ordinal => lambda { |time| "%B #{time.day.ordinalize}, %Y %H:%M" }
+        },
+        :time_with_zone => {
+          :formats => {
+            :default => lambda { |time| "%Y-%m-%d %H:%M:%S #{time.formatted_offset(false, 'UTC')}" }
+          }
         }
       }
     }
   }
 
-As you can see, there are two basic entites: :date and :time. :time also has two children, :datetime and
-:time_with_zone that both inherit from :time so you usually don't even need to define them (the de-AT locale doesn't).
-
-For example, if you define a :time format named :release_date, you can use Time.now.to_s(:release_date) in your views.
-You should always define a format named :default for both, :date and :time, that serves as the default format. You can
-use the default format by simply writing Time.now.to_s without passing an additional parameter.
+For example, if you define a time format named release_date, you can use Time.now.to_s(:release_date) in your views.
+You should always define a format named default for both, date and time, that serves as the default format. You can use
+the default format by simply writing Time.now.to_s without passing an additional parameter.
 
 You can either use a strftime compatible formatting string or a Proc that returns a strftime formatting string as a
 date/time format. Take a look at the following examples:
@@ -84,17 +107,15 @@ Customizing day and month names
 If you localize your application for a language other than English, you most likely want to change the default month
 and day names to your own countries' names. Here's how it's done:
 
-  I18n.backend.store_translations :'de-AT', {
-    :date => {
-      :day_names => %w(Sonntag Montag Dienstag Mittwoch Donnerstag Freitag Samstag),
-      :abbr_day_names => %w(So Mo Di Mi Do Fr Sa),
-      :month_names => [nil] + %w(Januar Februar März April Mai Juni Juli August September Oktober November Dezember),
-      :abbr_month_names => [nil] + %w(Jan Feb Mär Apr Mai Jun Jul Aug Sep Okt Nov Dez),
-      :order => [:day, :month, :year]
-    }
-  }
+  "de-AT":
+    date:
+      day_names: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+      abbr_day_names: [Sun, Mon, Tue, Wed, Thu, Fri, Sat]
+      month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
+      abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+      order: [ :year, :month, :day ]
 
-The only caveat here is that :month_names and :abbr_month_names *need* nil as their respective first elements. If you
+The only caveat here is that month_names and abbr_month_names *need* nil as their respective first elements. If you
 don't use nil as the first element you'll end up with wrong dates (August will become September, etc.). Also note that
 the definition of day names starts with Sunday (not Monday).
 

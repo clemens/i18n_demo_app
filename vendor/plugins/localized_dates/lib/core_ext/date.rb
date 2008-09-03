@@ -4,7 +4,7 @@
     formatter = formats[format]
 
     unless formatter
-      formatters = I18n.translate(:'date.formats') || {}
+      formatters = I18n.translate(:'date.formats', :raise => true) rescue {}
       formatter  = formatters[format]
     end
 

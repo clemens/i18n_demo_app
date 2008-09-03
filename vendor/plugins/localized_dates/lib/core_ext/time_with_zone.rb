@@ -5,7 +5,8 @@ ActiveSupport::TimeWithZone.class_eval do
     formatter = formats[format]
 
     unless formatter
-      default_formatters, twz_formatters = I18n.translate([:'time.formats', :'time.time_with_zone.formats']) || [{},{}]
+      default_formatters = I18n.translate(:'time.formats', :raise => true) rescue {}
+      twz_formatters = I18n.translate(:'time.time_with_zone.formats', :raise => true) rescue {}
       formatters = default_formatters.merge(twz_formatters)
       formatter  = formatters[format]
     end
