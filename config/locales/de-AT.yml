@@ -20,8 +20,8 @@
       long: "%A, %e. %B %Y, %H:%M Uhr"
       only_second: "%S"
           
-      am: ''
-      pm: ''
+    am: 'am'
+    pm: 'pm'
       
   datetime:
     distance_in_words:

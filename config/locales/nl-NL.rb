@@ -4,8 +4,8 @@
       :formats => {
         :default      => "%d/%m/%Y",
         :short        => "%e %b",
-        :long         => "%e %B, %Y",
-        :long_ordinal => lambda { |date| "#{date.day.ordinalize} %B, %Y" },
+        :long         => "%e %B %Y",
+        :long_ordinal => lambda { |date| "#{date.day}e van %B %Y" },
         :only_day     => "%e"
       },
       :day_names => %w(Zondag Maandag Dinsdag Woensdag Donderdag Vrijdag Zaterdag),
@@ -19,8 +19,8 @@
         :default      => "%a %b %d %H:%M:%S %Z %Y",
         :time         => "%H:%M",
         :short        => "%d %b %H:%M",
-        :long         => "%d %B, %Y %H:%M",
-        :long_ordinal => lambda { |time| "#{time.day.ordinalize} %B, %Y %H:%M" },
+        :long         => "%d %B %Y %H:%M",
+        :long_ordinal => lambda { |time| "#{time.day}e van %B %Y %H:%M" },
         :only_second  => "%S"
       },
       :datetime => {
@@ -33,8 +33,8 @@
           :default => lambda { |time| "%Y-%m-%d %H:%M:%S #{time.formatted_offset(false, 'UTC')}" }
         }
       },
-      :am => 'am',
-      :pm => 'pm'
+      :am => %q('s ochtends),
+      :pm => %q('s middags)
     },
     :datetime => {
       :distance_in_words => {
