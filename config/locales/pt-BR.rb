@@ -103,7 +103,7 @@
       },
       :about => {
         :title => "Sobre esta aplicação de demonstração",
-        :author => "Esta aplicação de demonstração foi escrita por {{mail_1}} e traduzida para português brasileiro por {{mail_2}}.",
+        :author => "Esta aplicação de demonstração foi escrita por {{mail_1}}.",
         :feedback => "Se tiver qualquer feedback, por favor sinta-se à vontade para me escrever. Também visite {{blog_href}} onde eu blogo regularmente sobre Rails e outras coisas.",
         :licence => "Esta aplicação de demonstração e seu conteúdo estão licenciados sobre a {{licence_href}}. Se quiser utilizar isso de maneiras proibidas pela licença, por favor entre em contato comigo e peça minha permissão."
       },
@@ -144,4 +144,4 @@
       }
     }
   }
-} 
+}
