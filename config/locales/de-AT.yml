@@ -20,8 +20,8 @@
       long: "%A, %e. %B %Y, %H:%M Uhr"
       only_second: "%S"
 
-    am: ""
-    pm: ""
+    am: "vormittags"
+    pm: "nachmittags"
       
   datetime:
     distance_in_words:
