@@ -66,9 +66,7 @@
       :error => {
         :header_message => ["无法保存 {{object_name}}: 1 错误", "无法保存 {{object_name}}: {{count}} 错误."],
         :message => "请检查以下字段:"
-      }
-    },
-    :active_record => {
+      },
       :error_messages => {
         :inclusion => "不包含于列表中",
         :exclusion => "不能用",
