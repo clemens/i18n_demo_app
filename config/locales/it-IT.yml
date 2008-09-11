@@ -24,8 +24,8 @@
         formats:
           default: "%d-%m-%YT%H:%M:%S%Z"
           
-      am: 'am'
-      pm: 'pm'
+    am: 'am'
+    pm: 'pm'
       
   datetime:
     distance_in_words:
