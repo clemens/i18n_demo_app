@@ -1,0 +1,143 @@
+"it-IT":
+  date:
+    formats:
+      default: "%d-%m-%Y"
+      short: "%d %b"
+      long: "%d %B %Y"
+      only_day: "%e"
+
+    day_names: [Domenica, Lunedì, Martedì, Mercoledì, Giovedì, Venerdì, Sabato]
+    abbr_day_names: [Dom, Lun, Mar, Mer, Gio, Ven, Sab]
+    month_names: [~, Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
+    abbr_month_names: [~, Gen, Feb, Mar, Apr, Mag, Giu, Lug, Ago, Set, Ott, Nov, Dic]
+    order: [ :day, :month, :year ]
+  
+  time:
+    formats:
+      default: "%a %d %b %Y, %H:%M:%S %z"
+      time: "%H:%M"
+      short: "%d %b %H:%M"
+      long: "%d %B %Y %H:%M"
+      only_second: "%S"
+      
+      datetime:
+        formats:
+          default: "%d-%m-%YT%H:%M:%S%Z"
+          
+      am: 'am'
+      pm: 'pm'
+      
+  datetime:
+    distance_in_words:
+      half_a_minute: "mezzo minuto"
+      less_than_x_seconds:
+        one:  "meno di un secondo"
+        other: "meno di {{count}} secondi"
+      x_seconds:
+        one:  "1 secondo"
+        other: "{{count}} secondi"
+      less_than_x_minutes:
+        one:  "meno di un minuto"
+        other: "meno di {{count}} minuti"
+      x_minutes:
+        one:  "1 minuto"
+        other: "{{count}} minuti"
+      about_x_hours:
+        one:  "circa un'ora"
+        other: "circa {{count}} ore"
+      x_days:
+        one:  "1 giorno"
+        other: "{{count}} giorni"
+      about_x_months:
+        one:  "circa un mese"
+        other: "circa {{count}} mesi"
+      x_months:
+        one:  "1 mese"
+        other: "{{count}} mesi"
+      about_x_years:
+        one:  "circa un anno"
+        other: "circa {{count}} anni"
+      over_x_years:
+        one:  "oltre un anno"
+        other: "oltre {{count}} anni"
+      
+  number:
+    format:
+      precision: 3
+      separator: ','
+      delimiter: '.'
+    currency:
+      format:
+        unit: '€'
+        precision: 2
+        format: '%n %u'
+        
+  active_record:
+    error:
+      header_message: ["Non posso salvare questo {{object_name}}: 1 errore", "Non posso salvare questo {{object_name}}: {{count}} errori."]
+      message: "Per favore ricontrolla i seguenti campi:"
+    error_messages:
+      inclusion: "non è incluso nella lista"
+      exclusion: "è riservato"
+      invalid: "non è valido"
+      confirmation: "non coincide con la conferma"
+      accepted: "deve essere accettata"
+      empty: "non può essere vuoto"
+      blank: "non può essere lasciato in bianco"
+      too_long: "è troppo lungo (il massimo è {{count}} lettere)"
+      too_short: "è troppo corto (il minimo è {{count}} lettere)"
+      wrong_length: "è della lunghezza sbagliata (deve essere di {{count}} lettere)"
+      taken: "è già in uso"
+      not_a_number: "non è un numero"
+      greater_than: "deve essere superiore a {{count}}"
+      greater_than_or_equal_to: "deve essere superiore o uguale a {{count}}"
+      equal_to: "deve essere uguale a {{count}}"
+      less_than: "deve essere meno di {{count}}"
+      less_than_or_equal_to: "deve essere meno o uguale a {{count}}"
+      odd: "deve essere dispari"
+      even: "deve essere pari"
+      
+  txt:
+    main_title: "Localizing Rails"
+    app_name: "Applicazione Dimostrativa"
+    sub_title: "come tradurre la tua applicazione con le nuove funzionalità i18n di Rails"
+    contents: "Contenuti"
+    menu:
+      introduction: "Introduzione"
+      about: "Informazioni"
+      setup: "Preparazione"
+      date_formats: "Formati delle data"
+      time_formats: "Formati dell'ora"
+    about:
+      title: "Informazioni su questa applicazione dimostrativa"
+      author: "Questa applicazione dimostrativa è stata scritta da {{mail_1}}."
+      feedback: "Se hai qualche commento, sentiti libero di scrivermi qualche riga. Inoltre visita {{blog_href}} dove regolarmente scrivo su Rails e altre cose."
+      licence: "Questa applicazione dimostrativa e tutto il suo contento sono sotto la licenza {{licence_href}}. Se vuoi utilizzarla in modi proibiti da questa licenza, per favore contattami e chiedi il mio permesso."
+    active_record:
+      too_lazy: "Nessun esempio qui dato che sono troppo pigro nel pensare che  gli attributi debbano avere <strong>tutti</strong> dei messaggi di errore personalizzati. ;-)"
+      easy_to_understand: "E' comunque semplice da capire, penso."
+    date_formats:
+      rails_standards_work: "Il formato standard di Rails (Date::DATE_FORMATS) funziona:"
+    date_helper:
+      date_time_title: "Distanza Data/Ora"
+      forms_title: "Forms"
+    index:
+      others: "altri"
+      introduction: "Ultimamente un sacco di lavoro è stato fatto da {{sven_blog}} e {{sven_github}} per facilitare ulteriori internazionalizzazioni e traduzioni su Rails."
+      story_so_far: "Questa applicazione dimostrativa prova a dimostrare come puoi utilizzare le funzionalità che sono state implementate sino ad ora per tradurre grandi parti della tua applicazione Rails."
+    number_helper:
+      note_one: "Nota: <code>number_to_phone</code> non è ancora stato tradotto e probabilmente non lo sarà mai - almeno non nel core. Controlla i nuovi internationalization/localization plugins come la nuova versione di {{globalize}} dato che probabilmente supporteranno cose come questa."
+      note_two: "Ulteriore nota: <code>number_to_currency</code>, <code>number_to_percentage</code> e <code>number_to_human_size</code> utilizzano <code>number_with_precision</code> internamente e <code>number_with_precision</code> utilizza <code>number_with_delimiter</code> internamente."
+    setup:
+      freezing_edge_and_adding: "Freezare Edge ed installare il plugin localized_dates"
+      you_need_to_be_on_edge: "Devi utilizzare Edge Rails per utilizzare le funzionalità i18n di Rails:"
+      date_time_formats: "Per i formati data e ora, hai anche bisogno di installare {{localized_dates_link}}:"
+      config_locale: "Configurare la lingua"
+      best_place: "Il miglior posto dove mettere le proprie traduzioni, in mia opinione, è  <code>config/locales</code>. Il plugin localized_dates copierà due traduzioni, en-US e de-AT, in questa cartella. Puoi estenderle o modificarle e oltretutto crearne di nuove."
+      locale: "Ecco la traduzione dimostrativa che è stata utilizzata per questa applicazione:"
+      defaults: "Hai anche bisogno di inizializzare la traduzione di default e/o la traduzione nel tuo <code>environment.rb</code> o in un initializer."
+      locale_structure_title: "Una parola sulla struttura dei locales"
+      locale_structure_number: "Potresti aver notato che dentro la parte della traduzione <code>:number</code> abbiamo definito <code>:format</code> e <code>:currency</code>. In generale, le traduzioni sono strutturate gerarchicamente - cioè valute sono numeri, percentuali sono numeri, etc. <code>:currency</code> può sovrascrivere il settaggio normale <code>:format</code> (nel nostro caso impostiamo <code>:precision</code> a 2 invece di 3) o estenderlo (aggiungiamo due nuove opzioni, <code>:unit</code> e <code>:format</code>)."
+      locale_structure_date_time: "Lo stesso è vero per data e ora: Se necessario, <code>:datetime</code> e <code>:time_with_zone</code> possono essere utilizzati per impostare la formattazione dei propri rispettivi tipi invece di basarsi sulle impostazioni per <code>:time</code>. Nota, comunque, che usualmente vorrai usare lo stesso formato di <code>:time</code>."
+    time_formats:
+      rails_standards_work: "I formati standard di Rails (Time::DATE_FORMATS) funzionano:"
