@@ -1,5 +1,9 @@
 module ActiveRecord
   module Associations
+    # This is the proxy that handles a has many association.
+    #
+    # If the association has a <tt>:through</tt> option further specialization
+    # is provided by its child HasManyThroughAssociation.
     class HasManyAssociation < AssociationCollection #:nodoc:
       protected
         def owner_quoted_id
@@ -10,6 +14,19 @@ module ActiveRecord
           end
         end
 
+        # Returns the number of records in this collection.
+        #
+        # If the association has a counter cache it gets that value. Otherwise
+        # it will attempt to do a count via SQL, bounded to <tt>:limit</tt> if
+        # there's one.  Some configuration options like :group make it impossible
+        # to do a SQL count, in those cases the array count will be used.
+        #
+        # That does not depend on whether the collection has already been loaded
+        # or not. The +size+ method is the one that takes the loaded flag into
+        # account and delegates to +count_records+ if needed.
+        #
+        # If the collection is empty the target is set to an empty array and
+        # the loaded flag is set to true as well.
         def count_records
           count = if has_cached_counter?
             @owner.send(:read_attribute, cached_counter_attribute_name)
@@ -44,6 +61,7 @@ module ActiveRecord
           record.save
         end
 
+        # Deletes the records according to the <tt>:dependent</tt> option.
         def delete_records(records)
           case @reflection.options[:dependent]
             when :destroy

@@ -7,15 +7,21 @@ module ActiveRecord
       end
 
       def create(attrs = {}, replace_existing = true)
-        new_record(replace_existing) { |klass| klass.create(attrs) }
+        new_record(replace_existing) do |reflection|
+          reflection.create_association(attrs)
+        end
       end
 
       def create!(attrs = {}, replace_existing = true)
-        new_record(replace_existing) { |klass| klass.create!(attrs) }
+        new_record(replace_existing) do |reflection|
+          reflection.create_association!(attrs)
+        end
       end
 
       def build(attrs = {}, replace_existing = true)
-        new_record(replace_existing) { |klass| klass.new(attrs) }
+        new_record(replace_existing) do |reflection|
+          reflection.build_association(attrs)
+        end
       end
 
       def replace(obj, dont_save = false)
@@ -51,7 +57,7 @@ module ActiveRecord
       protected
         def owner_quoted_id
           if @reflection.options[:primary_key]
-            quote_value(@owner.send(@reflection.options[:primary_key]))
+            @owner.class.quote_value(@owner.send(@reflection.options[:primary_key]))
           else
             @owner.quoted_id
           end
@@ -91,7 +97,9 @@ module ActiveRecord
           # instance. Otherwise, if the target has not previously been loaded
           # elsewhere, the instance we create will get orphaned.
           load_target if replace_existing
-          record = @reflection.klass.send(:with_scope, :create => construct_scope[:create]) { yield @reflection.klass }
+          record = @reflection.klass.send(:with_scope, :create => construct_scope[:create]) do
+            yield @reflection
+          end
 
           if replace_existing
             replace(record, true) 

@@ -106,16 +106,22 @@ module ActionController # :nodoc:
       headers['Last-Modified'] = utc_time.httpdate
     end
 
-    def etag; headers['ETag'] end
-    def etag?; headers.include?('ETag') end
+    def etag
+      headers['ETag']
+    end
+    
+    def etag?
+      headers.include?('ETag')
+    end
+    
     def etag=(etag)
       headers['ETag'] = %("#{Digest::MD5.hexdigest(ActiveSupport::Cache.expand_cache_key(etag))}")
     end
 
     def redirect(url, status)
       self.status = status
-      self.location = url
-      self.body = "<html><body>You are being <a href=\"#{url}\">redirected</a>.</body></html>"
+      self.location = url.gsub(/[\r\n]/, '')
+      self.body = "<html><body>You are being <a href=\"#{CGI.escapeHTML(url)}\">redirected</a>.</body></html>"
     end
 
     def sending_file?
@@ -129,22 +135,25 @@ module ActionController # :nodoc:
 
     def prepare!
       assign_default_content_type_and_charset!
-      set_content_length!
       handle_conditional_get!
+      set_content_length!
       convert_content_type!
     end
 
     private
-      def handle_conditional_get!
-        if nonempty_ok_response?
-          self.etag ||= body
-          if request && request.etag_matches?(etag)
-            self.status = '304 Not Modified'
-            self.body = ''
-          end
-        end
+      def handle_conditional_get! 
+        if etag? || last_modified? 
+          set_conditional_cache_control! 
+        elsif nonempty_ok_response? 
+          self.etag = body 
 
-        set_conditional_cache_control! if etag? || last_modified?
+          if request && request.etag_matches?(etag) 
+            self.status = '304 Not Modified' 
+            self.body = '' 
+          end 
+
+          set_conditional_cache_control! 
+        end 
       end
 
       def nonempty_ok_response?

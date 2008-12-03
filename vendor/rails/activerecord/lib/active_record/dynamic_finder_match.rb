@@ -6,10 +6,11 @@ module ActiveRecord
     end
 
     def initialize(method)
-      @finder = :find_initial
+      @finder = :first
       case method.to_s
-      when /^find_(all_by|by)_([_a-zA-Z]\w*)$/
-        @finder = :find_every if $1 == 'all_by'
+      when /^find_(all_by|last_by|by)_([_a-zA-Z]\w*)$/
+        @finder = :last if $1 == 'last_by'
+        @finder = :all if $1 == 'all_by'
         names = $2
       when /^find_by_([_a-zA-Z]\w*)\!$/
         @bang = true
@@ -30,7 +31,7 @@ module ActiveRecord
     end
 
     def instantiator?
-      @finder == :find_initial && !@instantiator.nil?
+      @finder == :first && !@instantiator.nil?
     end
 
     def bang?

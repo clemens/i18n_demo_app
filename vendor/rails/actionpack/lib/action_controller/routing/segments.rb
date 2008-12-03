@@ -13,6 +13,10 @@ module ActionController
         @is_optional = false
       end
 
+      def number_of_captures
+        Regexp.new(regexp_chunk).number_of_captures
+      end
+
       def extraction_code
         nil
       end
@@ -82,6 +86,10 @@ module ActionController
       def regexp_chunk
         chunk = Regexp.escape(value)
         optional? ? Regexp.optionalize(chunk) : chunk
+      end
+
+      def number_of_captures
+        0
       end
 
       def build_pattern(pattern)
@@ -160,7 +168,7 @@ module ActionController
         s << "\n#{expiry_statement}"
       end
 
-      def interpolation_chunk(value_code = "#{local_name}")
+      def interpolation_chunk(value_code = local_name)
         "\#{URI.escape(#{value_code}.to_s, ActionController::Routing::Segment::UNSAFE_PCHAR)}"
       end
 
@@ -194,10 +202,16 @@ module ActionController
         end
       end
 
+      def number_of_captures
+        if regexp
+          regexp.number_of_captures + 1
+        else
+          1
+        end
+      end
+
       def build_pattern(pattern)
-        chunk = regexp_chunk
-        chunk = "(#{chunk})" if Regexp.new(chunk).number_of_captures == 0
-        pattern = "#{chunk}#{pattern}"
+        pattern = "#{regexp_chunk}#{pattern}"
         optional? ? Regexp.optionalize(pattern) : pattern
       end
 
@@ -230,8 +244,12 @@ module ActionController
         "(?i-:(#{(regexp || Regexp.union(*possible_names)).source}))"
       end
 
+      def number_of_captures
+        1
+      end
+
       # Don't URI.escape the controller name since it may contain slashes.
-      def interpolation_chunk(value_code = "#{local_name}")
+      def interpolation_chunk(value_code = local_name)
         "\#{#{value_code}.to_s}"
       end
 
@@ -251,7 +269,7 @@ module ActionController
     end
 
     class PathSegment < DynamicSegment #:nodoc:
-      def interpolation_chunk(value_code = "#{local_name}")
+      def interpolation_chunk(value_code = local_name)
         "\#{#{value_code}}"
       end
 
@@ -273,6 +291,10 @@ module ActionController
 
       def regexp_chunk
         regexp || "(.*)"
+      end
+
+      def number_of_captures
+        regexp ? regexp.number_of_captures : 1
       end
 
       def optionality_implied?

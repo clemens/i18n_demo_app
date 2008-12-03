@@ -1,8 +1,7 @@
 module ActionView
-  module Renderable
-    # NOTE: The template that this mixin is beening include into is frozen
-    # So you can not set or modify any instance variables
-
+  # NOTE: The template that this mixin is being included into is frozen
+  # so you cannot set or modify any instance variables
+  module Renderable #:nodoc:
     extend ActiveSupport::Memoizable
 
     def self.included(base)
@@ -26,19 +25,28 @@ module ActionView
     def render(view, local_assigns = {})
       compile(local_assigns)
 
-      view.send(:_first_render=, self) unless view.send(:_first_render)
-      view.send(:_last_render=, self)
+      stack = view.instance_variable_get(:@_render_stack)
+      stack.push(self)
+
+      # This is only used for TestResponse to set rendered_template
+      unless is_a?(InlineTemplate) || view.instance_variable_get(:@_first_render)
+        view.instance_variable_set(:@_first_render, self)
+      end
 
       view.send(:_evaluate_assigns_and_ivars)
       view.send(:_set_controller_content_type, mime_type) if respond_to?(:mime_type)
 
-      view.send(method_name(local_assigns), local_assigns) do |*names|
-        if proc = view.instance_variable_get("@_proc_for_layout")
+      result = view.send(method_name(local_assigns), local_assigns) do |*names|
+        ivar = :@_proc_for_layout
+        if !view.instance_variable_defined?(:"@content_for_#{names.first}") && view.instance_variable_defined?(ivar) && (proc = view.instance_variable_get(ivar))
           view.capture(*names, &proc)
-        else
-          view.instance_variable_get("@content_for_#{names.first || 'layout'}")
+        elsif view.instance_variable_defined?(ivar = :"@content_for_#{names.first || :layout}")
+          view.instance_variable_get(ivar)
         end
       end
+
+      stack.pop
+      result
     end
 
     def method_name(local_assigns)
@@ -72,12 +80,9 @@ module ActionView
         end_src
 
         begin
-          logger = defined?(ActionController) && Base.logger
-          logger.debug "Compiling template #{render_symbol}" if logger
-
           ActionView::Base::CompiledTemplates.module_eval(source, filename, 0)
         rescue Exception => e # errors from template code
-          if logger
+          if logger = defined?(ActionController) && Base.logger
             logger.debug "ERROR: compiling #{render_symbol} RAISED #{e}"
             logger.debug "Function body: #{source}"
             logger.debug "Backtrace: #{e.backtrace.join("\n")}"

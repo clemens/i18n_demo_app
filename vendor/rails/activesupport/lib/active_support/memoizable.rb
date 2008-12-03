@@ -1,5 +1,9 @@
 module ActiveSupport
   module Memoizable
+    MEMOIZED_IVAR = Proc.new do |symbol|
+      "@_memoized_#{symbol.to_s.sub(/\?\Z/, '_query').sub(/!\Z/, '_bang')}".to_sym
+    end
+
     module Freezable
       def self.included(base)
         base.class_eval do
@@ -20,7 +24,7 @@ module ActiveSupport
             if method(m).arity == 0
               __send__($1)
             else
-              ivar = :"@_memoized_#{$1}"
+              ivar = MEMOIZED_IVAR.call($1)
               instance_variable_set(ivar, {})
             end
           end
@@ -30,7 +34,7 @@ module ActiveSupport
       def unmemoize_all
         methods.each do |m|
           if m.to_s =~ /^_unmemoized_(.*)/
-            ivar = :"@_memoized_#{$1}"
+            ivar = MEMOIZED_IVAR.call($1)
             instance_variable_get(ivar).clear if instance_variable_defined?(ivar)
           end
         end
@@ -40,7 +44,7 @@ module ActiveSupport
     def memoize(*symbols)
       symbols.each do |symbol|
         original_method = :"_unmemoized_#{symbol}"
-        memoized_ivar = :"@_memoized_#{symbol.to_s.sub(/\?\Z/, '_query').sub(/!\Z/, '_bang')}"
+        memoized_ivar = MEMOIZED_IVAR.call(symbol)
 
         class_eval <<-EOS, __FILE__, __LINE__
           include Freezable
@@ -60,7 +64,7 @@ module ActiveSupport
               #{memoized_ivar} ||= {} unless frozen?
               reload = args.pop if args.last == true || args.last == :reload
 
-              if #{memoized_ivar}
+              if defined?(#{memoized_ivar}) && #{memoized_ivar}
                 if !reload && #{memoized_ivar}.has_key?(args)
                   #{memoized_ivar}[args]
                 elsif #{memoized_ivar}

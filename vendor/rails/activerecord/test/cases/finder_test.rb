@@ -21,7 +21,7 @@ class DynamicFinderMatchTest < ActiveRecord::TestCase
     match = ActiveRecord::DynamicFinderMatch.match("find_by_age_and_sex_and_location")
     assert_not_nil match
     assert match.finder?
-    assert_equal :find_initial, match.finder
+    assert_equal :first, match.finder
     assert_equal %w(age sex location), match.attribute_names
   end
 
@@ -30,7 +30,7 @@ class DynamicFinderMatchTest < ActiveRecord::TestCase
     assert_not_nil match
     assert match.finder?
     assert match.bang?
-    assert_equal :find_initial, match.finder
+    assert_equal :first, match.finder
     assert_equal %w(age sex location), match.attribute_names
   end
 
@@ -38,7 +38,7 @@ class DynamicFinderMatchTest < ActiveRecord::TestCase
     match = ActiveRecord::DynamicFinderMatch.match("find_all_by_age_and_sex_and_location")
     assert_not_nil match
     assert match.finder?
-    assert_equal :find_every, match.finder
+    assert_equal :all, match.finder
     assert_equal %w(age sex location), match.attribute_names
   end
 
@@ -47,7 +47,7 @@ class DynamicFinderMatchTest < ActiveRecord::TestCase
     assert_not_nil match
     assert !match.finder?
     assert match.instantiator?
-    assert_equal :find_initial, match.finder
+    assert_equal :first, match.finder
     assert_equal :new, match.instantiator
     assert_equal %w(age sex location), match.attribute_names
   end
@@ -57,7 +57,7 @@ class DynamicFinderMatchTest < ActiveRecord::TestCase
     assert_not_nil match
     assert !match.finder?
     assert match.instantiator?
-    assert_equal :find_initial, match.finder
+    assert_equal :first, match.finder
     assert_equal :create, match.instantiator
     assert_equal %w(age sex location), match.attribute_names
   end
@@ -169,6 +169,12 @@ class FinderTest < ActiveRecord::TestCase
     assert_equal("fixture_3", developers.first.name)
   end
 
+  def test_find_with_group
+    developers =  Developer.find(:all, :group => "salary", :select => "salary")
+    assert_equal 4, developers.size
+    assert_equal 4, developers.map(&:salary).uniq.size
+  end
+
   def test_find_with_entire_select_statement
     topics = Topic.find_by_sql "SELECT * FROM topics WHERE author_name = 'Mary'"
 
@@ -197,11 +203,11 @@ class FinderTest < ActiveRecord::TestCase
     first = Topic.find(:first, :conditions => "title = 'The First Topic!'")
     assert_nil(first)
   end
-  
+
   def test_first
     assert_equal topics(:second).title, Topic.first(:conditions => "title = 'The Second Topic of the day'").title
   end
-  
+
   def test_first_failing
     assert_nil Topic.first(:conditions => "title = 'The Second Topic of the day!'")
   end
@@ -297,7 +303,6 @@ class FinderTest < ActiveRecord::TestCase
     assert_raises(ActiveRecord::RecordNotFound) { Topic.find(1, :conditions => { :author_name => "David", :title => "The First Topic", :replies_count => 1, :approved => true }) }
   end
 
-
   def test_condition_interpolation
     assert_kind_of Firm, Company.find(:first, :conditions => ["name = '%s'", "37signals"])
     assert_nil Company.find(:first, :conditions => ["name = '%s'", "37signals!"])
@@ -392,7 +397,7 @@ class FinderTest < ActiveRecord::TestCase
       Company.find(:first, :conditions => ["id=? AND name = ?", 2])
     }
     assert_raises(ActiveRecord::PreparedStatementInvalid) {
-	   Company.find(:first, :conditions => ["id=?", 2, 3, 4])
+     Company.find(:first, :conditions => ["id=?", 2, 3, 4])
     }
   end
 
@@ -418,7 +423,7 @@ class FinderTest < ActiveRecord::TestCase
   def test_named_bind_variables
     assert_equal '1', bind(':a', :a => 1) # ' ruby-mode
     assert_equal '1 1', bind(':a :a', :a => 1)  # ' ruby-mode
-    
+
     assert_nothing_raised { bind("'+00:00'", :foo => "bar") }
 
     assert_kind_of Firm, Company.find(:first, :conditions => ["name = :name", { :name => "37signals" }])
@@ -455,6 +460,15 @@ class FinderTest < ActiveRecord::TestCase
     assert_equal ActiveRecord::Base.connection.quote(''), bind('?', '')
   end
 
+  def test_bind_chars
+    quoted_bambi = ActiveRecord::Base.connection.quote("Bambi")
+    quoted_bambi_and_thumper = ActiveRecord::Base.connection.quote("Bambi\nand\nThumper")
+    assert_equal "name=#{quoted_bambi}", bind('name=?', "Bambi")
+    assert_equal "name=#{quoted_bambi_and_thumper}", bind('name=?', "Bambi\nand\nThumper")
+    assert_equal "name=#{quoted_bambi}", bind('name=?', "Bambi".mb_chars)
+    assert_equal "name=#{quoted_bambi_and_thumper}", bind('name=?', "Bambi\nand\nThumper".mb_chars)
+  end
+
   def test_bind_record
     o = Struct.new(:quoted_id).new(1)
     assert_equal '1', bind('?', o)
@@ -484,6 +498,23 @@ class FinderTest < ActiveRecord::TestCase
     assert_equal(0, Entrant.count_by_sql("SELECT COUNT(*) FROM entrants WHERE id > 3"))
     assert_equal(1, Entrant.count_by_sql(["SELECT COUNT(*) FROM entrants WHERE id > ?", 2]))
     assert_equal(2, Entrant.count_by_sql(["SELECT COUNT(*) FROM entrants WHERE id > ?", 1]))
+  end
+
+  uses_mocha('test_dynamic_finder_should_go_through_the_find_class_method') do
+    def test_dynamic_finders_should_go_through_the_find_class_method
+      Topic.expects(:find).with(:first, :conditions => { :title => 'The First Topic!' })
+      Topic.find_by_title("The First Topic!")
+
+      Topic.expects(:find).with(:last, :conditions => { :title => 'The Last Topic!' })
+      Topic.find_last_by_title("The Last Topic!")
+
+      Topic.expects(:find).with(:all, :conditions => { :title => 'A Topic.' })
+      Topic.find_all_by_title("A Topic.")
+
+      Topic.expects(:find).with(:first, :conditions => { :title => 'Does not exist yet for sure!' }).times(2)
+      Topic.find_or_initialize_by_title('Does not exist yet for sure!')
+      Topic.find_or_create_by_title('Does not exist yet for sure!')
+    end
   end
 
   def test_find_by_one_attribute
@@ -587,6 +618,38 @@ class FinderTest < ActiveRecord::TestCase
   def test_find_by_two_attributes
     assert_equal topics(:first), Topic.find_by_title_and_author_name("The First Topic", "David")
     assert_nil Topic.find_by_title_and_author_name("The First Topic", "Mary")
+  end
+
+  def test_find_last_by_one_attribute
+    assert_equal Topic.last, Topic.find_last_by_title(Topic.last.title)
+    assert_nil Topic.find_last_by_title("A title with no matches")
+  end
+
+  def test_find_last_by_one_attribute_caches_dynamic_finder
+    # ensure this test can run independently of order
+    class << Topic; self; end.send(:remove_method, :find_last_by_title) if Topic.public_methods.any? { |m| m.to_s == 'find_last_by_title' }
+    assert !Topic.public_methods.any? { |m| m.to_s == 'find_last_by_title' }
+    t = Topic.find_last_by_title(Topic.last.title)
+    assert Topic.public_methods.any? { |m| m.to_s == 'find_last_by_title' }
+  end
+
+  def test_find_last_by_invalid_method_syntax
+    assert_raises(NoMethodError) { Topic.fail_to_find_last_by_title("The First Topic") }
+    assert_raises(NoMethodError) { Topic.find_last_by_title?("The First Topic") }
+  end
+
+  def test_find_last_by_one_attribute_with_several_options
+    assert_equal accounts(:signals37), Account.find_last_by_credit_limit(50, :order => 'id DESC', :conditions => ['id != ?', 3])
+  end
+
+  def test_find_last_by_one_missing_attribute
+    assert_raises(NoMethodError) { Topic.find_last_by_undertitle("The Last Topic!") }
+  end
+
+  def test_find_last_by_two_attributes
+    topic = Topic.last
+    assert_equal topic, Topic.find_last_by_title_and_author_name(topic.title, topic.author_name)
+    assert_nil Topic.find_last_by_title_and_author_name(topic.title, "Anonymous")
   end
 
   def test_find_all_by_one_attribute
@@ -782,7 +845,18 @@ class FinderTest < ActiveRecord::TestCase
     assert c.valid?
     assert !c.new_record?
   end
-  
+
+  def test_find_or_create_should_work_with_block_on_first_call
+	  class << Company
+		undef_method(:find_or_create_by_name) if method_defined?(:find_or_create_by_name)
+	  end
+    c = Company.find_or_create_by_name(:name => "Fortune 1000") { |f| f.rating = 1000 }
+    assert_equal "Fortune 1000", c.name
+    assert_equal 1000.to_f, c.rating.to_f
+    assert c.valid?
+    assert !c.new_record?
+  end
+
   def test_dynamic_find_or_initialize_from_one_attribute_caches_method
     class << Company; self; end.send(:remove_method, :find_or_initialize_by_name) if Company.public_methods.any? { |m| m.to_s == 'find_or_initialize_by_name' }
     assert !Company.public_methods.any? { |m| m.to_s == 'find_or_initialize_by_name' }
@@ -887,6 +961,17 @@ class FinderTest < ActiveRecord::TestCase
       :conditions => 'companies.id = 1'
     )
     assert_equal 1, first.id
+  end
+
+  def test_joins_with_string_array
+    person_with_reader_and_post = Post.find(
+      :all,
+      :joins => [
+        "INNER JOIN categorizations ON categorizations.post_id = posts.id",
+        "INNER JOIN categories ON categories.id = categorizations.category_id AND categories.type = 'SpecialCategory'"
+      ]
+    )
+    assert_equal 1, person_with_reader_and_post.size
   end
 
   def test_find_by_id_with_conditions_with_or

@@ -606,7 +606,7 @@ class CleanBacktraceTest < Test::Unit::TestCase
   def test_should_reraise_the_same_object
     exception = Test::Unit::AssertionFailedError.new('message')
     clean_backtrace { raise exception }
-  rescue => caught
+  rescue Exception => caught
     assert_equal exception.object_id, caught.object_id
     assert_equal exception.message, caught.message
   end
@@ -616,7 +616,7 @@ class CleanBacktraceTest < Test::Unit::TestCase
     exception = Test::Unit::AssertionFailedError.new('message')
     exception.set_backtrace ["#{path}/abc", "#{path}/assertions/def"]
     clean_backtrace { raise exception }
-  rescue => caught
+  rescue Exception => caught
     assert_equal ["#{path}/abc"], caught.backtrace
   end
 
@@ -667,6 +667,7 @@ class NamedRoutesControllerTest < ActionController::TestCase
     with_routing do |set|
       set.draw { |map| map.resources :contents }
       assert_equal 'http://test.host/contents/new', new_content_url
+      assert_equal 'http://test.host/contents/1', content_url(:id => 1)
     end
   end
 end

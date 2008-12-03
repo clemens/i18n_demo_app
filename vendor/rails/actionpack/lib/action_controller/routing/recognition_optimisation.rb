@@ -134,6 +134,9 @@ module ActionController
         def write_recognize_optimized!
           tree = segment_tree(routes)
           body = generate_code(tree)
+
+          remove_recognize_optimized!
+
           instance_eval %{
             def recognize_optimized(path, env)
               segments = to_plain_segments(path)
@@ -145,7 +148,20 @@ module ActionController
               end
               nil
             end
-          }, __FILE__, __LINE__
+          }, '(recognize_optimized)', 1
+        end
+
+        def clear_recognize_optimized!
+          remove_recognize_optimized!
+          write_recognize_optimized!
+        end
+
+        def remove_recognize_optimized!
+          if respond_to?(:recognize_optimized)
+            class << self
+              remove_method :recognize_optimized
+            end
+          end
         end
     end
   end

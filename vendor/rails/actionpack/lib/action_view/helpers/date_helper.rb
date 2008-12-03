@@ -131,7 +131,7 @@ module ActionView
       # * <tt>:order</tt>             - Set to an array containing <tt>:day</tt>, <tt>:month</tt> and <tt>:year</tt> do
       #   customize the order in which the select fields are shown. If you leave out any of the symbols, the respective
       #   select will not be shown (like when you set <tt>:discard_xxx => true</tt>. Defaults to the order defined in
-      #   the respective locale (e.g. [:year, :month, :day] in the en-US locale that ships with Rails).
+      #   the respective locale (e.g. [:year, :month, :day] in the en locale that ships with Rails).
       # * <tt>:include_blank</tt>     - Include a blank option in every select field so it's possible to set empty
       #   dates.
       # * <tt>:default</tt>           - Set a default date if the affected date isn't set or is nil.
@@ -406,15 +406,15 @@ module ActionView
       # ==== Examples
       #   my_time = Time.now + 6.hours
       #
-      #   # Generates a select field for minutes that defaults to the minutes for the time in my_time
-      #   select_minute(my_time)
+      #   # Generates a select field for hours that defaults to the hour for the time in my_time
+      #   select_hour(my_time)
       #
-      #   # Generates a select field for minutes that defaults to the number given
-      #   select_minute(14)
+      #   # Generates a select field for hours that defaults to the number given
+      #   select_hour(13)
       #
-      #   # Generates a select field for minutes that defaults to the minutes for the time in my_time
+      #   # Generates a select field for hours that defaults to the minutes for the time in my_time
       #   # that is named 'stride' rather than 'second'
-      #   select_minute(my_time, :field_name => 'stride')
+      #   select_hour(my_time, :field_name => 'stride')
       #
       def select_hour(datetime, options = {}, html_options = {})
         DateTimeSelector.new(datetime, options, html_options).select_hour
@@ -539,7 +539,7 @@ module ActionView
 
           # If the day is hidden and the month is visible, the day should be set to the 1st so all month choices are
           # valid (otherwise it could be 31 and february wouldn't be a valid date)
-          if @options[:discard_day] && !@options[:discard_month]
+          if @datetime && @options[:discard_day] && !@options[:discard_month]
             @datetime = @datetime.change(:day => 1)
           end
 
@@ -567,7 +567,7 @@ module ActionView
 
           # If the day is hidden and the month is visible, the day should be set to the 1st so all month choices are
           # valid (otherwise it could be 31 and february wouldn't be a valid date)
-          if @options[:discard_day] && !@options[:discard_month]
+          if @datetime && @options[:discard_day] && !@options[:discard_month]
             @datetime = @datetime.change(:day => 1)
           end
         end

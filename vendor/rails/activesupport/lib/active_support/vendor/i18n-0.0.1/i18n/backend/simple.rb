@@ -1,4 +1,4 @@
-require 'strscan'
+require 'yaml'
 
 module I18n
   module Backend
@@ -10,7 +10,7 @@ module I18n
       # plain Ruby (*.rb) or YAML files (*.yml). See #load_rb and #load_yml
       # for details.
       def load_translations(*filenames)
-        filenames.each {|filename| load_file filename }
+        filenames.each { |filename| load_file(filename) }
       end
       
       # Stores translations for the given locale in memory. 
@@ -23,16 +23,22 @@ module I18n
       
       def translate(locale, key, options = {})
         raise InvalidLocale.new(locale) if locale.nil?
-        return key.map{|k| translate locale, k, options } if key.is_a? Array
+        return key.map { |k| translate(locale, k, options) } if key.is_a? Array
 
         reserved = :scope, :default
         count, scope, default = options.values_at(:count, *reserved)
         options.delete(:default)
-        values = options.reject{|name, value| reserved.include? name }
+        values = options.reject { |name, value| reserved.include?(name) }
 
-        entry = lookup(locale, key, scope) || default(locale, default, options) || raise(I18n::MissingTranslationData.new(locale, key, options))
-        entry = pluralize locale, entry, count
-        entry = interpolate locale, entry, values
+        entry = lookup(locale, key, scope)
+        if entry.nil?
+          entry = default(locale, default, options)
+          if entry.nil?
+            raise(I18n::MissingTranslationData.new(locale, key, options))
+          end
+        end
+        entry = pluralize(locale, entry, count)
+        entry = interpolate(locale, entry, values)
         entry
       end
       
@@ -59,7 +65,20 @@ module I18n
         object.strftime(format)
       end
       
+      def initialized?
+        @initialized ||= false
+      end
+
+      def reload!
+        @initialized = false
+        @translations = nil
+      end
+
       protected
+        def init_translations
+          load_translations(*I18n.load_path)
+          @initialized = true
+        end
         
         def translations
           @translations ||= {}
@@ -72,8 +91,15 @@ module I18n
         # <tt>%w(currency format)</tt>.
         def lookup(locale, key, scope = [])
           return unless key
-          keys = I18n.send :normalize_translation_keys, locale, key, scope
-          keys.inject(translations){|result, k| result[k.to_sym] or return nil }
+          init_translations unless initialized?
+          keys = I18n.send(:normalize_translation_keys, locale, key, scope)
+          keys.inject(translations) do |result, k|
+            if (x = result[k.to_sym]).nil?
+              return nil
+            else
+              x
+            end
+          end
         end
       
         # Evaluates a default translation. 
@@ -94,7 +120,7 @@ module I18n
         rescue MissingTranslationData
           nil
         end
-      
+
         # Picks a translation from an array according to English pluralization
         # rules. It will pick the first translation if count is not equal to 1
         # and the second translation if it is equal to 1. Other backends can
@@ -107,7 +133,7 @@ module I18n
           raise InvalidPluralizationData.new(entry, count) unless entry.has_key?(key)
           entry[key]
         end
-  
+
         # Interpolates values into a given string.
         # 
         #   interpolate "file {{file}} opened by \\{{user}}", :file => 'test.txt', :user => 'Mr. X'  
@@ -118,8 +144,6 @@ module I18n
         # interpolation).
         def interpolate(locale, string, values = {})
           return string unless string.is_a?(String)
-
-          string = string.gsub(/%d/, '{{count}}').gsub(/%s/, '{{value}}')
 
           if string.respond_to?(:force_encoding)
             original_encoding = string.encoding
@@ -150,21 +174,21 @@ module I18n
         # for all other file extensions.
         def load_file(filename)
           type = File.extname(filename).tr('.', '').downcase
-          raise UnknownFileType.new(type, filename) unless respond_to? :"load_#{type}"
+          raise UnknownFileType.new(type, filename) unless respond_to?(:"load_#{type}")
           data = send :"load_#{type}", filename # TODO raise a meaningful exception if this does not yield a Hash
-          data.each{|locale, d| merge_translations locale, d }
+          data.each { |locale, d| merge_translations(locale, d) }
         end
         
         # Loads a plain Ruby translations file. eval'ing the file must yield
         # a Hash containing translation data with locales as toplevel keys.
         def load_rb(filename)
-          eval IO.read(filename), binding, filename
+          eval(IO.read(filename), binding, filename)
         end
         
         # Loads a YAML translations file. The data must have locales as 
         # toplevel keys.
         def load_yml(filename)
-          YAML::load IO.read(filename)
+          YAML::load(IO.read(filename))
         end
         
         # Deep merges the given translations hash with the existing translations
@@ -172,16 +196,16 @@ module I18n
         def merge_translations(locale, data)
           locale = locale.to_sym
           translations[locale] ||= {}
-          data = deep_symbolize_keys data
+          data = deep_symbolize_keys(data)
 
           # deep_merge by Stefan Rusterholz, see http://www.ruby-forum.com/topic/142809
-          merger = proc{|key, v1, v2| Hash === v1 && Hash === v2 ? v1.merge(v2, &merger) : v2 }
-          translations[locale].merge! data, &merger
+          merger = proc { |key, v1, v2| Hash === v1 && Hash === v2 ? v1.merge(v2, &merger) : v2 }
+          translations[locale].merge!(data, &merger)
         end
         
         # Return a new hash with all keys and nested keys converted to symbols.
         def deep_symbolize_keys(hash)
-          hash.inject({}){|result, (key, value)|
+          hash.inject({}) { |result, (key, value)|
             value = deep_symbolize_keys(value) if value.is_a? Hash
             result[(key.to_sym rescue key) || key] = value
             result

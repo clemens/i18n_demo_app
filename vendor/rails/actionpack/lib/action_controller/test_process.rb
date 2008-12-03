@@ -218,7 +218,7 @@ module ActionController #:nodoc:
     # Returns the template of the file which was used to
     # render this response (or nil)
     def rendered_template
-      template.send(:_first_render)
+      template.instance_variable_get(:@_first_render)
     end
 
     # A shortcut to the flash. Returns an empty hash if no session flash exists.
@@ -284,6 +284,11 @@ module ActionController #:nodoc:
   # See AbstractResponse for more information on controller response objects.
   class TestResponse < AbstractResponse
     include TestResponseBehavior
+    
+    def recycle!
+      headers.delete('ETag')
+      headers.delete('Last-Modified')
+    end
   end
 
   class TestSession #:nodoc:
@@ -386,9 +391,11 @@ module ActionController #:nodoc:
       end
 
       @request.recycle!
+      @response.recycle!
 
       @html_document = nil
       @request.env['REQUEST_METHOD'] ||= "GET"
+
       @request.action = action.to_s
 
       parameters ||= {}

@@ -706,12 +706,13 @@ uses_mocha 'LegacyRouteSet, Route, RouteSet and RouteLoading' do
       port        = options.delete(:port) || 80
       port_string = port == 80 ? '' : ":#{port}"
 
-      host   = options.delete(:host) || "named.route.test"
-      anchor = "##{options.delete(:anchor)}" if options.key?(:anchor)
+      protocol = options.delete(:protocol) || "http"
+      host     = options.delete(:host) || "named.route.test"
+      anchor   = "##{options.delete(:anchor)}" if options.key?(:anchor)
 
       path = routes.generate(options)
 
-      only_path ? "#{path}#{anchor}" : "http://#{host}#{port_string}#{path}#{anchor}"
+      only_path ? "#{path}#{anchor}" : "#{protocol}://#{host}#{port_string}#{path}#{anchor}"
     end
 
     def request
@@ -922,6 +923,20 @@ uses_mocha 'LegacyRouteSet, Route, RouteSet and RouteLoading' do
       assert_equal("http://named.route.test/page/AboutRails",
                    x.send(:page_url, :title => "AboutRails"))
 
+    end
+
+    def test_named_route_with_name_prefix
+      rs.add_named_route :page, 'page', :controller => 'content', :action => 'show_page', :name_prefix => 'my_'
+      x = setup_for_named_route
+      assert_equal("http://named.route.test/page",
+                   x.send(:my_page_url))
+    end
+
+    def test_named_route_with_path_prefix
+      rs.add_named_route :page, 'page', :controller => 'content', :action => 'show_page', :path_prefix => 'my'
+      x = setup_for_named_route
+      assert_equal("http://named.route.test/my/page",
+                   x.send(:page_url))
     end
 
     def test_named_route_with_nested_controller
@@ -1375,6 +1390,36 @@ uses_mocha 'LegacyRouteSet, Route, RouteSet and RouteLoading' do
         x.send(:foo_with_requirement_url, "I am Against the requirements")
       end
     end
+
+    def test_routes_changed_correctly_after_clear
+      ActionController::Base.optimise_named_routes = true
+      rs = ::ActionController::Routing::RouteSet.new
+      rs.draw do |r|
+        r.connect 'ca', :controller => 'ca', :action => "aa"
+        r.connect 'cb', :controller => 'cb', :action => "ab"
+        r.connect 'cc', :controller => 'cc', :action => "ac"
+        r.connect ':controller/:action/:id'
+        r.connect ':controller/:action/:id.:format'
+      end
+
+      hash = rs.recognize_path "/cc"
+
+      assert_not_nil hash
+      assert_equal %w(cc ac), [hash[:controller], hash[:action]]
+
+      rs.draw do |r|
+        r.connect 'cb', :controller => 'cb', :action => "ab"
+        r.connect 'cc', :controller => 'cc', :action => "ac"
+        r.connect ':controller/:action/:id'
+        r.connect ':controller/:action/:id.:format'
+      end
+
+      hash = rs.recognize_path "/cc"
+
+      assert_not_nil hash
+      assert_equal %w(cc ac), [hash[:controller], hash[:action]]
+
+    end
   end
 
   class RouteTest < Test::Unit::TestCase
@@ -1680,6 +1725,11 @@ uses_mocha 'LegacyRouteSet, Route, RouteSet and RouteLoading' do
     def test_named_route_url_method_with_host
       controller = setup_named_route_test
       assert_equal "http://some.example.com/people/5", controller.send(:show_url, 5, :host=>"some.example.com")
+    end
+
+    def test_named_route_url_method_with_protocol
+      controller = setup_named_route_test
+      assert_equal "https://named.route.test/people/5", controller.send(:show_url, 5, :protocol => "https")
     end
 
     def test_named_route_url_method_with_ordered_parameters
@@ -2115,6 +2165,13 @@ uses_mocha 'LegacyRouteSet, Route, RouteSet and RouteLoading' do
       assert_equal "/foo/bar/7?x=y", set.generate(args)
       assert_equal ["/foo/bar/7", [:x]], set.generate_extras(args)
       assert_equal [:x], set.extra_keys(args)
+    end
+
+    def test_generate_with_path_prefix
+      set.draw { |map| map.connect ':controller/:action/:id', :path_prefix => 'my' }
+
+      args = { :controller => "foo", :action => "bar", :id => "7", :x => "y" }
+      assert_equal "/my/foo/bar/7?x=y", set.generate(args)
     end
 
     def test_named_routes_are_never_relative_to_modules

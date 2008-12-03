@@ -10,7 +10,8 @@ require 'i18n/exceptions'
 
 module I18n  
   @@backend = nil
-  @@default_locale = 'en-US'
+  @@load_path = nil
+  @@default_locale = :'en'
   @@exception_handler = :default_exception_handler
     
   class << self
@@ -24,7 +25,7 @@ module I18n
       @@backend = backend
     end
   
-    # Returns the current default locale. Defaults to 'en-US'
+    # Returns the current default locale. Defaults to 'en'
     def default_locale
       @@default_locale 
     end
@@ -49,14 +50,29 @@ module I18n
       @@exception_handler = exception_handler
     end
     
-    # Allows client libraries to pass arguments that specify a source for 
-    # translation data to be loaded by the backend. The backend defines
-    # acceptable sources. 
+    # Allow clients to register paths providing translation data sources. The
+    # backend defines acceptable sources.
+    #
     # E.g. the provided SimpleBackend accepts a list of paths to translation
     # files which are either named *.rb and contain plain Ruby Hashes or are
-    # named *.yml and contain YAML data.)
-    def load_translations(*args)
-      backend.load_translations(*args)
+    # named *.yml and contain YAML data. So for the SimpleBackend clients may
+    # register translation files like this:
+    #   I18n.load_path << 'path/to/locale/en.yml'
+    def load_path
+      @@load_path ||= []
+    end
+
+    # Sets the load path instance. Custom implementations are expected to
+    # behave like a Ruby Array.
+    def load_path=(load_path)
+      @@load_path = load_path
+    end
+
+    # Tells the backend to reload translations. Used in situations like the
+    # Rails development environment. Backends can implement whatever strategy
+    # is useful.
+    def reload!
+      backend.reload!
     end
     
     # Translates, pluralizes and interpolates a given key using a given locale, 
@@ -141,10 +157,10 @@ module I18n
     #   I18n.t [:foo, :bar], :scope => :baz
     def translate(key, options = {})
       locale = options.delete(:locale) || I18n.locale
-      backend.translate locale, key, options
+      backend.translate(locale, key, options)
     rescue I18n::ArgumentError => e
       raise e if options[:raise]
-      send @@exception_handler, e, locale, key, options
+      send(@@exception_handler, e, locale, key, options)
     end        
     alias :t :translate
     
@@ -171,10 +187,8 @@ module I18n
     # keys are Symbols.
     def normalize_translation_keys(locale, key, scope)
       keys = [locale] + Array(scope) + [key]
-      keys = keys.map{|k| k.to_s.split(/\./) }
-      keys.flatten.map{|k| k.to_sym}
+      keys = keys.map { |k| k.to_s.split(/\./) }
+      keys.flatten.map { |k| k.to_sym }
     end
   end
 end
-
-

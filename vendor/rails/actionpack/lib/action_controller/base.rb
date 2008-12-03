@@ -252,7 +252,7 @@ module ActionController #:nodoc:
   #
   #   def do_something
   #     redirect_to(:action => "elsewhere") and return if monkeys.nil?
-  #     render :action => "overthere" # won't be called unless monkeys is nil
+  #     render :action => "overthere" # won't be called if monkeys is nil
   #   end
   #
   class Base
@@ -278,19 +278,11 @@ module ActionController #:nodoc:
     @@consider_all_requests_local = true
     cattr_accessor :consider_all_requests_local
 
-    # Enable or disable the collection of failure information for RoutingErrors.
-    # This information can be extremely useful when tweaking custom routes, but is
-    # pointless once routes have been tested and verified.
-    @@debug_routes = true
-    cattr_accessor :debug_routes
-
     # Indicates whether to allow concurrent action processing. Your
     # controller actions and any other code they call must also behave well
     # when called from concurrent threads. Turned off by default.
     @@allow_concurrency = false
     cattr_accessor :allow_concurrency
-
-    @@guard = Monitor.new
 
     # Modern REST web services often need to submit complex data to the web application.
     # The <tt>@@param_parsers</tt> hash lets you register handlers which will process the HTTP body and add parameters to the
@@ -366,11 +358,8 @@ module ActionController #:nodoc:
     # If you are deploying to a subdirectory, you will need to set
     # <tt>config.action_controller.relative_url_root</tt>
     # This defaults to ENV['RAILS_RELATIVE_URL_ROOT']
-    cattr_writer :relative_url_root
-
-    def self.relative_url_root
-      @@relative_url_root || ENV['RAILS_RELATIVE_URL_ROOT']
-    end
+    cattr_accessor :relative_url_root
+    self.relative_url_root = ENV['RAILS_RELATIVE_URL_ROOT']
 
     # Holds the request object that's primarily used to get environment variables through access like
     # <tt>request.env["REQUEST_URI"]</tt>.
@@ -434,7 +423,11 @@ module ActionController #:nodoc:
       # render("test/template") will be looked up in the view load paths array and the closest match will be
       # returned.
       def view_paths
-        @view_paths || superclass.view_paths
+        if defined? @view_paths
+          @view_paths
+        else
+          superclass.view_paths
+        end
       end
 
       def view_paths=(value)
@@ -449,7 +442,7 @@ module ActionController #:nodoc:
       #   ArticleController.prepend_view_path(["views/default", "views/custom"])
       #
       def prepend_view_path(path)
-        @view_paths = superclass.view_paths.dup if @view_paths.nil?
+        @view_paths = superclass.view_paths.dup if !defined?(@view_paths) || @view_paths.nil?
         @view_paths.unshift(*path)
       end
 
@@ -528,12 +521,7 @@ module ActionController #:nodoc:
         assign_names
 
         log_processing
-
-        if @@allow_concurrency
-          send(method, *arguments)
-        else
-          @@guard.synchronize { send(method, *arguments) }
-        end
+        send(method, *arguments)
 
         send_response
       ensure
@@ -545,8 +533,8 @@ module ActionController #:nodoc:
         response
       end
 
-      # Returns a URL that has been rewritten according to the options hash and the defined Routes.
-      # (For doing a complete redirect, use redirect_to).
+      # Returns a URL that has been rewritten according to the options hash and the defined routes.
+      # (For doing a complete redirect, use +redirect_to+).
       #
       # <tt>url_for</tt> is used to:
       #
@@ -586,7 +574,15 @@ module ActionController #:nodoc:
       # missing values in the current request's parameters. Routes attempts to guess when a value should and should not be
       # taken from the defaults. There are a few simple rules on how this is performed:
       #
-      # * If the controller name begins with a slash, no defaults are used: <tt>url_for :controller => '/home'</tt>
+      # * If the controller name begins with a slash no defaults are used:
+      #
+      #     url_for :controller => '/home'
+      #
+      #   In particular, a leading slash ensures no namespace is assumed. Thus,
+      #   while <tt>url_for :controller => 'users'</tt> may resolve to
+      #   <tt>Admin::UsersController</tt> if the current controller lives under
+      #   that module, <tt>url_for :controller => '/users'</tt> ensures you link
+      #   to <tt>::UsersController</tt> no matter what.
       # * If the controller changes, the action will default to index unless provided
       #
       # The final rule is applied while the URL is being generated and is best illustrated by an example. Let us consider the
@@ -796,6 +792,19 @@ module ActionController #:nodoc:
       #   # Renders "Hello from code!"
       #   render :text => proc { |response, output| output.write("Hello from code!") }
       #
+      # === Rendering XML
+      #
+      # Rendering XML sets the content type to application/xml.
+      #
+      #   # Renders '<name>David</name>'
+      #   render :xml => {:name => "David"}.to_xml
+      #
+      # It's not necessary to call <tt>to_xml</tt> on the object you want to render, since <tt>render</tt> will
+      # automatically do that for you:
+      #
+      #   # Also renders '<name>David</name>'
+      #   render :xml => {:name => "David"}
+      #
       # === Rendering JSON
       #
       # Rendering JSON sets the content type to application/json and optionally wraps the JSON in a callback. It is expected
@@ -841,8 +850,14 @@ module ActionController #:nodoc:
       #     page.visual_effect :highlight, 'user_list'
       #   end
       #
-      # === Rendering with status and location headers
+      # === Rendering vanilla JavaScript
       #
+      # In addition to using RJS with render :update, you can also just render vanilla JavaScript with :js.
+      #
+      #   # Renders "alert('hello')" and sets the mime type to text/javascript
+      #   render :js => "alert('hello')"
+      #
+      # === Rendering with status and location headers
       # All renders take the <tt>:status</tt> and <tt>:location</tt> options and turn them into headers. They can even be used together:
       #
       #   render :xml => post.to_xml, :status => :created, :location => post_url(post)
@@ -893,6 +908,10 @@ module ActionController #:nodoc:
             response.content_type ||= Mime::XML
             render_for_text(xml.respond_to?(:to_xml) ? xml.to_xml : xml, options[:status])
 
+          elsif js = options[:js]
+            response.content_type ||= Mime::JS
+            render_for_text(js, options[:status])
+
           elsif json = options[:json]
             json = json.to_json unless json.is_a?(String)
             json = "#{options[:callback]}(#{json})" unless options[:callback].blank?
@@ -928,6 +947,7 @@ module ActionController #:nodoc:
       def render_to_string(options = nil, &block) #:doc:
         render(options, &block)
       ensure
+        response.content_type = nil
         erase_render_results
         reset_variables_added_to_assigns
       end
@@ -958,18 +978,6 @@ module ActionController #:nodoc:
         end
 
         render :nothing => true, :status => status
-      end
-
-      # Sets the Last-Modified response header. Returns 304 Not Modified if the
-      # If-Modified-Since request header is <= last modified.
-      def last_modified!(utc_time)
-        head(:not_modified) if response.last_modified!(utc_time)
-      end
-
-      # Sets the ETag response header. Returns 304 Not Modified if the
-      # If-None-Match request header matches.
-      def etag!(etag)
-        head(:not_modified) if response.etag!(etag)
       end
 
       # Clears the rendered results, allowing for another render to be performed.
@@ -1021,10 +1029,10 @@ module ActionController #:nodoc:
       #
       # * <tt>Hash</tt> - The URL will be generated by calling url_for with the +options+.
       # * <tt>Record</tt> - The URL will be generated by calling url_for with the +options+, which will reference a named URL for that record.
-      # * <tt>String starting with protocol:// (like http://)</tt> - Is passed straight through as the target for redirection.
-      # * <tt>String not containing a protocol</tt> - The current protocol and host is prepended to the string.
+      # * <tt>String</tt> starting with <tt>protocol://</tt> (like <tt>http://</tt>) - Is passed straight through as the target for redirection.
+      # * <tt>String</tt> not containing a protocol - The current protocol and host is prepended to the string.
       # * <tt>:back</tt> - Back to the page that issued the request. Useful for forms that are triggered from multiple places.
-      #   Short-hand for redirect_to(request.env["HTTP_REFERER"])
+      #   Short-hand for <tt>redirect_to(request.env["HTTP_REFERER"])</tt>
       #
       # Examples:
       #   redirect_to :action => "show", :id => 5
@@ -1056,11 +1064,14 @@ module ActionController #:nodoc:
           status = 302
         end
 
-        response.redirected_to= options
+        response.redirected_to = options
         logger.info("Redirected to #{options}") if logger && logger.info?
 
         case options
-          when %r{^\w+://.*}
+          # The scheme name consist of a letter followed by any combination of
+          # letters, digits, and the plus ("+"), period ("."), or hyphen ("-")
+          # characters; and is terminated by a colon (":").
+          when %r{^\w[\w\d+.-]*:.*}
             redirect_to_full_url(options, status)
           when String
             redirect_to_full_url(request.protocol + request.host_with_port + options, status)
@@ -1079,6 +1090,51 @@ module ActionController #:nodoc:
         raise DoubleRenderError if performed?
         response.redirect(url, interpret_status(status))
         @performed_redirect = true
+      end
+
+      # Sets the etag and/or last_modified on the response and checks it against
+      # the client request. If the request doesn't match the options provided, the
+      # request is considered stale and should be generated from scratch. Otherwise,
+      # it's fresh and we don't need to generate anything and a reply of "304 Not Modified" is sent.
+      #
+      # Example:
+      #
+      #   def show
+      #     @article = Article.find(params[:id])
+      #
+      #     if stale?(:etag => @article, :last_modified => @article.created_at.utc)
+      #       @statistics = @article.really_expensive_call
+      #       respond_to do |format|
+      #         # all the supported formats
+      #       end
+      #     end
+      #   end
+      def stale?(options)
+        fresh_when(options)
+        !request.fresh?(response)
+      end
+
+      # Sets the etag, last_modified, or both on the response and renders a
+      # "304 Not Modified" response if the request is already fresh. 
+      #
+      # Example:
+      #
+      #   def show
+      #     @article = Article.find(params[:id])
+      #     fresh_when(:etag => @article, :last_modified => @article.created_at.utc)
+      #   end
+      # 
+      # This will render the show template if the request isn't sending a matching etag or 
+      # If-Modified-Since header and just a "304 Not Modified" response if there's a match.
+      def fresh_when(options)
+        options.assert_valid_keys(:etag, :last_modified)
+
+        response.etag          = options[:etag]          if options[:etag]
+        response.last_modified = options[:last_modified] if options[:last_modified]
+
+        if request.fresh?(response)
+          head :not_modified
+        end
       end
 
       # Sets a HTTP 1.1 Cache-Control header. Defaults to issuing a "private" instruction, so that
@@ -1160,10 +1216,32 @@ module ActionController #:nodoc:
 
       def log_processing
         if logger && logger.info?
-          logger.info "\n\nProcessing #{self.class.name}\##{action_name} (for #{request_origin}) [#{request.method.to_s.upcase}]"
-          logger.info "  Session ID: #{@_session.session_id}" if @_session and @_session.respond_to?(:session_id)
-          logger.info "  Parameters: #{respond_to?(:filter_parameters) ? filter_parameters(params).inspect : params.inspect}"
+          log_processing_for_request_id
+          log_processing_for_session_id
+          log_processing_for_parameters
         end
+      end
+      
+      def log_processing_for_request_id
+        request_id = "\n\nProcessing #{self.class.name}\##{action_name} "
+        request_id << "to #{params[:format]} " if params[:format]
+        request_id << "(for #{request_origin}) [#{request.method.to_s.upcase}]"
+
+        logger.info(request_id)
+      end
+
+      def log_processing_for_session_id
+        if @_session && @_session.respond_to?(:session_id) && @_session.respond_to?(:dbman) &&
+            !@_session.dbman.is_a?(CGI::Session::CookieStore)
+          logger.info "  Session ID: #{@_session.session_id}"
+        end
+      end
+
+      def log_processing_for_parameters
+        parameters = respond_to?(:filter_parameters) ? filter_parameters(params) : params.dup
+        parameters = parameters.except!(:controller, :action, :format, :_method)
+        
+        logger.info "  Parameters: #{parameters.inspect}" unless parameters.empty?
       end
 
       def default_render #:nodoc:
@@ -1244,7 +1322,7 @@ module ActionController #:nodoc:
             action_name = strip_out_controller(action_name)
           end
         end
-        "#{self.class.controller_path}/#{action_name}"
+        "#{self.controller_path}/#{action_name}"
       end
 
       def strip_out_controller(path)
@@ -1252,7 +1330,7 @@ module ActionController #:nodoc:
       end
 
       def template_path_includes_controller?(path)
-        self.class.controller_path.split('/')[-1] == path.split('/')[0]
+        self.controller_path.split('/')[-1] == path.split('/')[0]
       end
 
       def process_cleanup

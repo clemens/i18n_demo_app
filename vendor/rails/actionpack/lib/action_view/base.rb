@@ -172,18 +172,6 @@ module ActionView #:nodoc:
       delegate :logger, :to => 'ActionController::Base'
     end
 
-    def self.cache_template_loading=(*args)
-      ActiveSupport::Deprecation.warn(
-        "config.action_view.cache_template_loading option has been deprecated" +
-        "and has no effect. Please remove it from your config files.", caller)
-    end
-
-    def self.cache_template_extensions=(*args)
-      ActiveSupport::Deprecation.warn(
-        "config.action_view.cache_template_extensions option has been" +
-        "deprecated and has no effect. Please remove it from your config files.", caller)
-    end
-
     # Templates that are exempt from layouts
     @@exempt_from_layout = Set.new([/\.rjs$/])
 
@@ -234,6 +222,7 @@ module ActionView #:nodoc:
     def initialize(view_paths = [], assigns_for_first_render = {}, controller = nil)#:nodoc:
       @assigns = assigns_for_first_render
       @assigns_added = nil
+      @_render_stack = []
       @controller = controller
       @helpers = ProxyModule.new(self)
       self.view_paths = view_paths
@@ -251,6 +240,11 @@ module ActionView #:nodoc:
       local_assigns ||= {}
 
       if options.is_a?(String)
+        ActiveSupport::Deprecation.warn(
+          "Calling render with a string will render a partial from Rails 2.3. " +
+          "Change this call to render(:file => '#{options}', :locals => locals_hash)."
+        )
+
         render(:file => options, :locals => local_assigns)
       elsif options == :update
         update_page(&block)
@@ -259,10 +253,6 @@ module ActionView #:nodoc:
         if options[:layout]
           _render_with_layout(options, local_assigns, &block)
         elsif options[:file]
-          if options[:use_full_path]
-            ActiveSupport::Deprecation.warn("use_full_path option has been deprecated and has no affect.", caller)
-          end
-
           _pick_template(options[:file]).render_template(self, options[:locals])
         elsif options[:partial]
           render_partial(options)
@@ -278,30 +268,36 @@ module ActionView #:nodoc:
     # the same name but differing formats.  See +Request#template_format+
     # for more details.
     def template_format
-      return @template_format if @template_format
-
-      if controller && controller.respond_to?(:request)
+      if defined? @template_format
+        @template_format
+      elsif controller && controller.respond_to?(:request)
         @template_format = controller.request.template_format
       else
         @template_format = :html
       end
     end
 
-    private
-      attr_accessor :_first_render, :_last_render
+    # Access the current template being rendered.
+    # Returns a ActionView::Template object.
+    def template
+      @_render_stack.last
+    end
 
-      # Evaluate the local assigns and pushes them to the view.
+    private
+      # Evaluates the local assigns and controller ivars, pushes them to the view.
       def _evaluate_assigns_and_ivars #:nodoc:
         unless @assigns_added
           @assigns.each { |key, value| instance_variable_set("@#{key}", value) }
-
-          if @controller
-            variables = @controller.instance_variables
-            variables -= @controller.protected_instance_variables if @controller.respond_to?(:protected_instance_variables)
-            variables.each {|name| instance_variable_set(name, @controller.instance_variable_get(name)) }
-          end
-
+          _copy_ivars_from_controller
           @assigns_added = true
+        end
+      end
+
+      def _copy_ivars_from_controller #:nodoc:
+        if @controller
+          variables = @controller.instance_variable_names
+          variables -= @controller.protected_instance_variables if @controller.respond_to?(:protected_instance_variables)
+          variables.each { |name| instance_variable_set(name, @controller.instance_variable_get(name)) }
         end
       end
 
@@ -326,7 +322,8 @@ module ActionView #:nodoc:
           template
         elsif template = self.view_paths[template_file_name]
           template
-        elsif _first_render && template = self.view_paths["#{template_file_name}.#{_first_render.format_and_extension}"]
+        elsif (first_render = @_render_stack.first) && first_render.respond_to?(:format_and_extension) &&
+            (template = self.view_paths["#{template_file_name}.#{first_render.format_and_extension}"])
           template
         elsif template_format == :js && template = self.view_paths["#{template_file_name}.html"]
           @template_format = :html
@@ -366,7 +363,9 @@ module ActionView #:nodoc:
           end
         else
           begin
-            original_content_for_layout, @content_for_layout = @content_for_layout, render(options)
+            original_content_for_layout = @content_for_layout if defined?(@content_for_layout)
+            @content_for_layout = render(options)
+
             if (options[:inline] || options[:file] || options[:text])
               @cached_content_for_layout = @content_for_layout
               render(:file => partial_layout, :locals => local_assigns)

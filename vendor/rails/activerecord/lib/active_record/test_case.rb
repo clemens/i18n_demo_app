@@ -11,11 +11,9 @@ module ActiveRecord
     end
 
     def assert_date_from_db(expected, actual, message = nil)
-      # SQL Server doesn't have a separate column type just for dates,
+      # SybaseAdapter doesn't have a separate column type just for dates,
       # so the time is in the string and incorrectly formatted
-      if current_adapter?(:SQLServerAdapter)
-        assert_equal expected.strftime("%Y/%m/%d 00:00:00"), actual.strftime("%Y/%m/%d 00:00:00")
-      elsif current_adapter?(:SybaseAdapter)
+      if current_adapter?(:SybaseAdapter)
         assert_equal expected.to_s, actual.to_date.to_s, message
       else
         assert_equal expected.to_s, actual.to_s, message
@@ -42,6 +40,21 @@ module ActiveRecord
 
     def assert_no_queries(&block)
       assert_queries(0, &block)
+    end
+
+    def self.use_concurrent_connections
+      setup :connection_allow_concurrency_setup
+      teardown :connection_allow_concurrency_teardown
+    end
+
+    def connection_allow_concurrency_setup
+      @connection = ActiveRecord::Base.remove_connection
+      ActiveRecord::Base.establish_connection(@connection.merge({:allow_concurrency => true}))
+    end
+
+    def connection_allow_concurrency_teardown
+      ActiveRecord::Base.clear_all_connections!
+      ActiveRecord::Base.establish_connection(@connection)
     end
   end
 end

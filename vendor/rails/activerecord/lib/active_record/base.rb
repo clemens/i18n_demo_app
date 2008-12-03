@@ -274,7 +274,7 @@ module ActiveRecord #:nodoc:
   # == Dynamic attribute-based finders
   #
   # Dynamic attribute-based finders are a cleaner way of getting (and/or creating) objects by simple queries without turning to SQL. They work by
-  # appending the name of an attribute to <tt>find_by_</tt> or <tt>find_all_by_</tt>, so you get finders like <tt>Person.find_by_user_name</tt>,
+  # appending the name of an attribute to <tt>find_by_</tt>, <tt>find_last_by_</tt>, or <tt>find_all_by_</tt>, so you get finders like <tt>Person.find_by_user_name</tt>,
   # <tt>Person.find_all_by_last_name</tt>, and <tt>Payment.find_by_transaction_id</tt>. So instead of writing
   # <tt>Person.find(:first, :conditions => ["user_name = ?", user_name])</tt>, you just do <tt>Person.find_by_user_name(user_name)</tt>.
   # And instead of writing <tt>Person.find(:all, :conditions => ["last_name = ?", last_name])</tt>, you just do <tt>Person.find_all_by_last_name(last_name)</tt>.
@@ -287,6 +287,7 @@ module ActiveRecord #:nodoc:
   # It's even possible to use all the additional parameters to find. For example, the full interface for <tt>Payment.find_all_by_amount</tt>
   # is actually <tt>Payment.find_all_by_amount(amount, options)</tt>. And the full interface to <tt>Person.find_by_user_name</tt> is
   # actually <tt>Person.find_by_user_name(user_name, options)</tt>. So you could call <tt>Payment.find_all_by_amount(50, :order => "created_on")</tt>.
+  # Also you may call <tt>Payment.find_last_by_amount(amount, options)</tt> returning the last record matching that amount and options.
   #
   # The same dynamic finder style can be used to create the object if it doesn't already exist. This dynamic finder is called with
   # <tt>find_or_create_by_</tt> and will return the object if it already exists and otherwise creates it, then returns it. Protected attributes won't be set unless they are given in a block. For example:
@@ -414,6 +415,31 @@ module ActiveRecord #:nodoc:
 
     @@subclasses = {}
 
+    # Contains the database configuration - as is typically stored in config/database.yml -
+    # as a Hash.
+    #
+    # For example, the following database.yml...
+    # 
+    #   development:
+    #     adapter: sqlite3
+    #     database: db/development.sqlite3
+    #   
+    #   production:
+    #     adapter: sqlite3
+    #     database: db/production.sqlite3
+    #
+    # ...would result in ActiveRecord::Base.configurations to look like this:
+    #
+    #   {
+    #      'development' => {
+    #         'adapter'  => 'sqlite3',
+    #         'database' => 'db/development.sqlite3'
+    #      },
+    #      'production' => {
+    #         'adapter'  => 'sqlite3',
+    #         'database' => 'db/production.sqlite3'
+    #      }
+    #   }
     cattr_accessor :configurations, :instance_writer => false
     @@configurations = {}
 
@@ -452,13 +478,6 @@ module ActiveRecord #:nodoc:
     cattr_accessor :default_timezone, :instance_writer => false
     @@default_timezone = :local
 
-    # Determines whether to use a connection for each thread, or a single shared connection for all threads.
-    # Defaults to false. If you're writing a threaded application, set to true
-    # and periodically call verify_active_connections! to clear out connections
-    # assigned to stale threads.
-    cattr_accessor :allow_concurrency, :instance_writer => false
-    @@allow_concurrency = false
-
     # Specifies the format to use when dumping the database schema with Rails'
     # Rakefile.  If :sql, the schema is dumped as (potentially database-
     # specific) SQL statements.  If :ruby, the schema is dumped as an
@@ -493,9 +512,9 @@ module ActiveRecord #:nodoc:
       #
       # All approaches accept an options hash as their last parameter.
       #
-      # ==== Attributes
+      # ==== Parameters
       #
-      # * <tt>:conditions</tt> - An SQL fragment like "administrator = 1" or <tt>[ "user_name = ?", username ]</tt>. See conditions in the intro.
+      # * <tt>:conditions</tt> - An SQL fragment like "administrator = 1", <tt>[ "user_name = ?", username ]</tt>, or <tt>["user_name = :user_name", { :user_name => user_name }]</tt>. See conditions in the intro.
       # * <tt>:order</tt> - An SQL fragment like "created_at DESC, name".
       # * <tt>:group</tt> - An attribute name by which the result should be grouped. Uses the <tt>GROUP BY</tt> SQL-clause.
       # * <tt>:limit</tt> - An integer determining the limit on the number of rows that should be returned.
@@ -507,7 +526,7 @@ module ActiveRecord #:nodoc:
       # * <tt>:include</tt> - Names associations that should be loaded alongside. The symbols named refer
       #   to already defined associations. See eager loading under Associations.
       # * <tt>:select</tt> - By default, this is "*" as in "SELECT * FROM", but can be changed if you, for example, want to do a join but not
-      #   include the joined columns.
+      #   include the joined columns. Takes a string with the SELECT SQL fragment (e.g. "id, name").
       # * <tt>:from</tt> - By default, this is the table name of the class, but can be changed to an alternate table name (or even the name
       #   of a database view).
       # * <tt>:readonly</tt> - Mark the returned records read-only so they cannot be saved or updated.
@@ -532,6 +551,7 @@ module ActiveRecord #:nodoc:
       #   # find first
       #   Person.find(:first) # returns the first object fetched by SELECT * FROM people
       #   Person.find(:first, :conditions => [ "user_name = ?", user_name])
+      #   Person.find(:first, :conditions => [ "user_name = :u", { :u => user_name }])
       #   Person.find(:first, :order => "created_on DESC", :offset => 5)
       #
       #   # find last
@@ -591,8 +611,8 @@ module ActiveRecord #:nodoc:
 
       # Executes a custom SQL query against your database and returns all the results.  The results will
       # be returned as an array with columns requested encapsulated as attributes of the model you call
-      # this method from.  If you call +Product.find_by_sql+ then the results will be returned in a Product
-      # object with the attributes you specified in the SQL query.
+      # this method from.  If you call <tt>Product.find_by_sql</tt> then the results will be returned in
+      # a Product object with the attributes you specified in the SQL query.
       #
       # If you call a complicated SQL query which spans multiple tables the columns specified by the
       # SELECT will be attributes of the model, whether or not they are columns of the corresponding
@@ -601,7 +621,7 @@ module ActiveRecord #:nodoc:
       # The +sql+ parameter is a full SQL query as a string.  It will be called as is, there will be
       # no database agnostic conversions performed.  This should be a last resort because using, for example,
       # MySQL specific terms will lock you to using that particular database engine or require you to
-      # change your call if you switch engines
+      # change your call if you switch engines.
       #
       # ==== Examples
       #   # A simple SQL query spanning multiple tables
@@ -678,7 +698,7 @@ module ActiveRecord #:nodoc:
       # Updates an object (or multiple objects) and saves it to the database, if validations pass.
       # The resulting object is returned whether the object was saved successfully to the database or not.
       #
-      # ==== Attributes
+      # ==== Parameters
       #
       # * +id+ - This should be the id or an array of ids to be updated.
       # * +attributes+ - This should be a Hash of attributes to be set on the object, or an array of Hashes.
@@ -706,9 +726,10 @@ module ActiveRecord #:nodoc:
       # is executed on the database which means that no callbacks are fired off running this.  This is an efficient method
       # of deleting records that don't need cleaning up after or other actions to be taken.
       #
-      # Objects are _not_ instantiated with this method.
+      # Objects are _not_ instantiated with this method, and so +:dependent+ rules
+      # defined on associations are not honered.
       #
-      # ==== Attributes
+      # ==== Parameters
       #
       # * +id+ - Can be either an Integer or an Array of Integers.
       #
@@ -731,7 +752,7 @@ module ActiveRecord #:nodoc:
       # This essentially finds the object (or multiple objects) with the given id, creates a new object
       # from the attributes, and then calls destroy on it.
       #
-      # ==== Attributes
+      # ==== Parameters
       #
       # * +id+ - Can be either an Integer or an Array of Integers.
       #
@@ -752,13 +773,15 @@ module ActiveRecord #:nodoc:
       end
 
       # Updates all records with details given if they match a set of conditions supplied, limits and order can
-      # also be supplied.
+      # also be supplied. This method constructs a single SQL UPDATE statement and sends it straight to the
+      # database. It does not instantiate the involved models and it does not trigger Active Record callbacks.
       #
-      # ==== Attributes
+      # ==== Parameters
       #
-      # * +updates+ - A String of column and value pairs that will be set on any records that match conditions.
+      # * +updates+ - A string of column and value pairs that will be set on any records that match conditions.
+      #               What goes into the SET clause.
       # * +conditions+ - An SQL fragment like "administrator = 1" or [ "user_name = ?", username ]. See conditions in the intro for more info.
-      # * +options+ - Additional options are <tt>:limit</tt> and/or <tt>:order</tt>, see the examples for usage.
+      # * +options+ - Additional options are <tt>:limit</tt> and <tt>:order</tt>, see the examples for usage.
       #
       # ==== Examples
       #
@@ -773,46 +796,66 @@ module ActiveRecord #:nodoc:
       #                         :order => 'created_at', :limit => 5 )
       def update_all(updates, conditions = nil, options = {})
         sql  = "UPDATE #{quoted_table_name} SET #{sanitize_sql_for_assignment(updates)} "
+
         scope = scope(:find)
-        add_conditions!(sql, conditions, scope)
-        add_order!(sql, options[:order], nil)
-        add_limit!(sql, options, nil)
+
+        select_sql = ""
+        add_conditions!(select_sql, conditions, scope)
+
+        if options.has_key?(:limit) || (scope && scope[:limit])
+          # Only take order from scope if limit is also provided by scope, this
+          # is useful for updating a has_many association with a limit.
+          add_order!(select_sql, options[:order], scope)
+
+          add_limit!(select_sql, options, scope)
+          sql.concat(connection.limited_update_conditions(select_sql, quoted_table_name, connection.quote_column_name(primary_key)))
+        else
+          add_order!(select_sql, options[:order], nil)
+          sql.concat(select_sql)
+        end
+
         connection.update(sql, "#{name} Update")
       end
 
-      # Destroys the records matching +conditions+ by instantiating each record and calling the destroy method.
-      # This means at least 2*N database queries to destroy N records, so avoid destroy_all if you are deleting
+      # Destroys the records matching +conditions+ by instantiating each record and calling their +destroy+ method.
+      # This means at least 2*N database queries to destroy N records, so avoid +destroy_all+ if you are deleting
       # many records. If you want to simply delete records without worrying about dependent associations or
       # callbacks, use the much faster +delete_all+ method instead.
       #
-      # ==== Attributes
+      # ==== Parameters
       #
       # * +conditions+ - Conditions are specified the same way as with +find+ method.
       #
       # ==== Example
       #
-      #   Person.destroy_all "last_login < '2004-04-04'"
+      #   Person.destroy_all("last_login < '2004-04-04'")
       #
       # This loads and destroys each person one by one, including its dependent associations and before_ and
       # after_destroy callbacks.
+      #
+      # +conditions+ can be anything that +find+ also accepts:
+      #
+      #   Person.destroy_all(:last_login => 6.hours.ago)
       def destroy_all(conditions = nil)
         find(:all, :conditions => conditions).each { |object| object.destroy }
       end
 
       # Deletes the records matching +conditions+ without instantiating the records first, and hence not
-      # calling the destroy method and invoking callbacks. This is a single SQL query, much more efficient
-      # than destroy_all.
+      # calling the +destroy+ method nor invoking callbacks. This is a single SQL DELETE statement that
+      # goes straight to the database, much more efficient than +destroy_all+. Be careful with relations
+      # though, in particular <tt>:dependent</tt> rules defined on associations are not honored.
       #
-      # ==== Attributes
+      # ==== Parameters
       #
       # * +conditions+ - Conditions are specified the same way as with +find+ method.
       #
       # ==== Example
       #
-      #   Post.delete_all "person_id = 5 AND (category = 'Something' OR category = 'Else')"
+      #   Post.delete_all("person_id = 5 AND (category = 'Something' OR category = 'Else')")
+      #   Post.delete_all(["person_id = ? AND (category = ? OR category = ?)", 5, 'Something', 'Else'])
       #
-      # This deletes the affected posts all at once with a single DELETE query. If you need to destroy dependent
-      # associations or call your before_ or after_destroy callbacks, use the +destroy_all+ method instead.
+      # Both calls delete the affected posts all at once with a single DELETE statement. If you need to destroy dependent
+      # associations or call your <tt>before_*</tt> or +after_destroy+ callbacks, use the +destroy_all+ method instead.
       def delete_all(conditions = nil)
         sql = "DELETE FROM #{quoted_table_name} "
         add_conditions!(sql, conditions, scope(:find))
@@ -823,7 +866,7 @@ module ActiveRecord #:nodoc:
       # The use of this method should be restricted to complicated SQL queries that can't be executed
       # using the ActiveRecord::Calculations class methods.  Look into those before using this.
       #
-      # ==== Attributes
+      # ==== Parameters
       #
       # * +sql+ - An SQL statement which should return a count query from the database, see the example below.
       #
@@ -841,7 +884,7 @@ module ActiveRecord #:nodoc:
       # with the given ID, altering the given hash of counters by the amount
       # given by the corresponding value:
       #
-      # ==== Attributes
+      # ==== Parameters
       #
       # * +id+ - The id of the object you wish to update a counter on.
       # * +counters+ - An Array of Hashes containing the names of the fields
@@ -871,7 +914,7 @@ module ActiveRecord #:nodoc:
       # For example, a DiscussionBoard may cache post_count and comment_count otherwise every time the board is
       # shown it would have to run an SQL query to find how many posts and comments there are.
       #
-      # ==== Attributes
+      # ==== Parameters
       #
       # * +counter_name+ - The name of the field that should be incremented.
       # * +id+ - The id of the object that should be incremented.
@@ -888,7 +931,7 @@ module ActiveRecord #:nodoc:
       #
       # This works the same as increment_counter but reduces the column value by 1 instead of increasing it.
       #
-      # ==== Attributes
+      # ==== Parameters
       #
       # * +counter_name+ - The name of the field that should be decremented.
       # * +id+ - The id of the object that should be decremented.
@@ -927,12 +970,12 @@ module ActiveRecord #:nodoc:
       # To start from an all-closed default and enable attributes as needed,
       # have a look at +attr_accessible+.
       def attr_protected(*attributes)
-        write_inheritable_attribute("attr_protected", Set.new(attributes.map(&:to_s)) + (protected_attributes || []))
+        write_inheritable_attribute(:attr_protected, Set.new(attributes.map(&:to_s)) + (protected_attributes || []))
       end
 
       # Returns an array of all the attributes that have been protected from mass-assignment.
       def protected_attributes # :nodoc:
-        read_inheritable_attribute("attr_protected")
+        read_inheritable_attribute(:attr_protected)
       end
 
       # Specifies a white list of model attributes that can be set via
@@ -960,22 +1003,22 @@ module ActiveRecord #:nodoc:
       #   customer.credit_rating = "Average"
       #   customer.credit_rating # => "Average"
       def attr_accessible(*attributes)
-        write_inheritable_attribute("attr_accessible", Set.new(attributes.map(&:to_s)) + (accessible_attributes || []))
+        write_inheritable_attribute(:attr_accessible, Set.new(attributes.map(&:to_s)) + (accessible_attributes || []))
       end
 
       # Returns an array of all the attributes that have been made accessible to mass-assignment.
       def accessible_attributes # :nodoc:
-        read_inheritable_attribute("attr_accessible")
+        read_inheritable_attribute(:attr_accessible)
       end
 
        # Attributes listed as readonly can be set for a new record, but will be ignored in database updates afterwards.
        def attr_readonly(*attributes)
-         write_inheritable_attribute("attr_readonly", Set.new(attributes.map(&:to_s)) + (readonly_attributes || []))
+         write_inheritable_attribute(:attr_readonly, Set.new(attributes.map(&:to_s)) + (readonly_attributes || []))
        end
 
        # Returns an array of all the attributes that have been specified as readonly.
        def readonly_attributes
-         read_inheritable_attribute("attr_readonly")
+         read_inheritable_attribute(:attr_readonly)
        end
 
       # If you have an attribute that needs to be saved to the database as an object, and retrieved as the same object,
@@ -983,7 +1026,7 @@ module ActiveRecord #:nodoc:
       # The serialization is done through YAML. If +class_name+ is specified, the serialized object must be of that
       # class on retrieval or SerializationTypeMismatch will be raised.
       #
-      # ==== Attributes
+      # ==== Parameters
       #
       # * +attr_name+ - The field name that should be serialized.
       # * +class_name+ - Optional, class name that the object type should be equal to.
@@ -999,7 +1042,7 @@ module ActiveRecord #:nodoc:
 
       # Returns a hash of all the attributes that have been specified for serialization as keys and their class restriction as values.
       def serialized_attributes
-        read_inheritable_attribute("attr_serialized") or write_inheritable_attribute("attr_serialized", {})
+        read_inheritable_attribute(:attr_serialized) or write_inheritable_attribute(:attr_serialized, {})
       end
 
 
@@ -1210,7 +1253,32 @@ module ActiveRecord #:nodoc:
         end
       end
 
-      # Resets all the cached information about columns, which will cause them to be reloaded on the next request.
+      # Resets all the cached information about columns, which will cause them
+      # to be reloaded on the next request.
+      #
+      # The most common usage pattern for this method is probably in a migration,
+      # when just after creating a table you want to populate it with some default
+      # values, eg:
+      #
+      #  class CreateJobLevels < ActiveRecord::Migration
+      #    def self.up
+      #      create_table :job_levels do |t|
+      #        t.integer :id
+      #        t.string :name
+      #
+      #        t.timestamps
+      #      end
+      #
+      #      JobLevel.reset_column_information
+      #      %w{assistant executive manager director}.each do |type|
+      #        JobLevel.create(:name => type)
+      #      end
+      #    end
+      #
+      #    def self.down
+      #      drop_table :job_levels
+      #    end
+      #  end
       def reset_column_information
         generated_methods.each { |name| undef_method(name) }
         @column_names = @columns = @columns_hash = @content_columns = @dynamic_methods_hash = @generated_methods = @inheritance_column = nil
@@ -1317,7 +1385,7 @@ module ActiveRecord #:nodoc:
         if logger && logger.level <= log_level
           result = nil
           seconds = Benchmark.realtime { result = use_silence ? silence { yield } : yield }
-          logger.add(log_level, "#{title} (#{'%.5f' % seconds})")
+          logger.add(log_level, "#{title} (#{'%.1f' % (seconds * 1000)}ms)")
           result
         else
           yield
@@ -1544,9 +1612,17 @@ module ActiveRecord #:nodoc:
           end
         end
 
+        def default_select(qualified)
+          if qualified
+            quoted_table_name + '.*'
+          else
+            '*'
+          end
+        end
+
         def construct_finder_sql(options)
           scope = scope(:find)
-          sql  = "SELECT #{options[:select] || (scope && scope[:select]) || ((options[:joins] || (scope && scope[:joins])) && quoted_table_name + '.*') || '*'} "
+          sql  = "SELECT #{options[:select] || (scope && scope[:select]) || default_select(options[:joins] || (scope && scope[:joins]))} "
           sql << "FROM #{(scope && scope[:from]) || options[:from] || quoted_table_name} "
 
           add_joins!(sql, options[:joins], scope)
@@ -1565,19 +1641,19 @@ module ActiveRecord #:nodoc:
          (safe_to_array(first) + safe_to_array(second)).uniq
         end
 
-        def merge_joins(first, second)
-          if first.is_a?(String) && second.is_a?(String)
-            "#{first} #{second}"
-          elsif first.is_a?(String) || second.is_a?(String)
-            if first.is_a?(String)
-              join_dependency = ActiveRecord::Associations::ClassMethods::InnerJoinDependency.new(self, second, nil)
-              "#{first} #{join_dependency.join_associations.collect { |assoc| assoc.association_join }.join}"
-            else
-              join_dependency = ActiveRecord::Associations::ClassMethods::InnerJoinDependency.new(self, first, nil)
-              "#{join_dependency.join_associations.collect { |assoc| assoc.association_join }.join} #{second}"
+        def merge_joins(*joins)
+          if joins.any?{|j| j.is_a?(String) || array_of_strings?(j) }
+            joins = joins.collect do |join|
+              join = [join] if join.is_a?(String)
+              unless array_of_strings?(join)
+                join_dependency = ActiveRecord::Associations::ClassMethods::InnerJoinDependency.new(self, join, nil)
+                join = join_dependency.join_associations.collect { |assoc| assoc.association_join }
+              end
+              join
             end
+            joins.flatten.uniq
           else
-            (safe_to_array(first) + safe_to_array(second)).uniq
+            joins.collect{|j| safe_to_array(j)}.flatten.uniq
           end
         end
 
@@ -1591,6 +1667,10 @@ module ActiveRecord #:nodoc:
           else
             [o]
           end
+        end
+
+        def array_of_strings?(o)
+          o.is_a?(Array) && o.all?{|obj| obj.is_a?(String)}
         end
 
         def add_order!(sql, order, scope = :auto)
@@ -1641,8 +1721,12 @@ module ActiveRecord #:nodoc:
           merged_joins = scope && scope[:joins] && joins ? merge_joins(scope[:joins], joins) : (joins || scope && scope[:joins])
           case merged_joins
           when Symbol, Hash, Array
-            join_dependency = ActiveRecord::Associations::ClassMethods::InnerJoinDependency.new(self, merged_joins, nil)
-            sql << " #{join_dependency.join_associations.collect { |assoc| assoc.association_join }.join} "
+            if array_of_strings?(merged_joins)
+              sql << merged_joins.join(' ') + " "
+            else
+              join_dependency = ActiveRecord::Associations::ClassMethods::InnerJoinDependency.new(self, merged_joins, nil)
+              sql << " #{join_dependency.join_associations.collect { |assoc| assoc.association_join }.join} "
+            end
           when String
             sql << " #{merged_joins} "
           end
@@ -1688,7 +1772,7 @@ module ActiveRecord #:nodoc:
         #
         # Each dynamic finder or initializer/creator is also defined in the class after it is first invoked, so that future
         # attempts to use it do not run through method_missing.
-        def method_missing(method_id, *arguments)
+        def method_missing(method_id, *arguments, &block)
           if match = DynamicFinderMatch.match(method_id)
             attribute_names = match.attribute_names
             super unless all_attributes_exists?(attribute_names)
@@ -1705,10 +1789,10 @@ module ActiveRecord #:nodoc:
 
                   #{'result = ' if bang}if options[:conditions]
                     with_scope(:find => finder_options) do
-                      ActiveSupport::Deprecation.silence { send(:#{finder}, options) }
+                      find(:#{finder}, options)
                     end
                   else
-                    ActiveSupport::Deprecation.silence { send(:#{finder}, options.merge(finder_options)) }
+                    find(:#{finder}, options.merge(finder_options))
                   end
                   #{'result || raise(RecordNotFound)' if bang}
                 end
@@ -1731,9 +1815,9 @@ module ActiveRecord #:nodoc:
                   options = { :conditions => find_attributes }
                   set_readonly_option!(options)
 
-                  record = find_initial(options)
+                  record = find(:first, options)
 
-                   if record.nil?
+                  if record.nil?
                     record = self.new { |r| r.send(:attributes=, attributes, guard_protected_attributes) }
                     #{'yield(record) if block_given?'}
                     #{'record.save' if instantiator == :create}
@@ -1743,7 +1827,7 @@ module ActiveRecord #:nodoc:
                   end
                 end
               }, __FILE__, __LINE__
-              send(method_id, *arguments)
+              send(method_id, *arguments, &block)
             end
           else
             super
@@ -1866,6 +1950,9 @@ module ActiveRecord #:nodoc:
         #       end
         #     end
         #   end
+        #
+        # *Note*: the +:find+ scope also has effect on update and deletion methods,
+        # like +update_all+ and +delete_all+.
         def with_scope(method_scoping = {}, action = :merge, &block)
           method_scoping = method_scoping.method_scoping if method_scoping.respond_to?(:method_scoping)
 
@@ -1943,20 +2030,8 @@ module ActiveRecord #:nodoc:
           end
         end
 
-        def thread_safe_scoped_methods #:nodoc:
-          scoped_methods = (Thread.current[:scoped_methods] ||= {})
-          scoped_methods[self] ||= []
-        end
-
-        def single_threaded_scoped_methods #:nodoc:
-          @scoped_methods ||= []
-        end
-
-        # pick up the correct scoped_methods version from @@allow_concurrency
-        if @@allow_concurrency
-          alias_method :scoped_methods, :thread_safe_scoped_methods
-        else
-          alias_method :scoped_methods, :single_threaded_scoped_methods
+        def scoped_methods #:nodoc:
+          Thread.current[:"#{self}_scoped_methods"] ||= []
         end
 
         def current_scoped_methods #:nodoc:
@@ -2152,7 +2227,7 @@ module ActiveRecord #:nodoc:
         end
 
         def quote_bound_value(value) #:nodoc:
-          if value.respond_to?(:map) && !value.is_a?(String)
+          if value.respond_to?(:map) && !value.acts_like?(:string)
             if value.respond_to?(:empty?) && value.empty?
               connection.quote(nil)
             else
@@ -2224,7 +2299,28 @@ module ActiveRecord #:nodoc:
 
       end
 
-      # Enables Active Record objects to be used as URL parameters in Action Pack automatically.
+      # Returns a String, which Action Pack uses for constructing an URL to this
+      # object. The default implementation returns this record's id as a String,
+      # or nil if this record's unsaved.
+      #
+      # For example, suppose that you have a Users model, and that you have a
+      # <tt>map.resources :users</tt> route. Normally, +users_path+ will
+      # construct an URI with the user object's 'id' in it:
+      #
+      #   user = User.find_by_name('Phusion')
+      #   user_path(path)  # => "/users/1"
+      #
+      # You can override +to_param+ in your model to make +users_path+ construct
+      # an URI using the user's name instead of the user's id:
+      #
+      #   class User < ActiveRecord::Base
+      #     def to_param  # overridden
+      #       name
+      #     end
+      #   end
+      #   
+      #   user = User.find_by_name('Phusion')
+      #   user_path(path)  # => "/users/Phusion"
       def to_param
         # We can't use alias_method here, because method 'id' optimizes itself on the fly.
         (id = self.id) ? id.to_s : nil # Be sure to stringify the id for routes
@@ -2266,32 +2362,66 @@ module ActiveRecord #:nodoc:
         defined?(@new_record) && @new_record
       end
 
-      # * No record exists: Creates a new record with values matching those of the object attributes.
-      # * A record does exist: Updates the record with values matching those of the object attributes.
+      # :call-seq:
+      #   save(perform_validation = true)
       #
-      # Note: If your model specifies any validations then the method declaration dynamically
-      # changes to:
-      #   save(perform_validation=true)
-      # Calling save(false) saves the model without running validations.
-      # See ActiveRecord::Validations for more information.
+      # Saves the model.
+      #
+      # If the model is new a record gets created in the database, otherwise
+      # the existing record gets updated.
+      #
+      # If +perform_validation+ is true validations run. If any of them fail
+      # the action is cancelled and +save+ returns +false+. If the flag is
+      # false validations are bypassed altogether. See
+      # ActiveRecord::Validations for more information. 
+      #
+      # There's a series of callbacks associated with +save+. If any of the
+      # <tt>before_*</tt> callbacks return +false+ the action is cancelled and
+      # +save+ returns +false+. See ActiveRecord::Callbacks for further
+      # details. 
       def save
         create_or_update
       end
 
-      # Attempts to save the record, but instead of just returning false if it couldn't happen, it raises a
-      # RecordNotSaved exception
+      # Saves the model.
+      #
+      # If the model is new a record gets created in the database, otherwise
+      # the existing record gets updated.
+      #
+      # With <tt>save!</tt> validations always run. If any of them fail
+      # ActiveRecord::RecordInvalid gets raised. See ActiveRecord::Validations
+      # for more information. 
+      #
+      # There's a series of callbacks associated with <tt>save!</tt>. If any of
+      # the <tt>before_*</tt> callbacks return +false+ the action is cancelled
+      # and <tt>save!</tt> raises ActiveRecord::RecordNotSaved. See
+      # ActiveRecord::Callbacks for further details. 
       def save!
         create_or_update || raise(RecordNotSaved)
       end
 
       # Deletes the record in the database and freezes this instance to reflect that no changes should
       # be made (since they can't be persisted).
+      #
+      # Unlike #destroy, this method doesn't run any +before_delete+ and +after_delete+
+      # callbacks, nor will it enforce any association +:dependent+ rules.
+      # 
+      # In addition to deleting this record, any defined +before_delete+ and +after_delete+
+      # callbacks are run, and +:dependent+ rules defined on associations are run.
+      def delete
+        self.class.delete(id) unless new_record?
+        freeze
+      end
+
+      # Deletes the record in the database and freezes this instance to reflect that no changes should
+      # be made (since they can't be persisted).
       def destroy
         unless new_record?
-          connection.delete <<-end_sql, "#{self.class.name} Destroy"
-            DELETE FROM #{self.class.quoted_table_name}
-            WHERE #{connection.quote_column_name(self.class.primary_key)} = #{quoted_id}
-          end_sql
+          connection.delete(
+            "DELETE FROM #{self.class.quoted_table_name} " +
+            "WHERE #{connection.quote_column_name(self.class.primary_key)} = #{quoted_id}",
+            "#{self.class.name} Destroy"
+          )
         end
 
         freeze
@@ -2423,10 +2553,25 @@ module ActiveRecord #:nodoc:
       end
 
       # Allows you to set all the attributes at once by passing in a hash with keys
-      # matching the attribute names (which again matches the column names). Sensitive attributes can be protected
-      # from this form of mass-assignment by using the +attr_protected+ macro. Or you can alternatively
-      # specify which attributes *can* be accessed with the +attr_accessible+ macro. Then all the
+      # matching the attribute names (which again matches the column names).
+      #
+      # If +guard_protected_attributes+ is true (the default), then sensitive
+      # attributes can be protected from this form of mass-assignment by using
+      # the +attr_protected+ macro. Or you can alternatively specify which
+      # attributes *can* be accessed with the +attr_accessible+ macro. Then all the
       # attributes not included in that won't be allowed to be mass-assigned.
+      #
+      #   class User < ActiveRecord::Base
+      #     attr_protected :is_admin
+      #   end
+      #   
+      #   user = User.new
+      #   user.attributes = { :username => 'Phusion', :is_admin => true }
+      #   user.username   # => "Phusion"
+      #   user.is_admin?  # => false
+      #   
+      #   user.send(:attributes=, { :username => 'Phusion', :is_admin => true }, false)
+      #   user.is_admin?  # => true
       def attributes=(new_attributes, guard_protected_attributes = true)
         return if new_attributes.nil?
         attributes = new_attributes.dup
@@ -2710,7 +2855,7 @@ module ActiveRecord #:nodoc:
       end
 
       def instantiate_time_object(name, values)
-        if self.class.time_zone_aware_attributes && !self.class.skip_time_zone_conversion_for_attributes.include?(name.to_sym)
+        if self.class.send(:create_time_zone_conversion_attribute?, name, column_for_attribute(name))
           Time.zone.local(*values)
         else
           Time.time_with_datetime_fallback(@@default_timezone, *values)
@@ -2801,7 +2946,7 @@ module ActiveRecord #:nodoc:
       end
 
       def object_from_yaml(string)
-        return string unless string.is_a?(String)
+        return string unless string.is_a?(String) && string =~ /^---/
         YAML::load(string) rescue string
       end
 

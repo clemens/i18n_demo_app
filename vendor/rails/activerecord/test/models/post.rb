@@ -13,6 +13,7 @@ class Post < ActiveRecord::Base
   end
 
   belongs_to :author_with_posts, :class_name => "Author", :foreign_key => :author_id, :include => :posts
+  belongs_to :author_with_address, :class_name => "Author", :foreign_key => :author_id, :include => :author_address
 
   has_one :last_comment, :class_name => 'Comment', :order => 'id desc'
 
@@ -21,6 +22,8 @@ class Post < ActiveRecord::Base
       find(:first, :order => "id DESC")
     end
   end
+
+  has_many :author_favorites, :through => :author
 
   has_many :comments_with_interpolated_conditions, :class_name => 'Comment',
       :conditions => ['#{"#{aliased_table_name}." rescue ""}body = ?', 'Thank you for the welcome']
@@ -32,12 +35,6 @@ class Post < ActiveRecord::Base
 
   has_and_belongs_to_many :categories
   has_and_belongs_to_many :special_categories, :join_table => "categories_posts", :association_foreign_key => 'category_id'
-
-  belongs_to              :creatable_author,     :class_name => 'Author',   :accessible => true
-  has_one                 :uncreatable_comment,  :class_name => 'Comment',  :accessible => false, :order => 'id desc'
-  has_one                 :creatable_comment,    :class_name => 'Comment',  :accessible => true,  :order => 'id desc'
-  has_many                :creatable_comments,   :class_name => 'Comment',  :accessible => true,  :dependent => :destroy
-  has_and_belongs_to_many :creatable_categories, :class_name => 'Category', :accessible => true
 
   has_many :taggings, :as => :taggable
   has_many :tags, :through => :taggings do

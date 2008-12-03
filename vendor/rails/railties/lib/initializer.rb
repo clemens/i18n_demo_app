@@ -49,8 +49,10 @@ module Rails
     end
 
     def env
-      require 'active_support/string_inquirer'
-      ActiveSupport::StringInquirer.new(RAILS_ENV)
+      @_env ||= begin
+        require 'active_support/string_inquirer'
+        ActiveSupport::StringInquirer.new(RAILS_ENV)
+      end
     end
 
     def cache
@@ -145,7 +147,10 @@ module Rails
       initialize_dependency_mechanism
       initialize_whiny_nils
       initialize_temporary_session_directory
+
       initialize_time_zone
+      initialize_i18n
+
       initialize_framework_settings
       initialize_framework_views
 
@@ -212,6 +217,7 @@ module Rails
           Gem.loaded_specs[stub] = Gem::Specification.new do |s|
             s.name = stub
             s.version = Rails::VERSION::STRING
+            s.loaded_from = ""
           end
         end
       end
@@ -264,6 +270,7 @@ module Rails
     end
 
     def add_gem_load_paths
+      Rails::GemDependency.add_frozen_gem_path
       unless @configuration.gems.empty?
         require "rubygems"
         @configuration.gems.each { |gem| gem.add_load_paths }
@@ -500,6 +507,18 @@ Run `rake gems:install` to install the missing gems.
       end
     end
 
+    # Set the i18n configuration from config.i18n but special-case for the load_path which should be 
+    # appended to what's already set instead of overwritten.
+    def initialize_i18n
+      configuration.i18n.each do |setting, value|
+        if setting == :load_path
+          I18n.load_path += value
+        else
+          I18n.send("#{setting}=", value)
+        end
+      end
+    end
+
     # Initializes framework-specific settings for each of the loaded frameworks
     # (Configuration#frameworks). The available settings map to the accessors
     # on each of the corresponding Base classes.
@@ -728,6 +747,9 @@ Run `rake gems:install` to install the missing gems.
     # timezone to <tt>:utc</tt>.
     attr_accessor :time_zone
 
+    # Accessor for i18n settings.
+    attr_accessor :i18n
+
     # Create a new Configuration instance, initialized with the default
     # values.
     def initialize
@@ -751,6 +773,7 @@ Run `rake gems:install` to install the missing gems.
       self.database_configuration_file  = default_database_configuration_file
       self.routes_configuration_file    = default_routes_configuration_file
       self.gems                         = default_gems
+      self.i18n                         = default_i18n
 
       for framework in default_frameworks
         self.send("#{framework}=", Rails::OrderedOptions.new)
@@ -784,7 +807,6 @@ Run `rake gems:install` to install the missing gems.
     def threadsafe!
       self.cache_classes = true
       self.dependency_loading = false
-      self.active_record.allow_concurrency = true
       self.action_controller.allow_concurrency = true
       self
     end
@@ -964,6 +986,18 @@ Run `rake gems:install` to install the missing gems.
 
       def default_gems
         []
+      end
+
+      def default_i18n
+        i18n = Rails::OrderedOptions.new
+        i18n.load_path = []
+
+        if File.exist?(File.join(RAILS_ROOT, 'config', 'locales'))
+          i18n.load_path << Dir[File.join(RAILS_ROOT, 'config', 'locales', '*.{rb,yml}')]
+          i18n.load_path.flatten!
+        end
+
+        i18n
       end
   end
 end

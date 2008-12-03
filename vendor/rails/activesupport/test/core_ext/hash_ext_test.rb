@@ -329,6 +329,16 @@ class HashExtTest < Test::Unit::TestCase
     end
   end
 
+  def test_indifferent_slice_access_with_symbols
+    original = {'login' => 'bender', 'password' => 'shiny', 'stuff' => 'foo'}
+    original = original.with_indifferent_access
+
+    slice = original.slice(:login, :password)
+
+    assert_equal 'bender', slice[:login]
+    assert_equal 'bender', slice['login']
+  end
+
   def test_except
     original = { :a => 'x', :b => 'y', :c => 10 }
     expected = { :a => 'x', :b => 'y' }
@@ -340,6 +350,20 @@ class HashExtTest < Test::Unit::TestCase
     # Should replace the hash with only the given keys.
     assert_equal expected, original.except!(:c)
     assert_equal expected, original
+  end
+
+  def test_except_with_original_frozen
+    original = { :a => 'x', :b => 'y' }
+    original.freeze
+    assert_nothing_raised { original.except(:a) }
+  end
+
+  uses_mocha 'except with expectation' do
+    def test_except_with_mocha_expectation_on_original
+      original = { :a => 'x', :b => 'y' }
+      original.expects(:delete).never
+      original.except(:a)
+    end
   end
 end
 
