@@ -2,7 +2,7 @@
 module ApplicationHelper
   def show_locale_files
     output = ''
-    @locale_files.sort.each do |locale_file|
+    Dir["#{LOCALES_DIRECTORY}#{I18n.locale}.{rb,yml}"].sort.each do |locale_file|
       output << "\n#{locale_file.sub(RAILS_ROOT + "/", "")}:\n\n"
       counter, lineWidth = 1, 80
       lines = *open(locale_file).map(&:rstrip).each do |line|
