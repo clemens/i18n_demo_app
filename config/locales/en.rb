@@ -1,5 +1,5 @@
 {
-  :'en-US' => {
+  :'en' => {
     :date => {
       :formats => {
         :long_ordinal => lambda { |date| "%B #{date.day.ordinalize}, %Y" }

@@ -1,5 +1,5 @@
 {
-  :'zh-CN' => {
+  :'zh' => {
     :date => {
       :formats => {
         :default      => "%Y-%m-%d",
