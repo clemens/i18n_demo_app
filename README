@@ -33,15 +33,18 @@ It's easy to add a translation to this demo app, simply drop your locale file in
 Contributors (in alphabetical order)
 ===================
 
-Claudio Poli - claudio@icoretech.org - Content translation, Italian locale
-Dr Nic Williams - http://drnicwilliams.com - Australian locale
-Fabio Akita - http://www.akitaonrails.com/ - Portuguese locale
-Kai Chen - http://chenk85.com - Chinese (zh_CN) locale
-Karel Minařík - http://www.karmi.cz - Czech locale
-Leandro Marcucci - http://leanucci.com.ar - Spanish (Argentinean) locale
-Masayuki Nakamura - masayuki@japancentre.com - Content translation, Japanese locale
-Prem Sichanugrist - http://sikachu.com - Thai locale
-Simon Tokumine - simon@japancentre.com - Content translation, Japanese locale
+Akira Matsuda - http://github.com/amatsuda - Japanese locale (ja)
+Claudio Poli - claudio@icoretech.org - Content translation, Italian locale (it)
+Dr Nic Williams - http://drnicwilliams.com - English locale (en-AU)
+Fabio Akita - http://www.akitaonrails.com/ - Portuguese locale (pt-BR)
+Janko Ahlbrandt - "http://www.keyj.de - German locale (de)
+Kai Chen - http://chenk85.com - Chinese locale (zh)
+Karel Minařík - http://www.karmi.cz - Czech locale (cz)
+Leandro Marcucci - http://leanucci.com.ar - Spanish locale (es-AR)
+Masayuki Nakamura - masayuki@japancentre.com - Content translation, Japanese locale (ja)
+Ninh Bui - http://www.phusion.nl - Dutch locale (nl), Hosting (http://i18n-demo.phusion.nl)
+Prem Sichanugrist - http://sikachu.com - Thai locale (th)
+Simon Tokumine - simon@japancentre.com - Content translation, Japanese locale (ja)
 
 Bugs and Feedback
 ===================
